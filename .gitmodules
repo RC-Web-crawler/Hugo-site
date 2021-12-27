@@ -1,0 +1,11 @@
+[submodule "hyde"]
+	path = hyde
+	url = https://github.com/spf13/hyde
+[submodule "rc-web-crawler.github.io"]
+	path = rc-web-crawler.github.io
+	url = https://github.com/RC-Web-crawler/rc-web-crawler.github.io.git
+	branch = main
+[submodule "public"]
+	path = public
+	url = https://github.com/RC-Web-crawler/rc-web-crawler.github.io.git
+	branch = main
