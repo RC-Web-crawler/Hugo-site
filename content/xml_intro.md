@@ -16,7 +16,7 @@
 
 ## **1. 了解网页** 
 ### **1.1 认识网页结构**
-网页一般由三部分组成，分别是 HTML（超文本标记语言）、CSS（层叠样式表）和 JScript（活动脚本语言）。
+网页一般由三部分组成，分别是 HTML（超文本标记语言）、CSS（层叠样式表）和 JavaScript（活动脚本语言）。
 #### **1.1.1 HTML**
 首先让我们来看一个简单的网页：[webpage_raw](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_raw.html)
 
@@ -67,7 +67,7 @@ HTML 是整个网页的结构，相当于整个网站的框架。带“＜”、
 #### **1.1.2 CSS**
 CSS 表示样式，`<style type="text/css">`表示下面引用一个 CSS，在 CSS 中定义了外观。
 
-我们来看一下加入下面的CSS之后，网页会变成什么样子: [webpage_css](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage.html)
+我们来看一下加入下面的CSS之后，网页会变成什么样子: [webpage_css](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_css.html)
 
 ```
     <style type="text/css">
@@ -81,7 +81,7 @@ CSS 表示样式，`<style type="text/css">`表示下面引用一个 CSS，在 C
     </style>
 ```
 #### **1.1.3 JavaScript**
-JavaScript 表示功能。交互的内容和各种特效都在 JavaScript 中，JavaScript 描述了网站中的各种功能。让我们一起来看一个的例子：[webpage_js]()
+JavaScript 表示功能。交互的内容和各种特效都在 JavaScript 中，JavaScript 描述了网站中的各种功能。让我们一起来看一个的例子：[webpage_js](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_js.html)
 
 如果用人体来比喻，HTML 是人的骨架，并且定义了人的嘴巴、眼睛、耳朵等要长在哪里。CSS 是人的外观细节，如嘴巴长什么样子，眼睛是双眼皮还是单眼皮，是大眼睛还是小眼睛，皮肤是黑色的还是白色的等。JavaScript 表示人的技能，例如跳舞、唱歌或者演奏乐器等。
 
