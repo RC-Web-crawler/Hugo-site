@@ -1,15 +1,25 @@
 baseURL = "https://rc-web-crawler.github.io/"
 languageCode = 'en-us'
 title = 'Web Crawler'
-theme="hyde"
-
-[Menus]
-  main = [
-      {Name = "Source Code", URL = "https://github.com/RC-Web-crawler/Hugo-site"}
-  ]
+theme="hugo-theme-learn"
+relativeurls = true
 
 [params]
-  description = """
-  A webpage for our Web-Crawler study group. :)
-  """
-  themeColor = "theme-base-08"
+  themeVariant = "green"
+  titleSeparator = ":"
+  showVisitedLinks = false
+
+[outputs]
+  home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[[Languages.en.menu.shortcuts]]
+  name = "<i class='fab fa-fw fa-github'></i> GitHub"
+  identifier = "ds"
+  url = "https://github.com/RC-Web-crawler/Hugo-site"
+  weight = 10
+
+[[Languages.en.menu.shortcuts]]
+  name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+  url = "/credits"
+  weight = 20
