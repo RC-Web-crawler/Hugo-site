@@ -11,8 +11,8 @@ weight = 1
     - [**1.1.3 JavaScript**](#113-javascript)
 
 <span style="font-family:Impact; font-size:1.5em;color:red;">Is web crawling and scraping legal?</span>
-> <img src="https://op.image.skieer.com/images/logo_header.png" width="120"> <span style="font-family:Georgia; font-size:1em;">: If you’re doing web crawling for your own purposes, then it is legal as it falls under fair use doctrine. The complications start if you want to use scraped data for others, especially commercial purposes. As long as you are not crawling at a disruptive rate and the source is public you should be fine.</span> <br> 
-> <img src="https://2xawx0gmudy471po527lbxcd-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/quora-604x400.png" height="35"> <span style="font-family:Georgia; font-size:1em;">: You can crawl any page you like, scraping in itself is not illegal. The worst case scenario would be if you got blocked by the website if you do not follow the rules stated in the robots.txt.</span>
+><span style="font-family:Georgia;color:rgb(30,144,255);font-size:1.5em">Octoparse</span> <span style="font-family:Georgia; font-size:1em;">: If you’re doing web crawling for your own purposes, then it is legal as it falls under fair use doctrine. The complications start if you want to use scraped data for others, especially commercial purposes. As long as you are not crawling at a disruptive rate and the source is public you should be fine.</span> <br> 
+> <span style="font-family:Georgia;color:rgb(139,0,0);font-size:1.5em">Quora</span> <span style="font-family:Georgia; font-size:1em;">: You can crawl any page you like, scraping in itself is not illegal. The worst case scenario would be if you got blocked by the website if you do not follow the rules stated in the robots.txt.</span>
 
 **What is a robots.txt file?** Robots.txt is a text file webmasters create to instruct web robots (typically search engine robots) how to crawl pages on their website. The robots.txt file is part of the the robots exclusion protocol (REP), a group of web standards that regulate how robots crawl the web, access and index content, and serve that content up to users.
 
@@ -70,7 +70,7 @@ HTML Document:
 </body>
 </html>
 ```
-You can see a lot of tags in this document, such as `<html>`, `</html>`, `<head>`, `<body>`, `<img>` etc.
+You can see a lot of tags in this document, such as `<html>`, `</html>`, `<head>`, `<body>`, `<img>`, etc.
 
 #### **1.1.2 CSS**
 CSS stands for Cascading Style Sheets. This programming language dictates how the HTML elements of a website should actually appear on the frontend of the page.
