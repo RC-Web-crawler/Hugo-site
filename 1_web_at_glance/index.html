@@ -6,18 +6,18 @@
 <meta name=description content>
 <link rel=icon href=../images/favicon.png type=image/png>
 <title>Web at a glance : Web Crawler</title>
-<link href=../css/nucleus.css?1642060086 rel=stylesheet>
-<link href=../css/fontawesome-all.min.css?1642060086 rel=stylesheet>
-<link href=../css/hybrid.css?1642060086 rel=stylesheet>
-<link href=../css/featherlight.min.css?1642060086 rel=stylesheet>
-<link href=../css/perfect-scrollbar.min.css?1642060086 rel=stylesheet>
-<link href=../css/auto-complete.css?1642060086 rel=stylesheet>
-<link href=../css/atom-one-dark-reasonable.css?1642060086 rel=stylesheet>
-<link href=../css/theme.css?1642060086 rel=stylesheet>
-<link href=../css/tabs.css?1642060086 rel=stylesheet>
-<link href=../css/hugo-theme.css?1642060086 rel=stylesheet>
-<link href=../css/theme-green.css?1642060086 rel=stylesheet>
-<script src=../js/jquery-3.3.1.min.js?1642060086></script>
+<link href=../css/nucleus.css?1642149336 rel=stylesheet>
+<link href=../css/fontawesome-all.min.css?1642149336 rel=stylesheet>
+<link href=../css/hybrid.css?1642149336 rel=stylesheet>
+<link href=../css/featherlight.min.css?1642149336 rel=stylesheet>
+<link href=../css/perfect-scrollbar.min.css?1642149336 rel=stylesheet>
+<link href=../css/auto-complete.css?1642149336 rel=stylesheet>
+<link href=../css/atom-one-dark-reasonable.css?1642149336 rel=stylesheet>
+<link href=../css/theme.css?1642149336 rel=stylesheet>
+<link href=../css/tabs.css?1642149336 rel=stylesheet>
+<link href=../css/hugo-theme.css?1642149336 rel=stylesheet>
+<link href=../css/theme-green.css?1642149336 rel=stylesheet>
+<script src=../js/jquery-3.3.1.min.js?1642149336></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 </head>
 <body data-url=../1_web_at_glance/>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=../js/lunr.min.js?1642060086></script>
-<script type=text/javascript src=../js/auto-complete.js?1642060086></script>
+<script type=text/javascript src=../js/lunr.min.js?1642149336></script>
+<script type=text/javascript src=../js/auto-complete.js?1642149336></script>
 <script type=text/javascript>var baseurl="https://rc-web-crawler.github.io/"</script>
-<script type=text/javascript src=../js/search.js?1642060086></script>
+<script type=text/javascript src=../js/search.js?1642149336></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -51,6 +51,11 @@ parent
 active">
 <a href=../1_web_at_glance/>
 1. Web at a glance
+</a>
+</li>
+<li data-nav-id=/2_html_elements/ title="HTML elements & Tree Structure" class=dd-item>
+<a href=../2_html_elements/>
+2. HTML elements
 </a>
 </li>
 <li data-nav-id=/3_css/ title="CSS selectorts & Xpath" class=dd-item>
@@ -100,13 +105,11 @@ active">
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#1-了解网页><strong>1. 了解网页</strong></a>
+<li><a href=#1-web-at-a-glance><strong>1. Web at a glance</strong></a>
 <ul>
-<li><a href=#11-认识网页结构><strong>1.1 认识网页结构</strong></a></li>
-<li><a href=#12-关于爬虫的合法性><strong>1.2 关于爬虫的合法性</strong></a></li>
+<li><a href=#11-overview-of-a-webpage><strong>1.1 Overview of a webpage</strong></a></li>
 </ul>
 </li>
-<li><a href=#2-节点及节点的关系><strong>2. 节点及节点的关系</strong></a></li>
 </ul>
 </nav>
 </div>
@@ -119,39 +122,41 @@ active">
 <h1>
 Web at a glance
 </h1>
-<h1 id=爬虫入门教程><strong>爬虫入门教程</strong></h1>
-<p>该教程总共分为4部分内容：</p>
-<ol>
-<li>了解网页</li>
-<li>节点及节点之间的关系</li>
-<li>节点的抓取与选择</li>
-<li>用R与Python对网站进行简单的爬取</li>
-</ol>
 <ul>
-<li><a href=#%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B><strong>爬虫入门教程</strong></a>
+<li><a href=#1-web-at-a-glance><strong>1. Web at a glance</strong></a>
 <ul>
-<li><a href=#1-%E4%BA%86%E8%A7%A3%E7%BD%91%E9%A1%B5><strong>1. 了解网页</strong></a>
-<ul>
-<li><a href=#11-%E8%AE%A4%E8%AF%86%E7%BD%91%E9%A1%B5%E7%BB%93%E6%9E%84><strong>1.1 认识网页结构</strong></a>
+<li><a href=#11-overview-of-a-webpage><strong>1.1 Overview of a webpage</strong></a>
 <ul>
 <li><a href=#111-html><strong>1.1.1 HTML</strong></a></li>
 <li><a href=#112-css><strong>1.1.2 CSS</strong></a></li>
 <li><a href=#113-javascript><strong>1.1.3 JavaScript</strong></a></li>
 </ul>
 </li>
-<li><a href=#12-%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E5%90%88%E6%B3%95%E6%80%A7><strong>1.2 关于爬虫的合法性</strong></a></li>
-</ul>
-</li>
-<li><a href=#2-%E8%8A%82%E7%82%B9%E5%8F%8A%E8%8A%82%E7%82%B9%E7%9A%84%E5%85%B3%E7%B3%BB><strong>2. 节点及节点的关系</strong></a></li>
 </ul>
 </li>
 </ul>
-<h2 id=1-了解网页><strong>1. 了解网页</strong></h2>
-<h3 id=11-认识网页结构><strong>1.1 认识网页结构</strong></h3>
-<p>网页一般由三部分组成，分别是 HTML（超文本标记语言）、CSS（层叠样式表）和 JavaScript（活动脚本语言）。</p>
+<p>Is web crawling and scraping legal?</p>
+<blockquote>
+<p> : If you’re doing web crawling for your own purposes, then it is legal as it falls under fair use doctrine. The complications start if you want to use scraped data for others, especially commercial purposes. As long as you are not crawling at a disruptive rate and the source is public you should be fine. : You can crawl any page you like, scraping in itself is not illegal. The worst case scenario would be if you got blocked by the website if you do not follow the rules stated in the robots.txt.</p>
+</blockquote>
+<p><strong>What is a robots.txt file?</strong> Robots.txt is a text file webmasters create to instruct web robots (typically search engine robots) how to crawl pages on their website. The robots.txt file is part of the the robots exclusion protocol (REP), a group of web standards that regulate how robots crawl the web, access and index content, and serve that content up to users.</p>
+<h2 id=1-web-at-a-glance><strong>1. Web at a glance</strong></h2>
+<p><em><strong>What is the Web?</strong></em></p>
+<p>The <strong>World Wide Web</strong> (<strong>WWW</strong>), commonly known as the <strong>Web</strong>, is an information system. It is an amazing collection of interconnected documents.</p>
+<p><strong>Webpage</strong>/<strong>Website</strong> is a metaphor applied to the web.</p>
+<p>The purpose of a <strong>Web browser</strong> (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly. A browser does not display the HTML tags, but uses them to determine how to display the document</p>
+<h3 id=11-overview-of-a-webpage><strong>1.1 Overview of a webpage</strong></h3>
+<p>A webpage generally consists of three parts, namely HTML(超文本标记语言), CSS(层叠样式表) and JavaScript(活动脚本语言).</p>
+<ul>
+<li><strong>HTML</strong> provides the basic structure of sites, which is enhanced and modified by other technologies like CSS and JavaScript.</li>
+<li><strong>CSS</strong> is used to control presentation, formatting, and layout.</li>
+<li><strong>JavaScript</strong> is used to control the behavior of different elements.</li>
+</ul>
+<p><em>如果用人体来比喻，HTML 是人的骨架，并且定义了人的嘴巴、眼睛、耳朵等要长在哪里。CSS 是人的外观细节，如嘴巴长什么样子，眼睛是双眼皮还是单眼皮，是大眼睛还是小眼睛，皮肤是黑色的还是白色的等。JavaScript 表示人的技能，例如跳舞、唱歌或者演奏乐器等。</em></p>
 <h4 id=111-html><strong>1.1.1 HTML</strong></h4>
-<p>首先让我们来看一个简单的网页：<a href=https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_raw.html>webpage_raw</a></p>
-<p>这个网页背后的源代码是：</p>
+<p>HTML stands for HyperText Markup Language. &ldquo;Markup language&rdquo; means that, rather than using a programming language to perform functions, HTML uses <strong>tags</strong> to identify different types of content and the purposes they each serve to the webpage.</p>
+<p>Let&rsquo;s start with a simple webpage without CSS and JavaScript：<a href=https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_raw.html>webpage_raw</a></p>
+<p>HTML Document:</p>
 <pre tabindex=0><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 
@@ -161,6 +166,7 @@ Web at a glance
 &lt;/head&gt;
 
 &lt;body&gt;
+
     &lt;h1&gt;欢迎来到爬虫小组的网页！&lt;/h1&gt;
     &lt;p&gt;这是一个简单的测试页&lt;/p&gt;
 
@@ -172,27 +178,17 @@ Web at a glance
     &lt;p&gt;&lt;b&gt;2021年7月1日&lt;/b&gt; — 滕书言加入诺华的日子&lt;/p&gt;
     &lt;p&gt;&lt;b&gt;2021年7月1日&lt;/b&gt; — 姚艾文加入诺华的日子&lt;/p&gt;
 
-    &lt;h2&gt;更多信息&lt;/h2&gt;
+    &lt;h2&gt;&lt;img id=&quot;myImage&quot; src=&quot;https://www.w3schools.com/js/pic_bulboff.gif&quot; style=&quot;width:30px&quot;&gt;更多信息 &lt;/h2&gt;
     &lt;p&gt;Gitlab: 
-        &lt;a href=&quot;http://gitlabce.apps.dit-prdocp.novartis.net/YUHAY/web-crawler-do.git&quot;&gt;Web Craler DO&lt;/a&gt;
+        &lt;a href=&quot;http://gitlabce.apps.dit-prdocp.novartis.net/YUHAY/web-crawler-do.git&quot;&gt;Web Crawler DO&lt;/a&gt;
     &lt;/p&gt;
+    
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>HTML 是整个网页的结构，相当于整个网站的框架。带“＜”、“＞”符号的都是属于 HTML 的标签，并且标签都是成对出现的。</p>
-<p>常见的标签如下：</p>
-<pre tabindex=0><code>&lt;!DOCTYPE html&gt; 声明为 HTML5 文档
-&lt;head&gt; 包含了文档的元（meta）数据，如 &lt;meta charset=&quot;utf-8&quot;&gt; 定义网页编码格式为 utf-8
-&lt;html&gt;..&lt;/html&gt; 表示标记中间的元素是网页
-&lt;body&gt;..&lt;/body&gt; 表示用户可见的内容
-&lt;div&gt;..&lt;/div&gt; 表示框架
-&lt;p&gt;..&lt;/p&gt; 表示段落
-&lt;li&gt;..&lt;/li&gt;表示列表
-&lt;img&gt;..&lt;/img&gt;表示图片
-&lt;h1&gt;..&lt;/h1&gt;表示标题
-&lt;a href=&quot;&quot;&gt;..&lt;/a&gt;表示超链接
-</code></pre><h4 id=112-css><strong>1.1.2 CSS</strong></h4>
-<p>CSS 表示样式，<code>&lt;style type="text/css"></code>表示下面引用一个 CSS，在 CSS 中定义了外观。</p>
-<p>我们来看一下加入下面的CSS之后，网页会变成什么样子: <a href=https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_css.html>webpage_css</a></p>
+</code></pre><p>You can see a lot of tags in this document, such as <code>&lt;html></code>, <code>&lt;/html></code>, <code>&lt;head></code>, <code>&lt;body></code>, <code>&lt;img></code> etc.</p>
+<h4 id=112-css><strong>1.1.2 CSS</strong></h4>
+<p>CSS stands for Cascading Style Sheets. This programming language dictates how the HTML elements of a website should actually appear on the frontend of the page.</p>
+<p>Let&rsquo;s see the new webpage after adding a CSS style: <a href=https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_css.html>webpage_css</a></p>
 <pre tabindex=0><code>    &lt;style type=&quot;text/css&quot;&gt;
     @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&amp;display=swap');
     body {background-image: url('https://www.statnews.com/wp-content/uploads/2018/05/Novartis-1.jpg');
@@ -203,50 +199,31 @@ Web at a glance
     a {color:turquoise;}
     &lt;/style&gt;
 </code></pre><h4 id=113-javascript><strong>1.1.3 JavaScript</strong></h4>
-<p>JavaScript 表示功能。交互的内容和各种特效都在 JavaScript 中，JavaScript 描述了网站中的各种功能。让我们一起来看一个的例子：<a href=https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_js.html>webpage_js</a></p>
-<p>如果用人体来比喻，HTML 是人的骨架，并且定义了人的嘴巴、眼睛、耳朵等要长在哪里。CSS 是人的外观细节，如嘴巴长什么样子，眼睛是双眼皮还是单眼皮，是大眼睛还是小眼睛，皮肤是黑色的还是白色的等。JavaScript 表示人的技能，例如跳舞、唱歌或者演奏乐器等。</p>
-<h3 id=12-关于爬虫的合法性><strong>1.2 关于爬虫的合法性</strong></h3>
-<p>几乎每一个网站都有一个名为 robots.txt 的文档，当然也有部分网站没有设定 robots.txt。对于没有设定 robots.txt 的网站可以通过网络爬虫获取没有口令加密的数据，也就是该网站所有页面数据都可以爬取。如果网站有 robots.txt 文档，就要判断是否有禁止访客获取的数据。</p>
-<h2 id=2-节点及节点的关系><strong>2. 节点及节点的关系</strong></h2>
-<table>
-<thead>
-<tr>
-<th>a</th>
-<th>b</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>askldjlaskjd</td>
-<td>asiodiasdaskjd</td>
-</tr>
-</tbody>
-</table>
-<p>i need to highlight ==so funny==</p>
-<p>:joy: :christmas_tree:</p>
+<p>JavaScript is a logic-based programming language that can be used to modify website content and make it behave in different ways in response to a user&rsquo;s actions. Most of the dynamic behavior you&rsquo;ll see on a web page is thanks to JavaScript, which augments a browser&rsquo;s default controls and behaviors.</p>
+<p>Let&rsquo;s see the new webpage after applying a JavaScript：<a href=https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_js.html>webpage_js</a></p>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
 <a class="nav nav-prev" href=../ title> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=../3_css/ title="CSS selectorts & Xpath" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-next" href=../2_html_elements/ title="HTML elements & Tree Structure" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=../js/clipboard.min.js?1642060086></script>
-<script src=../js/perfect-scrollbar.min.js?1642060086></script>
-<script src=../js/perfect-scrollbar.jquery.min.js?1642060086></script>
-<script src=../js/jquery.sticky.js?1642060086></script>
-<script src=../js/featherlight.min.js?1642060086></script>
-<script src=../js/highlight.pack.js?1642060086></script>
+<script src=../js/clipboard.min.js?1642149336></script>
+<script src=../js/perfect-scrollbar.min.js?1642149336></script>
+<script src=../js/perfect-scrollbar.jquery.min.js?1642149336></script>
+<script src=../js/jquery.sticky.js?1642149336></script>
+<script src=../js/featherlight.min.js?1642149336></script>
+<script src=../js/highlight.pack.js?1642149336></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=../js/modernizr.custom-3.6.0.js?1642060086></script>
-<script src=../js/learn.js?1642060086></script>
-<script src=../js/hugo-learn.js?1642060086></script>
-<script src=../mermaid/mermaid.js?1642060086></script>
+<script src=../js/modernizr.custom-3.6.0.js?1642149336></script>
+<script src=../js/learn.js?1642149336></script>
+<script src=../js/hugo-learn.js?1642149336></script>
+<script src=../mermaid/mermaid.js?1642149336></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
