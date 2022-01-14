@@ -4,30 +4,42 @@ menuTitle = "1. Web at a glance"
 weight = 1
 +++
 
+- [**1. Web at a glance**](#1-web-at-a-glance)
+  - [**1.1 Overview of a webpage**](#11-overview-of-a-webpage)
+    - [**1.1.1 HTML**](#111-html)
+    - [**1.1.2 CSS**](#112-css)
+    - [**1.1.3 JavaScript**](#113-javascript)
 
-# **爬虫入门教程**
-该教程总共分为4部分内容：
-1. 了解网页
-2. 节点及节点之间的关系
-3. 节点的抓取与选择
-4. 用R与Python对网站进行简单的爬取
+<span style="font-family:Impact; font-size:1.5em;color:red;">Is web crawling and scraping legal?</span>
+> <img src="https://op.image.skieer.com/images/logo_header.png" width="120"> <span style="font-family:Georgia; font-size:1em;">: If you’re doing web crawling for your own purposes, then it is legal as it falls under fair use doctrine. The complications start if you want to use scraped data for others, especially commercial purposes. As long as you are not crawling at a disruptive rate and the source is public you should be fine.</span> <br> 
+> <img src="https://2xawx0gmudy471po527lbxcd-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/quora-604x400.png" height="35"> <span style="font-family:Georgia; font-size:1em;">: You can crawl any page you like, scraping in itself is not illegal. The worst case scenario would be if you got blocked by the website if you do not follow the rules stated in the robots.txt.</span>
 
-- [**爬虫入门教程**](#爬虫入门教程)
-  - [**1. 了解网页**](#1-了解网页)
-    - [**1.1 认识网页结构**](#11-认识网页结构)
-      - [**1.1.1 HTML**](#111-html)
-      - [**1.1.2 CSS**](#112-css)
-      - [**1.1.3 JavaScript**](#113-javascript)
-    - [**1.2 关于爬虫的合法性**](#12-关于爬虫的合法性)
-  - [**2. 节点及节点的关系**](#2-节点及节点的关系)
+**What is a robots.txt file?** Robots.txt is a text file webmasters create to instruct web robots (typically search engine robots) how to crawl pages on their website. The robots.txt file is part of the the robots exclusion protocol (REP), a group of web standards that regulate how robots crawl the web, access and index content, and serve that content up to users.
 
-## **1. 了解网页** 
-### **1.1 认识网页结构**
-网页一般由三部分组成，分别是 HTML（超文本标记语言）、CSS（层叠样式表）和 JavaScript（活动脚本语言）。
+## **1. Web at a glance** 
+***What is the Web?*** 
+
+The **World Wide Web** (**WWW**), commonly known as the **Web**, is an information system. It is an amazing collection of interconnected documents. 
+
+**Webpage**/**Website** is a metaphor applied to the web.
+
+The purpose of a **Web browser** (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly. A browser does not display the HTML tags, but uses them to determine how to display the document
+
+### **1.1 Overview of a webpage**
+A webpage generally consists of three parts, namely HTML(超文本标记语言), CSS(层叠样式表) and JavaScript(活动脚本语言).
+
+- **HTML** provides the basic structure of sites, which is enhanced and modified by other technologies like CSS and JavaScript.
+- **CSS** is used to control presentation, formatting, and layout.
+- **JavaScript** is used to control the behavior of different elements.
+  
+*如果用人体来比喻，HTML 是人的骨架，并且定义了人的嘴巴、眼睛、耳朵等要长在哪里。CSS 是人的外观细节，如嘴巴长什么样子，眼睛是双眼皮还是单眼皮，是大眼睛还是小眼睛，皮肤是黑色的还是白色的等。JavaScript 表示人的技能，例如跳舞、唱歌或者演奏乐器等。*
+
 #### **1.1.1 HTML**
-首先让我们来看一个简单的网页：[webpage_raw](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_raw.html)
+HTML stands for HyperText Markup Language. "Markup language" means that, rather than using a programming language to perform functions, HTML uses **tags** to identify different types of content and the purposes they each serve to the webpage.
 
-这个网页背后的源代码是：
+Let's start with a simple webpage without CSS and JavaScript：[webpage_raw](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_raw.html)
+
+HTML Document:
 ```
 <!DOCTYPE html>
 <html>
@@ -38,6 +50,7 @@ weight = 1
 </head>
 
 <body>
+
     <h1>欢迎来到爬虫小组的网页！</h1>
     <p>这是一个简单的测试页</p>
 
@@ -49,32 +62,20 @@ weight = 1
     <p><b>2021年7月1日</b> — 滕书言加入诺华的日子</p>
     <p><b>2021年7月1日</b> — 姚艾文加入诺华的日子</p>
 
-    <h2>更多信息</h2>
+    <h2><img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:30px">更多信息 </h2>
     <p>Gitlab: 
-        <a href="http://gitlabce.apps.dit-prdocp.novartis.net/YUHAY/web-crawler-do.git">Web Craler DO</a>
+        <a href="http://gitlabce.apps.dit-prdocp.novartis.net/YUHAY/web-crawler-do.git">Web Crawler DO</a>
     </p>
+    
 </body>
 </html>
 ```
-HTML 是整个网页的结构，相当于整个网站的框架。带“＜”、“＞”符号的都是属于 HTML 的标签，并且标签都是成对出现的。
+You can see a lot of tags in this document, such as `<html>`, `</html>`, `<head>`, `<body>`, `<img>` etc.
 
-常见的标签如下：
-```
-<!DOCTYPE html> 声明为 HTML5 文档
-<head> 包含了文档的元（meta）数据，如 <meta charset="utf-8"> 定义网页编码格式为 utf-8
-<html>..</html> 表示标记中间的元素是网页
-<body>..</body> 表示用户可见的内容
-<div>..</div> 表示框架
-<p>..</p> 表示段落
-<li>..</li>表示列表
-<img>..</img>表示图片
-<h1>..</h1>表示标题
-<a href="">..</a>表示超链接
-```
 #### **1.1.2 CSS**
-CSS 表示样式，`<style type="text/css">`表示下面引用一个 CSS，在 CSS 中定义了外观。
+CSS stands for Cascading Style Sheets. This programming language dictates how the HTML elements of a website should actually appear on the frontend of the page.
 
-我们来看一下加入下面的CSS之后，网页会变成什么样子: [webpage_css](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_css.html)
+Let's see the new webpage after adding a CSS style: [webpage_css](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_css.html)
 
 ```
     <style type="text/css">
@@ -88,19 +89,7 @@ CSS 表示样式，`<style type="text/css">`表示下面引用一个 CSS，在 C
     </style>
 ```
 #### **1.1.3 JavaScript**
-JavaScript 表示功能。交互的内容和各种特效都在 JavaScript 中，JavaScript 描述了网站中的各种功能。让我们一起来看一个的例子：[webpage_js](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/webpage_js.html)
+JavaScript is a logic-based programming language that can be used to modify website content and make it behave in different ways in response to a user's actions. Most of the dynamic behavior you'll see on a web page is thanks to JavaScript, which augments a browser's default controls and behaviors.
 
-如果用人体来比喻，HTML 是人的骨架，并且定义了人的嘴巴、眼睛、耳朵等要长在哪里。CSS 是人的外观细节，如嘴巴长什么样子，眼睛是双眼皮还是单眼皮，是大眼睛还是小眼睛，皮肤是黑色的还是白色的等。JavaScript 表示人的技能，例如跳舞、唱歌或者演奏乐器等。
+Let's see the new webpage after applying a JavaScript：[webpage_js](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_js.html)
 
-### **1.2 关于爬虫的合法性**
-几乎每一个网站都有一个名为 robots.txt 的文档，当然也有部分网站没有设定 robots.txt。对于没有设定 robots.txt 的网站可以通过网络爬虫获取没有口令加密的数据，也就是该网站所有页面数据都可以爬取。如果网站有 robots.txt 文档，就要判断是否有禁止访客获取的数据。
-
-## **2. 节点及节点的关系** 
-
-|a|b|
-|---|---|
-askldjlaskjd|asiodiasdaskjd 
-
-i need to highlight ==so funny==
-
-:joy: :christmas_tree:
