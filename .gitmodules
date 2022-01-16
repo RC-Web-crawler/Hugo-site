@@ -9,6 +9,3 @@
 	path = public
 	url = https://github.com/RC-Web-crawler/rc-web-crawler.github.io.git
 	branch = main
-[submodule "themes/hugo-theme-learn"]
-	path = themes/hugo-theme-learn
-	url = https://github.com/matcornic/hugo-theme-learn
