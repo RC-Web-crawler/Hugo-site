@@ -1,7 +1,7 @@
 baseURL = "https://rc-web-crawler.github.io/"
 languageCode = 'en-us'
 title = 'Web Crawler'
-theme="learn"
+theme="hugo-theme-learn"
 relativeurls = true
 
 [params]
