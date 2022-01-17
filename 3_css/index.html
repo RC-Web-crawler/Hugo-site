@@ -6,18 +6,18 @@
 <meta name=description content>
 <link rel=icon href=../images/favicon.png type=image/png>
 <title>CSS selectorts & Xpath : Web Crawler</title>
-<link href=../css/nucleus.css?1642152840 rel=stylesheet>
-<link href=../css/fontawesome-all.min.css?1642152840 rel=stylesheet>
-<link href=../css/hybrid.css?1642152840 rel=stylesheet>
-<link href=../css/featherlight.min.css?1642152840 rel=stylesheet>
-<link href=../css/perfect-scrollbar.min.css?1642152840 rel=stylesheet>
-<link href=../css/auto-complete.css?1642152840 rel=stylesheet>
-<link href=../css/atom-one-dark-reasonable.css?1642152840 rel=stylesheet>
-<link href=../css/theme.css?1642152840 rel=stylesheet>
-<link href=../css/tabs.css?1642152840 rel=stylesheet>
-<link href=../css/hugo-theme.css?1642152840 rel=stylesheet>
-<link href=../css/theme-green.css?1642152840 rel=stylesheet>
-<script src=../js/jquery-3.3.1.min.js?1642152840></script>
+<link href=../css/nucleus.css?1642411111 rel=stylesheet>
+<link href=../css/fontawesome-all.min.css?1642411111 rel=stylesheet>
+<link href=../css/hybrid.css?1642411111 rel=stylesheet>
+<link href=../css/featherlight.min.css?1642411111 rel=stylesheet>
+<link href=../css/perfect-scrollbar.min.css?1642411111 rel=stylesheet>
+<link href=../css/auto-complete.css?1642411111 rel=stylesheet>
+<link href=../css/atom-one-dark-reasonable.css?1642411111 rel=stylesheet>
+<link href=../css/theme.css?1642411111 rel=stylesheet>
+<link href=../css/tabs.css?1642411111 rel=stylesheet>
+<link href=../css/hugo-theme.css?1642411111 rel=stylesheet>
+<link href=../css/theme-green.css?1642411111 rel=stylesheet>
+<script src=../js/jquery-3.3.1.min.js?1642411111></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
 <body data-url=../3_css/>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=../js/lunr.min.js?1642152840></script>
-<script type=text/javascript src=../js/auto-complete.js?1642152840></script>
+<script type=text/javascript src=../js/lunr.min.js?1642411111></script>
+<script type=text/javascript src=../js/auto-complete.js?1642411111></script>
 <script type=text/javascript>var baseurl="https://rc-web-crawler.github.io/"</script>
-<script type=text/javascript src=../js/search.js?1642152840></script>
+<script type=text/javascript src=../js/search.js?1642411111></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -108,87 +108,25 @@ active">
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li>
+<li><a href=#31-introduction>3.1 Introduction</a></li>
+<li><a href=#32-summary>3.2 Summary</a>
 <ul>
-<li></li>
+<li><a href=#321-css-selector-summary>3.2.1 CSS Selector Summary</a></li>
 </ul>
 </li>
-</ul>
+<li><a href=#322-xpath-summary>3.2.2 XPATH Summary</a></li>
+<li><a href=#33-examples>3.3 Examples</a>
 <ul>
-<li><a href=#css-selector-summary>CSS selector Summary</a>
-<ul>
-<li><a href=#syntax>Syntax</a></li>
-<li><a href=#expression>Expression</a></li>
-</ul>
-</li>
-<li><a href=#xpath-summary>XPATH Summary</a>
-<ul>
-<li><a href=#syntax-1>Syntax</a></li>
-<li><a href=#axes>Axes</a></li>
-<li><a href=#operator>Operator</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><a href=#html-structure>HTML Structure</a></li>
-<li><a href=#example-1>Example 1</a>
-<ul>
-<li><a href=#css-selector>css selector</a></li>
-<li><a href=#xpath>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-2>Example 2</a>
-<ul>
-<li><a href=#css-selector-1>css selector</a></li>
-<li><a href=#xpath-1>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-3>Example 3</a>
-<ul>
-<li><a href=#css-selector-2>css selector</a></li>
-<li><a href=#xpath-2>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-4>Example 4</a>
-<ul>
-<li><a href=#css-selector-3>css selector</a></li>
-<li><a href=#xpath-3>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-5>Example 5</a>
-<ul>
-<li><a href=#css-selector-4>css selector</a></li>
-<li><a href=#xpath-4>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-6>Example 6</a>
-<ul>
-<li><a href=#css-selector-5>css selector</a></li>
-<li><a href=#xpath-5>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-7>Example 7</a>
-<ul>
-<li><a href=#css-selector-6>css selector</a></li>
-<li><a href=#xpath-6>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-8>Example 8</a>
-<ul>
-<li><a href=#css-selector-7>css selector</a></li>
-<li><a href=#xpath-7>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-9>Example 9</a>
-<ul>
-<li><a href=#css-selector-8>css selector</a></li>
-<li><a href=#xpath-8>xpath</a></li>
-</ul>
-</li>
-<li><a href=#example-10>Example 10</a>
-<ul>
-<li><a href=#css-selector-9>css selector</a></li>
-<li><a href=#xpath-9>xpath</a></li>
+<li><a href=#example-1abusolte-path>Example 1:Abusolte path</a></li>
+<li><a href=#example-2relative-path>Example 2:Relative path</a></li>
+<li><a href=#example-3single-element>Example 3:Single element</a></li>
+<li><a href=#example-4multiple-element>Example 4:Multiple element</a></li>
+<li><a href=#example-5position>Example 5:Position</a></li>
+<li><a href=#example-6id-attribute>Example 6:ID attribute</a></li>
+<li><a href=#example-7class-attribute>Example 7:Class attribute</a></li>
+<li><a href=#example-8asterisk>Example 8:Asterisk</a></li>
+<li><a href=#example-9relationship>Example 9:Relationship</a></li>
+<li><a href=#example-10calculation>Example 10:Calculation</a></li>
 </ul>
 </li>
 </ul>
@@ -203,528 +141,814 @@ active">
 <h1>
 CSS selectorts & Xpath
 </h1>
-<p>========</p>
-<h4 id=songren>songren</h4>
-<h4 id=12272021>12/27/2021</h4>
-<h1 id=introduction>Introduction</h1>
-<p>XPath is a query language for selecting nodes from an XML document. In addition, XPath may be used to compute values from the content of an XML document. XPath was defined by the World Wide Web Consortium. CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.(CSS selector: <a href=https://www.w3school.com.cn/cssref/css_selectors.asp>https://www.w3school.com.cn/cssref/css_selectors.asp</a>, Xpath: <a href=https://www.w3school.com.cn/xpath/index.asp>https://www.w3school.com.cn/xpath/index.asp</a>)</p>
-<h1 id=summary>Summary</h1>
-<h2 id=css-selector-summary>CSS selector Summary</h2>
-<h3 id=syntax>Syntax</h3>
-<p>Syntax</p>
-<p>Example</p>
-<p>Result</p>
-<p>.class</p>
-<p>.intro</p>
-<p>Selects all elements with class=“intro”</p>
-<p>.class1.class2</p>
-<p>.name1.name2</p>
-<p>Selects all elements with both name1 and name2 set within its class attribute</p>
-<p>.class1 .class2</p>
-<p>.name1 .name2</p>
-<p>Selects all elements with name2 that is a descendant of an element with name1</p>
-<p>#id</p>
-<p>#firstname</p>
-<p>Selects the element with id=“firstname”</p>
-<p>asterisk</p>
-<p>asterisk</p>
-<p>Selects all elements</p>
-<p>element</p>
-<p>p</p>
-<p>Selects all <p> elements</p>
-<p>element.class</p>
-<p>p.intro</p>
-<p>Selects all <p> elements with class=“intro”</p>
-<p>element,element</p>
-<p>div, p</p>
-<p>Selects all <div> elements and all <p> elements</p>
-<p>element element</p>
-<p>div p</p>
-<p>Selects all <p> elements inside <div> elements</p>
-<p>element>element</p>
-<p>div > p</p>
-<p>Selects all <p> elements where the parent is a <div> element</p>
-<p>element+element</p>
-<p>div + p</p>
-<p>Selects the first <p> element that is placed immediately after <div> elements</p>
-<p>element1~element2</p>
-<p>p ~ ul</p>
-<p>Selects every <ul> element that is preceded by a <p> element</p>
-<p>[attribute]</p>
-<p>[target]</p>
-<p>Selects all elements with a target attribute</p>
-<p>[attribute=value]</p>
-<p>[target=_blank]</p>
-<p>Selects all elements with target="_blank"</p>
-<p>[attribute~=value]</p>
-<p>[title~=flower]</p>
-<p>Selects all elements with a title attribute containing the word “flower”</p>
-<p>[attribute|=value]</p>
-<p>[lang|=en]</p>
-<p>Selects all elements with a lang attribute value equal to “en” or starting with “en-”</p>
-<p>[attribute^=value]</p>
-<p>a[href^=“https”]</p>
-<p>Selects every <a> element whose href attribute value begins with “https”</p>
-<p>[attribute$=value]</p>
-<p>a[href$=“.pdf”]</p>
-<p>Selects every <a> element whose href attribute value ends with “.pdf”</p>
-<p>[attribute*=value]</p>
-<p>a[href*=“w3schools”]</p>
-<p>Selects every <a> element whose href attribute value contains the substring “w3schools”</p>
-<h3 id=expression>Expression</h3>
-<p>Expression</p>
-<p>Example</p>
-<p>Result</p>
-<p>:active</p>
-<p>a:active</p>
-<p>Selects the active link</p>
-<p>::after</p>
-<p>p::after</p>
-<p>Insert something after the content of each <p> element</p>
-<p>::before</p>
-<p>p::before</p>
-<p>Insert something before the content of each <p> element</p>
-<p>:checked</p>
-<p>input:checked</p>
-<p>Selects every checked <input> element</p>
-<p>:default</p>
-<p>input:default</p>
-<p>Selects the default <input> element</p>
-<p>:disabled</p>
-<p>input:disabled</p>
-<p>Selects every disabled <input> element</p>
-<p>:empty</p>
-<p>p:empty</p>
-<p>Selects every <p> element that has no children (including text nodes)</p>
-<p>:enabled</p>
-<p>input:enabled</p>
-<p>Selects every enabled <input> element</p>
-<p>:first-child</p>
-<p>p:first-child</p>
-<p>Selects every <p> element that is the first child of its parent</p>
-<p>::first-letter</p>
-<p>p::first-letter</p>
-<p>Selects the first letter of every <p> element</p>
-<p>::first-line</p>
-<p>p::first-line</p>
-<p>Selects the first line of every <p> element</p>
-<p>:first-of-type</p>
-<p>p:first-of-type</p>
-<p>Selects every <p> element that is the first <p> element of its parent</p>
-<p>:focus</p>
-<p>input:focus</p>
-<p>Selects the input element which has focus</p>
-<p>:fullscreen</p>
-<p>:fullscreen</p>
-<p>Selects the element that is in full-screen mode</p>
-<p>:hover</p>
-<p>a:hover</p>
-<p>Selects links on mouse over</p>
-<p>:in-range</p>
-<p>input:in-range</p>
-<p>Selects input elements with a value within a specified range</p>
-<p>:indeterminate</p>
-<p>input:indeterminate</p>
-<p>Selects input elements that are in an indeterminate state</p>
-<p>:invalid</p>
-<p>input:invalid</p>
-<p>Selects all input elements with an invalid value</p>
-<p>:lang(language)</p>
-<p>p:lang(it)</p>
-<p>Selects every <p> element with a lang attribute equal to “it” (Italian)</p>
-<p>:last-child</p>
-<p>p:last-child</p>
-<p>Selects every <p> element that is the last child of its parent</p>
-<p>:last-of-type</p>
-<p>p:last-of-type</p>
-<p>Selects every <p> element that is the last <p> element of its parent</p>
-<p>:link</p>
-<p>a:link</p>
-<p>Selects all unvisited links</p>
-<p>::marker</p>
-<p>::marker</p>
-<p>Selects the markers of list items</p>
-<p>:not(selector)</p>
-<p>:not(p)</p>
-<p>Selects every element that is not a <p> element</p>
-<p>:nth-child(n)</p>
-<p>p:nth-child(2)</p>
-<p>Selects every <p> element that is the second child of its parent</p>
-<p>:nth-last-child(n)</p>
-<p>p:nth-last-child(2)</p>
-<p>Selects every <p> element that is the second child of its parent, counting from the last child</p>
-<p>:nth-last-of-type(n)</p>
-<p>p:nth-last-of-type(2)</p>
-<p>Selects every <p> element that is the second <p> element of its parent, counting from the last child</p>
-<p>:nth-of-type(n)</p>
-<p>p:nth-of-type(2)</p>
-<p>Selects every <p> element that is the second <p> element of its parent</p>
-<p>:only-of-type</p>
-<p>p:only-of-type</p>
-<p>Selects every <p> element that is the only <p> element of its parent</p>
-<p>:only-child</p>
-<p>p:only-child</p>
-<p>Selects every <p> element that is the only child of its parent</p>
-<p>:optional</p>
-<p>input:optional</p>
-<p>Selects input elements with no “required” attribute</p>
-<p>:out-of-range</p>
-<p>input:out-of-range</p>
-<p>Selects input elements with a value outside a specified range</p>
-<p>::placeholder</p>
-<p>input::placeholder</p>
-<p>Selects input elements with the “placeholder” attribute specified</p>
-<p>:read-only</p>
-<p>input:read-only</p>
-<p>Selects input elements with the “readonly” attribute specified</p>
-<p>:read-write</p>
-<p>input:read-write</p>
-<p>Selects input elements with the “readonly” attribute NOT specified</p>
-<p>:required</p>
-<p>input:required</p>
-<p>Selects input elements with the “required” attribute specified</p>
-<p>:root</p>
-<p>:root</p>
-<p>Selects the document’s root element</p>
-<p>::selection</p>
-<p>::selection</p>
-<p>Selects the portion of an element that is selected by a user</p>
-<p>:target</p>
-<p>#<a href=news:target>news:target</a></p>
-<p>Selects the current active #news element (clicked on a URL containing that anchor name)</p>
-<p>:valid</p>
-<p>input:valid</p>
-<p>Selects all input elements with a valid value</p>
-<p>:visited</p>
-<p>a:visited</p>
-<p>Selects all visited links</p>
-<h2 id=xpath-summary>XPATH Summary</h2>
-<h3 id=syntax-1>Syntax</h3>
-<p>Expression</p>
-<p>Description</p>
-<p>Example</p>
-<p>Result</p>
-<p>nodename</p>
-<p>Selects all nodes with the name “nodename”</p>
-<p>bookstore</p>
-<p>Selects all nodes with the name “bookstore”</p>
-<p>/</p>
-<p>Selects from the root node</p>
-<p>/bookstore</p>
-<p>Selects the root element bookstore</p>
-<p>//</p>
-<p>Selects nodes in the document from the current node that match the selection no matter where they are</p>
-<p>bookstore/book</p>
-<p>Selects all book elements that are children of bookstore</p>
-<p>.</p>
-<p>Selects the current node</p>
-<p>//book</p>
-<p>Selects all book elements no matter where they are in the document</p>
-<p>..</p>
-<p>Selects the parent of the current node</p>
-<p>bookstore//book</p>
-<p>Selects all book elements that are descendant of the bookstore element, no matter where they are under the bookstore element</p>
-<p>@</p>
-<p>Selects attributes</p>
-<p>//@lang</p>
-<p>Selects all attributes that are named lang</p>
-<p>*</p>
-<p>Matches any element node</p>
-<p>/bookstore/*</p>
-<p>Selects all the child element nodes of the bookstore element</p>
-<p>@*</p>
-<p>Matches any attribute node</p>
-<p>//*</p>
-<p>Selects all elements in the document</p>
-<p>node()</p>
-<p>Matches any node of any kind</p>
-<p>//title[@*]</p>
-<p>Selects all title elements which have at least one attribute of any kind</p>
+<h2 id=31-introduction>3.1 Introduction</h2>
+<p>CSS, Cascading Style Sheets, is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. And CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.</p>
+<p>XPath, XML Path Language, is a query language for selecting nodes from an XML document. In addition, XPath may be used to compute values from the content of an XML document. XPath was defined by the World Wide Web Consortium.
+<a href=https://www.w3schools.com/default.asp>CSS Selector vs XPATH</a></p>
+<p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as <code>&lt;img /></code> and <code>&lt;input /></code> directly introduce content into the page. Other tags such as <code>&lt;p></code> surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page. HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997. A form of HTML, known as HTML5, is used to display video and audio, primarily using the <code>&lt;canvas></code> element, in collaboration with javascript.</p>
+<p>Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The design goals of XML emphasize simplicity, generality, and usability across the Internet. It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures such as those used in web services.
+<a href="https://www.upgrad.com/blog/html-vs-xml/#:~:text=HTML%20and%20XML%20are%20related,language%20that%20defines%20other%20languages.">HTML vs XML</a></p>
+<h2 id=32-summary>3.2 Summary</h2>
+<h3 id=321-css-selector-summary>3.2.1 CSS Selector Summary</h3>
+<hr>
+<p>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item=Syntax data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','Syntax')">Syntax</button>
+<button data-tab-item=Expression data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','Expression')">Expression</button>
+</div>
+<div class=tab-content>
+<div data-tab-item=Syntax data-tab-group=default class="tab-item active">
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.class</td>
+<td>.intro</td>
+<td>Selects all elements with class=&ldquo;intro&rdquo;</td>
+</tr>
+<tr>
+<td>.class1.class2</td>
+<td>.name1.name2</td>
+<td>Selects all elements with both name1 and name2 set within its class attribute</td>
+</tr>
+<tr>
+<td>.class1 .class2</td>
+<td>.name1 .name2</td>
+<td>Selects all elements with name2 that is a descendant of an element with name1</td>
+</tr>
+<tr>
+<td>#id</td>
+<td>#firstname</td>
+<td>Selects the element with id=&ldquo;firstname&rdquo;</td>
+</tr>
+<tr>
+<td>*</td>
+<td>*</td>
+<td>Selects all elements</td>
+</tr>
+<tr>
+<td>element</td>
+<td>p</td>
+<td>Selects all p elements</td>
+</tr>
+<tr>
+<td>element.class</td>
+<td>p.intro</td>
+<td>Selects all p elements with class=&ldquo;intro&rdquo;</td>
+</tr>
+<tr>
+<td>element,element</td>
+<td>div, p</td>
+<td>Selects all div elements and all p elements</td>
+</tr>
+<tr>
+<td>element element</td>
+<td>div p</td>
+<td>Selects all p elements inside div elements</td>
+</tr>
+<tr>
+<td>element>element</td>
+<td>div > p</td>
+<td>Selects all p elements where the parent is a div element</td>
+</tr>
+<tr>
+<td>element+element</td>
+<td>div + p</td>
+<td>Selects the first p element that is placed immediately after div elements</td>
+</tr>
+<tr>
+<td>element1~element2</td>
+<td>p ~ ul</td>
+<td>Selects every ul element that is preceded by a p element</td>
+</tr>
+<tr>
+<td>[attribute]</td>
+<td>[target]</td>
+<td>Selects all elements with a target attribute</td>
+</tr>
+<tr>
+<td>[attribute=value]</td>
+<td>[target=_blank]</td>
+<td>Selects all elements with target="_blank"</td>
+</tr>
+<tr>
+<td>[attribute~=value]</td>
+<td>[title~=flower]</td>
+<td>Selects all elements with a title attribute containing the word &ldquo;flower&rdquo;</td>
+</tr>
+<tr>
+<td>[attribute|=value]</td>
+<td>[lang|=en]</td>
+<td>Selects all elements with a lang attribute value equal to &ldquo;en&rdquo; or starting with &ldquo;en-&rdquo;</td>
+</tr>
+<tr>
+<td>[attribute^=value]</td>
+<td>a[href^=&ldquo;https&rdquo;]</td>
+<td>Selects every a element whose href attribute value begins with &ldquo;https&rdquo;</td>
+</tr>
+<tr>
+<td>[attribute$=value]</td>
+<td>a[href$=".pdf"]</td>
+<td>Selects every a element whose href attribute value ends with &ldquo;.pdf&rdquo;</td>
+</tr>
+<tr>
+<td>[attribute*=value]</td>
+<td>a[href*=&ldquo;w3schools&rdquo;]</td>
+<td>Selects every a element whose href attribute value contains the substring &ldquo;w3schools&rdquo;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-tab-item=Expression data-tab-group=default class=tab-item>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:active</td>
+<td>a:active</td>
+<td>Selects the active link</td>
+</tr>
+<tr>
+<td>::after</td>
+<td>p::after</td>
+<td>Insert something after the content of each p element</td>
+</tr>
+<tr>
+<td>::before</td>
+<td>p::before</td>
+<td>Insert something before the content of each p element</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>input:checked</td>
+<td>Selects every checked input element</td>
+</tr>
+<tr>
+<td>:default</td>
+<td>input:default</td>
+<td>Selects the default input element</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>input:disabled</td>
+<td>Selects every disabled input element</td>
+</tr>
+<tr>
+<td>:empty</td>
+<td>p:empty</td>
+<td>Selects every p element that has no children (including text nodes)</td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>input:enabled</td>
+<td>Selects every enabled input element</td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>p:first-child</td>
+<td>Selects every p element that is the first child of its parent</td>
+</tr>
+<tr>
+<td>::first-letter</td>
+<td>p::first-letter</td>
+<td>Selects the first letter of every p element</td>
+</tr>
+<tr>
+<td>::first-line</td>
+<td>p::first-line</td>
+<td>Selects the first line of every p element</td>
+</tr>
+<tr>
+<td>:first-of-type</td>
+<td>p:first-of-type</td>
+<td>Selects every p element that is the first p element of its parent</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>input:focus</td>
+<td>Selects the input element which has focus</td>
+</tr>
+<tr>
+<td>:fullscreen</td>
+<td>:fullscreen</td>
+<td>Selects the element that is in full-screen mode</td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>a:hover</td>
+<td>Selects links on mouse over</td>
+</tr>
+<tr>
+<td>:in-range</td>
+<td>input:in-range</td>
+<td>Selects input elements with a value within a specified range</td>
+</tr>
+<tr>
+<td>:indeterminate</td>
+<td>input:indeterminate</td>
+<td>Selects input elements that are in an indeterminate state</td>
+</tr>
+<tr>
+<td>:invalid</td>
+<td>input:invalid</td>
+<td>Selects all input elements with an invalid value</td>
+</tr>
+<tr>
+<td>:lang(language)</td>
+<td>p:lang(it)</td>
+<td>Selects every p element with a lang attribute equal to &ldquo;it&rdquo; (Italian)</td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>p:last-child</td>
+<td>Selects every p element that is the last child of its parent</td>
+</tr>
+<tr>
+<td>:last-of-type</td>
+<td>p:last-of-type</td>
+<td>Selects every p element that is the last p element of its parent</td>
+</tr>
+<tr>
+<td>:link</td>
+<td>a:link</td>
+<td>Selects all unvisited links</td>
+</tr>
+<tr>
+<td>::marker</td>
+<td>::marker</td>
+<td>Selects the markers of list items</td>
+</tr>
+<tr>
+<td>:not(selector)</td>
+<td>:not(p)</td>
+<td>Selects every element that is not a p element</td>
+</tr>
+<tr>
+<td>:nth-child(n)</td>
+<td>p:nth-child(2)</td>
+<td>Selects every p element that is the second child of its parent</td>
+</tr>
+<tr>
+<td>:nth-last-child(n)</td>
+<td>p:nth-last-child(2)</td>
+<td>Selects every p element that is the second child of its parent, counting from the last child</td>
+</tr>
+<tr>
+<td>:nth-last-of-type(n)</td>
+<td>p:nth-last-of-type(2)</td>
+<td>Selects every p element that is the second p element of its parent, counting from the last child</td>
+</tr>
+<tr>
+<td>:nth-of-type(n)</td>
+<td>p:nth-of-type(2)</td>
+<td>Selects every p element that is the second p element of its parent</td>
+</tr>
+<tr>
+<td>:only-of-type</td>
+<td>p:only-of-type</td>
+<td>Selects every p element that is the only p element of its parent</td>
+</tr>
+<tr>
+<td>:only-child</td>
+<td>p:only-child</td>
+<td>Selects every p element that is the only child of its parent</td>
+</tr>
+<tr>
+<td>:optional</td>
+<td>input:optional</td>
+<td>Selects input elements with no &ldquo;required&rdquo; attribute</td>
+</tr>
+<tr>
+<td>:out-of-range</td>
+<td>input:out-of-range</td>
+<td>Selects input elements with a value outside a specified range</td>
+</tr>
+<tr>
+<td>::placeholder</td>
+<td>input::placeholder</td>
+<td>Selects input elements with the &ldquo;placeholder&rdquo; attribute specified</td>
+</tr>
+<tr>
+<td>:read-only</td>
+<td>input:read-only</td>
+<td>Selects input elements with the &ldquo;readonly&rdquo; attribute specified</td>
+</tr>
+<tr>
+<td>:read-write</td>
+<td>input:read-write</td>
+<td>Selects input elements with the &ldquo;readonly&rdquo; attribute NOT specified</td>
+</tr>
+<tr>
+<td>:required</td>
+<td>input:required</td>
+<td>Selects input elements with the &ldquo;required&rdquo; attribute specified</td>
+</tr>
+<tr>
+<td>:root</td>
+<td>:root</td>
+<td>Selects the document&rsquo;s root element</td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>::selection</td>
+<td>Selects the portion of an element that is selected by a user</td>
+</tr>
+<tr>
+<td>:target</td>
+<td>#news:target</td>
+<td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+</tr>
+<tr>
+<td>:valid</td>
+<td>input:valid</td>
+<td>Selects all input elements with a valid value</td>
+</tr>
+<tr>
+<td>:visited</td>
+<td>a:visited</td>
+<td>Selects all visited links</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<a href=https://frontend30.com/css-selectors-cheatsheet/>CSS Selector Cheat Sheet</a></p>
+<h2 id=322-xpath-summary>3.2.2 XPATH Summary</h2>
+<hr>
+<p>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item=Syntax data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','Syntax')">Syntax</button>
+<button data-tab-item=Axes data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','Axes')">Axes</button>
+<button data-tab-item=Operator data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','Operator')">Operator</button>
+</div>
+<div class=tab-content>
+<div data-tab-item=Syntax data-tab-group=default class="tab-item active">
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodename</td>
+<td>Selects all nodes with the name &ldquo;nodename&rdquo;</td>
+<td>bookstore</td>
+<td>Selects all nodes with the name &ldquo;bookstore&rdquo;</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Selects from the root node</td>
+<td>/bookstore</td>
+<td>Selects the root element bookstore</td>
+</tr>
+<tr>
+<td>//</td>
+<td>Selects nodes in the document from the current node that match the selection</td>
+<td>bookstore/book</td>
+<td>Selects all book elements that are children of bookstore</td>
+</tr>
+<tr>
+<td>.</td>
+<td>Selects the current node</td>
+<td>//book</td>
+<td>Selects all book elements no matter where they are in the document</td>
+</tr>
+<tr>
+<td>..</td>
+<td>Selects the parent of the current node</td>
+<td>bookstore//book</td>
+<td>Selects all book elements that are descendant of the bookstore element</td>
+</tr>
+<tr>
+<td>@</td>
+<td>Selects attributes</td>
+<td>//@lang</td>
+<td>Selects all attributes that are named lang</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Matches any element node</td>
+<td>/bookstore/*</td>
+<td>Selects all the child element nodes of the bookstore element</td>
+</tr>
+<tr>
+<td>@*</td>
+<td>Matches any attribute node</td>
+<td>//*</td>
+<td>Selects all elements in the document</td>
+</tr>
+<tr>
+<td>node()</td>
+<td>Matches any node of any kind</td>
+<td>//title[@*]</td>
+<td>Selects all title elements which have at least one attribute of any kind</td>
+</tr>
+</tbody>
+</table>
 <p>Note: If the path starts with a slash ( / ) it always represents an absolute path to an element!</p>
-<h3 id=axes>Axes</h3>
-<p>Axesname</p>
-<p>Description</p>
-<p>Example</p>
-<p>Result</p>
-<p>ancestor</p>
-<p>Selects all ancestors (parent, grandparent, etc.) of the current node</p>
-<p>ancestor::book</p>
-<p>Selects all book nodes that are ancestor of the current node</p>
-<p>ancestor-or-self</p>
-<p>Selects all ancestors (parent, grandparent, etc.) of the current node and the current node itself</p>
-<p>attribute</p>
-<p>Selects all attributes of the current node</p>
-<p>attribute::*</p>
-<p>Selects all attributes of the current node</p>
-<p>child</p>
-<p>Selects all children of the current node</p>
-<p>child::*/child::price</p>
-<p>Selects all price grandchildren of the current node</p>
-<p>descendant</p>
-<p>Selects all descendants (children, grandchildren, etc.) of the current node</p>
-<p>descendant::book</p>
-<p>Selects all book descendants of the current node</p>
-<p>descendant-or-self</p>
-<p>Selects all descendants (children, grandchildren, etc.) of the current node and the current node itself</p>
-<p>following</p>
-<p>Selects everything in the document after the closing tag of the current node</p>
-<p>following::text()</p>
-<p>Selects all text node that are everything after the current node</p>
-<p>following-sibling</p>
-<p>Selects all siblings after the current node</p>
-<p>following-sibling::node()</p>
-<p>Selects all siblings after the current node</p>
-<p>namespace</p>
-<p>Selects all namespace nodes of the current node</p>
-<p>parent</p>
-<p>Selects the parent of the current node</p>
-<p>parent::book</p>
-<p>Selects all book nodes that are parent of the current node</p>
-<p>preceding</p>
-<p>Selects all nodes that appear before the current node in the document, except ancestors, attribute nodes and namespace nodes</p>
-<p>preceding::price</p>
-<p>Selects all price nodes that appear before the current node</p>
-<p>preceding-sibling</p>
-<p>Selects all siblings before the current node</p>
-<p>preceding-sibling::book[price>50.0]</p>
-<p>Selects book nodes with price>50 from siblings before the current node</p>
-<p>self</p>
-<p>Selects the current node</p>
-<p>self::*</p>
-<p>Selects all in the current node</p>
-<h3 id=operator>Operator</h3>
-<p>Operator</p>
-<p>Description</p>
-<p>Example</p>
-<p>|</p>
-<p>Computes two node-sets</p>
-<p>//book | //cd</p>
-<ul>
-<li></li>
-</ul>
-<p>Addition</p>
-<p>6 + 4</p>
-<p>-</p>
-<p>Subtraction</p>
-<p>6 - 4</p>
-<p>*</p>
-<p>Multiplication</p>
-<p>6 * 4</p>
-<p>div</p>
-<p>Division</p>
-<p>8 div 4</p>
-<p>=</p>
-<p>Equal</p>
-<p>price=9.80</p>
-<p>!=</p>
-<p>Not equal</p>
-<p>price!=9.80</p>
-<p>&lt;</p>
-<p>Less than</p>
-<p>price&lt;9.80</p>
-<p>&lt;=</p>
-<p>Less than or equal to</p>
-<p>price&lt;=9.80</p>
-<p>></p>
-<p>Greater than</p>
-<p>price>9.80</p>
-<p>>=</p>
-<p>Greater than or equal to</p>
-<p>price>=9.80</p>
-<p>or</p>
-<p>or</p>
-<p>price=9.80 or price=9.70</p>
-<p>and</p>
-<p>and</p>
-<p>price>9.00 and price&lt;9.90</p>
-<p>mod</p>
-<p>Modulus (division remainder)</p>
-<p>5 mod 2</p>
-<h1 id=examples>Examples</h1>
-<h2 id=html-structure>HTML Structure</h2>
-<pre><code>## &lt;!DOCTYPE html&gt;
-## &lt;html&gt;
-## &lt;head&gt;
-## &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
-## &lt;meta charset=&quot;utf-8&quot;&gt;
-## &lt;title&gt;Webscrap introduction&lt;/title&gt;
-## &lt;/head&gt;
-## &lt;body&gt;
-## &lt;div class=&quot;class1&quot; id=&quot;div1&quot;&gt;
-##       &lt;p class=&quot;class3&quot;&gt;
-##         Welcome 2022!
-##          &lt;t class=&quot;text&quot;&gt;
-##          Beat COVID-19!
-##          &lt;/t&gt;&lt;/p&gt;
-##  &lt;/div&gt;
-##  &lt;div class=&quot;class2&quot; id=&quot;div2&quot;&gt;
-##       &lt;p class=&quot;class3&quot; href=&quot;https://en.wikipedia.org/wiki/Cat&quot;&gt;
-##         Happy Spring Festival!
-##          &lt;t class=&quot;text&quot;&gt; Dumpling YYDS! &lt;/t&gt;&lt;price&gt;0.00&lt;/price&gt;&lt;/p&gt;
-##  &lt;/div&gt;
-##  &lt;div class=&quot;class1 class2&quot; id=&quot;div3&quot;&gt;
-##       &lt;p class=&quot;class3&quot; href=&quot;https://en.wikipedia.org/wiki/Cat&quot;&gt;
-##         Happy Valentine's Day!
-##          &lt;t class=&quot;text&quot;&gt; Let's romantic! &lt;/t&gt;&lt;price&gt;100.0&lt;/price&gt;&lt;/p&gt;
-##       &lt;p class=&quot;class4&quot; href=&quot;https://en.wikipedia.org/wiki/Cat&quot;&gt;
-##         Happy Lantern Festival!
-##          &lt;t class=&quot;text&quot;&gt; Sweet Dumpling YYDS! &lt;/t&gt;&lt;price&gt;0.0&lt;/price&gt;&lt;/p&gt;
-##  &lt;/div&gt;
-## &lt;/body&gt;
-## &lt;/html&gt;
-## 
-</code></pre>
-<h2 id=example-1>Example 1</h2>
-<h3 id=css-selector>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;head &gt; title&quot;)
-
-## [1] &quot;Webscrap introduction&quot;
-</code></pre>
-<h3 id=xpath>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;/html/head/title&quot;)
-
-## [1] &quot;Webscrap introduction&quot;
-</code></pre>
-<h2 id=example-2>Example 2</h2>
-<h3 id=css-selector-1>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;body p&quot;)
-
-## [1] &quot;   Welcome 2022!        Beat COVID-19!    &quot;             
-## [2] &quot;   Happy Spring Festival!     Dumpling YYDS! 0.00&quot;      
-## [3] &quot;   Happy Valentine's Day!     Let's romantic! 100.0&quot;    
-## [4] &quot;   Happy Lantern Festival!     Sweet Dumpling YYDS! 0.0&quot;
-</code></pre>
-<h3 id=xpath-1>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//body//p&quot;)
-
-## [1] &quot;   Welcome 2022!        Beat COVID-19!    &quot;             
-## [2] &quot;   Happy Spring Festival!     Dumpling YYDS! 0.00&quot;      
-## [3] &quot;   Happy Valentine's Day!     Let's romantic! 100.0&quot;    
-## [4] &quot;   Happy Lantern Festival!     Sweet Dumpling YYDS! 0.0&quot;
-</code></pre>
-<h2 id=example-3>Example 3</h2>
-<h3 id=css-selector-2>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;t&quot;)
-
-## [1] &quot;    Beat COVID-19!    &quot; &quot; Dumpling YYDS! &quot;       &quot; Let's romantic! &quot;     
-## [4] &quot; Sweet Dumpling YYDS! &quot;
-</code></pre>
-<h3 id=xpath-2>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//t&quot;)
-
-## [1] &quot;    Beat COVID-19!    &quot; &quot; Dumpling YYDS! &quot;       &quot; Let's romantic! &quot;     
-## [4] &quot; Sweet Dumpling YYDS! &quot;
-</code></pre>
-<h2 id=example-4>Example 4</h2>
-<h3 id=css-selector-3>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;div:first-of-type&quot;)
-
-## [1] &quot;    Welcome 2022!        Beat COVID-19!     &quot;
-
-check_element_text(html = html, css = &quot;div:nth-of-type(2)&quot;)
-
-## [1] &quot;    Happy Spring Festival!     Dumpling YYDS! 0.00 &quot;
-
-check_element_text(html = html, css = &quot;div:last-of-type&quot;)
-
-## [1] &quot;    Happy Valentine's Day!     Let's romantic! 100.0    Happy Lantern Festival!     Sweet Dumpling YYDS! 0.0 &quot;
-</code></pre>
-<h3 id=xpath-3>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//div[position()=1]&quot;)
-
-## [1] &quot;    Welcome 2022!        Beat COVID-19!     &quot;
-
-check_element_text(html = html, xpath = &quot;//div[2]&quot;)
-
-## [1] &quot;    Happy Spring Festival!     Dumpling YYDS! 0.00 &quot;
-
-check_element_text(html = html, xpath = &quot;//div[last()]&quot;)
-
-## [1] &quot;    Happy Valentine's Day!     Let's romantic! 100.0    Happy Lantern Festival!     Sweet Dumpling YYDS! 0.0 &quot;
-</code></pre>
-<h2 id=example-5>Example 5</h2>
-<h3 id=css-selector-4>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;div#div2&quot;)
-
-## [1] &quot;    Happy Spring Festival!     Dumpling YYDS! 0.00 &quot;
-</code></pre>
-<h3 id=xpath-4>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//div[@id='div2']&quot;)
-
-## [1] &quot;    Happy Spring Festival!     Dumpling YYDS! 0.00 &quot;
-</code></pre>
-<h2 id=example-6>Example 6</h2>
-<h3 id=css-selector-5>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;t.text&quot;)
-
-## [1] &quot;    Beat COVID-19!    &quot; &quot; Dumpling YYDS! &quot;       &quot; Let's romantic! &quot;     
-## [4] &quot; Sweet Dumpling YYDS! &quot;
-</code></pre>
-<h3 id=xpath-5>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//t[@class='text']&quot;)
-
-## [1] &quot;    Beat COVID-19!    &quot; &quot; Dumpling YYDS! &quot;       &quot; Let's romantic! &quot;     
-## [4] &quot; Sweet Dumpling YYDS! &quot;
-</code></pre>
-<h2 id=example-7>Example 7</h2>
-<h3 id=css-selector-6>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;*.class3&quot;)
-
-## [1] &quot;   Welcome 2022!        Beat COVID-19!    &quot;         
-## [2] &quot;   Happy Spring Festival!     Dumpling YYDS! 0.00&quot;  
-## [3] &quot;   Happy Valentine's Day!     Let's romantic! 100.0&quot;
-</code></pre>
-<h3 id=xpath-6>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//*[@class='class3']&quot;)
-
-## [1] &quot;   Welcome 2022!        Beat COVID-19!    &quot;         
-## [2] &quot;   Happy Spring Festival!     Dumpling YYDS! 0.00&quot;  
-## [3] &quot;   Happy Valentine's Day!     Let's romantic! 100.0&quot;
-</code></pre>
-<h2 id=example-8>Example 8</h2>
-<h3 id=css-selector-7>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;t, price&quot;)
-
-## [1] &quot;    Beat COVID-19!    &quot; &quot; Dumpling YYDS! &quot;       &quot;0.00&quot;                  
-## [4] &quot; Let's romantic! &quot;      &quot;100.0&quot;                  &quot; Sweet Dumpling YYDS! &quot;
-## [7] &quot;0.0&quot;
-</code></pre>
-<h3 id=xpath-7>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//t | //price&quot;)
-
-## [1] &quot;    Beat COVID-19!    &quot; &quot; Dumpling YYDS! &quot;       &quot;0.00&quot;                  
-## [4] &quot; Let's romantic! &quot;      &quot;100.0&quot;                  &quot; Sweet Dumpling YYDS! &quot;
-## [7] &quot;0.0&quot;
-</code></pre>
-<h2 id=example-9>Example 9</h2>
-<h3 id=css-selector-8>css selector</h3>
-<pre><code>check_element_text(html = html, css = &quot;div t&quot;)
-
-## [1] &quot;    Beat COVID-19!    &quot; &quot; Dumpling YYDS! &quot;       &quot; Let's romantic! &quot;     
-## [4] &quot; Sweet Dumpling YYDS! &quot;
-</code></pre>
-<h3 id=xpath-8>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//div/descendant::t&quot;)
-
-## [1] &quot;    Beat COVID-19!    &quot; &quot; Dumpling YYDS! &quot;       &quot; Let's romantic! &quot;     
-## [4] &quot; Sweet Dumpling YYDS! &quot;
-
-check_element_text(html = html, xpath = &quot;//t/ancestor::div&quot;)
-
-## [1] &quot;    Welcome 2022!        Beat COVID-19!     &quot;                                                                 
-## [2] &quot;    Happy Spring Festival!     Dumpling YYDS! 0.00 &quot;                                                          
-## [3] &quot;    Happy Valentine's Day!     Let's romantic! 100.0    Happy Lantern Festival!     Sweet Dumpling YYDS! 0.0 &quot;
-</code></pre>
-<h2 id=example-10>Example 10</h2>
-<h3 id=css-selector-9>css selector</h3>
-<pre><code>## Not avaiable
-</code></pre>
-<h3 id=xpath-9>xpath</h3>
-<pre><code>check_element_text(html = html, xpath = &quot;//p[price&gt;50.0]/t&quot;)
-
-## [1] &quot; Let's romantic! &quot;
-</code></pre>
-<p>// add bootstrap table styles to pandoc tables function bootstrapStylePandocTables() { $(&lsquo;tr.odd&rsquo;).parent(&lsquo;tbody&rsquo;).parent(&lsquo;table&rsquo;).addClass(&lsquo;table table-condensed&rsquo;); } $(document).ready(function () { bootstrapStylePandocTables(); }); $(document).ready(function () { window.buildTabsets(&ldquo;TOC&rdquo;); }); $(document).ready(function () { $('.tabset-dropdown > .nav-tabs > li').click(function () { $(this).parent().toggleClass(&lsquo;nav-tabs-open&rsquo;); }); }); $(document).ready(function () { // temporarily add toc-ignore selector to headers for the consistency with Pandoc $('.unlisted.unnumbered').addClass(&lsquo;toc-ignore&rsquo;) // move toc-ignore selectors from section div to header $(&lsquo;div.section.toc-ignore&rsquo;) .removeClass(&lsquo;toc-ignore&rsquo;) .children(&lsquo;h1,h2,h3,h4,h5&rsquo;).addClass(&lsquo;toc-ignore&rsquo;); // establish options var options = { selectors: &ldquo;h1,h2,h3&rdquo;, theme: &ldquo;bootstrap3&rdquo;, context: &lsquo;.toc-content&rsquo;, hashGenerator: function (text) { return text.replace(/[.\\/?&!#&lt;>]/g, &lsquo;').replace(/\s/g, &lsquo;_'); }, ignoreSelector: &ldquo;.toc-ignore&rdquo;, scrollTo: 0 }; options.showAndHide = true; options.smoothScroll = true; // tocify var toc = $("#TOC").tocify(options).data(&ldquo;toc-tocify&rdquo;); }); (function () { var script = document.createElement(&ldquo;script&rdquo;); script.type = &ldquo;text/javascript&rdquo;; script.src = &ldquo;<a href="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML">https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML</a>_HTMLorMML&rdquo;; document.getElementsByTagName(&ldquo;head&rdquo;)[0].appendChild(script); })();</p>
+</div>
+<div data-tab-item=Axes data-tab-group=default class=tab-item>
+<table>
+<thead>
+<tr>
+<th>Axesname</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ancestor</td>
+<td>Selects all ancestors (parent, grandparent, etc.) of the current node</td>
+<td>ancestor::book</td>
+<td>Selects all book nodes that are ancestor of the current node</td>
+</tr>
+<tr>
+<td>ancestor-or-self</td>
+<td>Selects all ancestors (parent, grandparent, etc.) of the current node and the current node itself</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>attribute</td>
+<td>Selects all attributes of the current node</td>
+<td>attribute::*</td>
+<td>Selects all attributes of the current node</td>
+</tr>
+<tr>
+<td>child</td>
+<td>Selects all children of the current node</td>
+<td>child::*/child::price</td>
+<td>Selects all price grandchildren of the current node</td>
+</tr>
+<tr>
+<td>descendant</td>
+<td>Selects all descendants (children, grandchildren, etc.) of the current node</td>
+<td>descendant::book</td>
+<td>Selects all book descendants of the current node</td>
+</tr>
+<tr>
+<td>descendant-or-self</td>
+<td>Selects all descendants (children, grandchildren, etc.) of the current node and the current node itself</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>following</td>
+<td>Selects everything in the document after the closing tag of the current node</td>
+<td>following::text()</td>
+<td>Selects all text node that are everything after the current node</td>
+</tr>
+<tr>
+<td>following-sibling</td>
+<td>Selects all siblings after the current node</td>
+<td>following-sibling::node()</td>
+<td>Selects all siblings after the current node</td>
+</tr>
+<tr>
+<td>namespace</td>
+<td>Selects all namespace nodes of the current node</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Selects the parent of the current node</td>
+<td>parent::book</td>
+<td>Selects all book nodes that are parent of the current node</td>
+</tr>
+<tr>
+<td>preceding</td>
+<td>Selects all nodes that are before the current node, except ancestors, attribute nodes and namespace nodes</td>
+<td>preceding::price</td>
+<td>Selects all price nodes that appear before the current node</td>
+</tr>
+<tr>
+<td>preceding-sibling</td>
+<td>Selects all siblings before the current node</td>
+<td>preceding-sibling::book[price>50.0]</td>
+<td>Selects book nodes with price>50 from siblings before the current node</td>
+</tr>
+<tr>
+<td>self</td>
+<td>Selects the current node</td>
+<td>self::*</td>
+<td>Selects all in the current node</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div data-tab-item=Operator data-tab-group=default class=tab-item>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>|</td>
+<td>Computes two node-sets</td>
+<td>//book | //cd</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td>6 + 4</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td>6 - 4</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>6 * 4</td>
+</tr>
+<tr>
+<td>div</td>
+<td>Division</td>
+<td>8 div 4</td>
+</tr>
+<tr>
+<td>=</td>
+<td>Equal</td>
+<td>price=9.80</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Not equal</td>
+<td>price!=9.80</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+<td>price&lt;9.80</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+<td>price&lt;=9.80</td>
+</tr>
+<tr>
+<td>></td>
+<td>Greater than</td>
+<td>price>9.80</td>
+</tr>
+<tr>
+<td>>=</td>
+<td>Greater than or equal to</td>
+<td>price>=9.80</td>
+</tr>
+<tr>
+<td>or</td>
+<td>or</td>
+<td>price=9.80 or price=9.70</td>
+</tr>
+<tr>
+<td>and</td>
+<td>and</td>
+<td>price>9.00 and price&lt;9.90</td>
+</tr>
+<tr>
+<td>mod</td>
+<td>Modulus (division remainder)</td>
+<td>5 mod 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<a href=https://devhints.io/xpath>XPATH Cheat Sheet</a></p>
+<h2 id=33-examples>3.3 Examples</h2>
+<h3 id=example-1abusolte-path>Example 1:Abusolte path</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;body &gt; div &gt; p &gt; t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;/html/body/div/p/t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-2relative-path>Example 2:Relative path</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;body t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//body//t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-3single-element>Example 3:Single element</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-4multiple-element>Example 4:Multiple element</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t, price&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;1000000000.00&rdquo; <br>
+[3] &ldquo;Dumpling YYDS!&rdquo; &ldquo;100.00&rdquo;
+[5] &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;1000.0&rdquo; <br>
+[7] &ldquo;Sweet Dumpling YYDS!&rdquo; &ldquo;100.0&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t | //price&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;1000000000.00&rdquo; <br>
+[3] &ldquo;Dumpling YYDS!&rdquo; &ldquo;100.00&rdquo;
+[5] &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;1000.0&rdquo; <br>
+[7] &ldquo;Sweet Dumpling YYDS!&rdquo; &ldquo;100.0&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-5position>Example 5:Position</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:first-of-type&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:nth-of-type(2)&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:last-of-type&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[position()=1]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[2]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[last()]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-6id-attribute>Example 6:ID attribute</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div#div2&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@id=&#39;div2&#39;]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-7class-attribute>Example 7:Class attribute</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div.class1&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
+[2] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div.class1.class2&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@class=&#39;class1&#39;]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@class=&#39;class1 class2&#39;]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-8asterisk>Example 8:Asterisk</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;*.class3&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
+[2] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;
+[3] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//*[@class=&#39;class3&#39;]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
+[2] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;
+[3] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-9relationship>Example 9:Relationship</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div#div2 t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Dumpling YYDS!&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@id=&#39;div2&#39;]/descendant::t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Dumpling YYDS!&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t[@class=&#39;text1&#39;]/ancestor::div&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-10calculation>Example 10:Calculation</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<p>Not avaiable</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//p[price&gt;50.0]/t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+</div>
+</div>
 <footer class=footline>
 </footer>
 </div>
@@ -737,17 +961,17 @@ check_element_text(html = html, xpath = &quot;//t/ancestor::div&quot;)
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=../js/clipboard.min.js?1642152840></script>
-<script src=../js/perfect-scrollbar.min.js?1642152840></script>
-<script src=../js/perfect-scrollbar.jquery.min.js?1642152840></script>
-<script src=../js/jquery.sticky.js?1642152840></script>
-<script src=../js/featherlight.min.js?1642152840></script>
-<script src=../js/highlight.pack.js?1642152840></script>
+<script src=../js/clipboard.min.js?1642411111></script>
+<script src=../js/perfect-scrollbar.min.js?1642411111></script>
+<script src=../js/perfect-scrollbar.jquery.min.js?1642411111></script>
+<script src=../js/jquery.sticky.js?1642411111></script>
+<script src=../js/featherlight.min.js?1642411111></script>
+<script src=../js/highlight.pack.js?1642411111></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=../js/modernizr.custom-3.6.0.js?1642152840></script>
-<script src=../js/learn.js?1642152840></script>
-<script src=../js/hugo-learn.js?1642152840></script>
-<script src=../mermaid/mermaid.js?1642152840></script>
+<script src=../js/modernizr.custom-3.6.0.js?1642411111></script>
+<script src=../js/learn.js?1642411111></script>
+<script src=../js/hugo-learn.js?1642411111></script>
+<script src=../mermaid/mermaid.js?1642411111></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
