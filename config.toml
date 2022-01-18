@@ -9,6 +9,8 @@ relativeurls = true
   titleSeparator = ":"
   showVisitedLinks = false
   disableInlineCopyToClipBoard = true
+  disableLandingPageButton = false
+  disableBreadcrumb = true
 
 [outputs]
   home = [ "HTML", "RSS", "JSON"]
