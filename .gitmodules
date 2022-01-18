@@ -11,4 +11,4 @@
 	branch = main
 [submodule "hugo-theme-learn"]
 	path = themes/hugo-theme-learn
-	url = https://github.com/matcornic/hugo-theme-learn
+	url = https://github.com/RC-Web-crawler/Hugo-site.git
