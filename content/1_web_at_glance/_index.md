@@ -10,9 +10,14 @@ weight = 1
     - [**1.1.2 CSS**](#112-css)
     - [**1.1.3 JavaScript**](#113-javascript)
 
+
 <span style="font-family:Impact; font-size:1.5em;color:red;">Is web crawling and scraping legal?</span>
 ><span style="font-family:Georgia;color:rgb(30,144,255);font-size:1.5em">Octoparse</span> <span style="font-family:Georgia; font-size:1em;">: If you’re doing web crawling for your own purposes, then it is legal as it falls under fair use doctrine. The complications start if you want to use scraped data for others, especially commercial purposes. As long as you are not crawling at a disruptive rate and the source is public you should be fine.</span> <br> 
 > <span style="font-family:Georgia;color:rgb(139,0,0);font-size:1.5em">Quora</span> <span style="font-family:Georgia; font-size:1em;">: You can crawl any page you like, scraping in itself is not illegal. The worst case scenario would be if you got blocked by the website if you do not follow the rules stated in the robots.txt.</span>
+
+|Web crawling| Vs. |Web scraping|
+|:---|:---:|:---|
+|- Web crawling, also known as Indexing is used to index the information on the page using bots also known as crawlers.<br> - Web Crawlers are basically used by major search engines like Google, Bing, Yahoo, statistical agencies, and large online aggregators.<br>- When a bot crawls a website, it goes through every page and every link, until the last line of the website, looking for ANY information.<br> - **The web crawling process usually captures generic information.**|🆚|- Web scraping, also known as web data extraction, is similar to web crawling in that it identifies and locates the target data from web pages.<br> - **The key difference, is that with web scraping, we know the exact data set identifier** e.g. an HTML element structure for web pages that are being fixed, from which data needs to be extracted.<br> - Web scraping is an automated way of extracting specific data sets using bots which are also known as ‘scrapers’.|
 
 **What is a robots.txt file?** Robots.txt is a text file webmasters create to instruct web robots (typically search engine robots) how to crawl pages on their website. The robots.txt file is part of the the robots exclusion protocol (REP), a group of web standards that regulate how robots crawl the web, access and index content, and serve that content up to users.
 
