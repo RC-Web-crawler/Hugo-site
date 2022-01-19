@@ -6,18 +6,18 @@
 <meta name=description content>
 <link rel=icon href=../images/favicon.png type=image/png>
 <title>Demo: Web Scraping with R/Python : Web Crawler</title>
-<link href=../css/nucleus.css?1642495172 rel=stylesheet>
-<link href=../css/fontawesome-all.min.css?1642495172 rel=stylesheet>
-<link href=../css/hybrid.css?1642495172 rel=stylesheet>
-<link href=../css/featherlight.min.css?1642495172 rel=stylesheet>
-<link href=../css/perfect-scrollbar.min.css?1642495172 rel=stylesheet>
-<link href=../css/auto-complete.css?1642495172 rel=stylesheet>
-<link href=../css/atom-one-dark-reasonable.css?1642495172 rel=stylesheet>
-<link href=../css/theme.css?1642495172 rel=stylesheet>
-<link href=../css/tabs.css?1642495172 rel=stylesheet>
-<link href=../css/hugo-theme.css?1642495172 rel=stylesheet>
-<link href=../css/theme-green.css?1642495172 rel=stylesheet>
-<script src=../js/jquery-3.3.1.min.js?1642495172></script>
+<link href=../css/nucleus.css?1642572245 rel=stylesheet>
+<link href=../css/fontawesome-all.min.css?1642572245 rel=stylesheet>
+<link href=../css/hybrid.css?1642572245 rel=stylesheet>
+<link href=../css/featherlight.min.css?1642572245 rel=stylesheet>
+<link href=../css/perfect-scrollbar.min.css?1642572245 rel=stylesheet>
+<link href=../css/auto-complete.css?1642572245 rel=stylesheet>
+<link href=../css/atom-one-dark-reasonable.css?1642572245 rel=stylesheet>
+<link href=../css/theme.css?1642572245 rel=stylesheet>
+<link href=../css/tabs.css?1642572245 rel=stylesheet>
+<link href=../css/hugo-theme.css?1642572245 rel=stylesheet>
+<link href=../css/theme-green.css?1642572245 rel=stylesheet>
+<script src=../js/jquery-3.3.1.min.js?1642572245></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
 <body data-url=../4_demo/>
@@ -33,10 +33,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=../js/lunr.min.js?1642495172></script>
-<script type=text/javascript src=../js/auto-complete.js?1642495172></script>
+<script type=text/javascript src=../js/lunr.min.js?1642572245></script>
+<script type=text/javascript src=../js/auto-complete.js?1642572245></script>
 <script type=text/javascript>var baseurl="https://rc-web-crawler.github.io/"</script>
-<script type=text/javascript src=../js/search.js?1642495172></script>
+<script type=text/javascript src=../js/search.js?1642572245></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -144,7 +144,8 @@ Demo: Web Scraping with R/Python
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=include_packages class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>(rvest)
+<span style=color:#a6e22e>library</span>(dplyr)
 </code></pre></div>
 </div>
 </div>
@@ -173,7 +174,9 @@ tree <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>fr
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=read_in_the_url class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># read url</span>
+website <span style=color:#f92672>&lt;-</span> <span style=color:#e6db74>&#34;https://www.lexjansen.com&#34;</span>
+lex <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(website)
 </code></pre></div>
 </div>
 </div>
@@ -361,11 +364,16 @@ sugi_url <span style=color:#f92672>=</span> url <span style=color:#f92672>+</spa
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=sugi_url class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e>#sublink1</span>
+uri1 <span style=color:#f92672>&lt;-</span> lex <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;span a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
+sublink1 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website,uri1)
+sublink1[6]
+conf.ch <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink1[6])
 </code></pre></div>
 </div>
 </div>
 </div>
+<p>[1] &ldquo;<a href=https://www.lexjansen.com/sugi%22>https://www.lexjansen.com/sugi"</a></p>
 <h4 id=2-sugi--sas-global-forum---get-conference-information>2. SUGI / SAS Global Forum -> Get conference information</h4>
 <p>
 <div class=mermaid align=center>
@@ -416,17 +424,35 @@ tree2<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//li
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=sugi_sas class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># SUGI Forun 2018 link</span>
+uri2 <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
+sublink2 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website,<span style=color:#a6e22e>substring</span>(uri2,<span style=color:#ae81ff>3</span>))
+conf.ch.2018 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink2[4])
+
+<span style=color:#75715e># conference name</span>
+conf.name <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+(conf.name.f <span style=color:#f92672>&lt;-</span> conf.name[4])
+
+<span style=color:#75715e># conference info (time, place)</span>
+conf.info <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li span&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+<span style=color:#75715e>#time</span>
+conf.time <span style=color:#f92672>&lt;-</span> conf.info<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(conf.info),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
+</span><span style=color:#a6e22e></span>(conf.time.f <span style=color:#f92672>&lt;-</span> conf.time[4])
+<span style=color:#75715e>#place</span>
+conf.place <span style=color:#f92672>&lt;-</span> conf.info<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(conf.info),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
+</span><span style=color:#a6e22e></span>(conf.place.f <span style=color:#f92672>&lt;-</span> conf.place[4])
 </code></pre></div>
 </div>
 </div>
 </div>
+<p>[1] &ldquo;SAS Global Forum 2018&rdquo;<br>
+[1] &ldquo;April 8-11, 2018&rdquo;<br>
+[1] &ldquo;Denver, Colorado&rdquo;</p>
 <h4 id=3-sugi-forum-2018-webpage---get-paper-information>3. SUGI Forum 2018 webpage -> Get paper information</h4>
 <p>
 <div class=tab-panel>
 <div class=tab-nav>
 <button data-tab-item=python data-tab-group=info class="tab-nav-button btn active" onclick="switchTab('info','python')">python</button>
-<button data-tab-item=R data-tab-group=info class="tab-nav-button btn" onclick="switchTab('info','R')">R</button>
 </div>
 <div class=tab-content>
 <div data-tab-item=python data-tab-group=info class="tab-item active">
@@ -434,10 +460,6 @@ tree2<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//li
 r_sugi_2018 <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(sugi_2018_url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
 soup3 <span style=color:#f92672>=</span> BeautifulSoup(r_sugi_2018<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
 tree3 <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>fromstring(r_sugi_2018<span style=color:#f92672>.</span>content)  
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=info class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
 </code></pre></div>
 </div>
 </div>
@@ -460,8 +482,8 @@ A --> K["span xmlns:gcse='uri:dummy-google-ns' class='size'", Size] -->k[b];
 style J fill:#f3d7d3;
 style K fill:#f3d7d3;
 </div>
-<code>Title</code>: Under <code>&lt;a taget="_blank"></code> tag <br>
-<code>&lt;a target="_blank" href="https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"</code> <br>
+<span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Title:</strong></span> Under <code>&lt;a taget="_blank"></code> tag</p>
+<p><code>&lt;a target="_blank" href="https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"</code> <br>
 <code>>A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma&lt;/a></code><br>
 <div class=tab-panel>
 <div class=tab-nav>
@@ -477,13 +499,17 @@ tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//di
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=title class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># title</span>
+pname <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//*[@target=&#39;_blank&#39;]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+pname.f <span style=color:#f92672>&lt;-</span> pname<span style=color:#a6e22e>[which</span>(pname <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;&#34;</span>)<span style=color:#a6e22e>]
+</span><span style=color:#a6e22e></span>(pa.name.f <span style=color:#f92672>&lt;-</span> pname.f[3])
 </code></pre></div>
 </div>
 </div>
 </div>
 </p>
-<p><code>Link</code>
+<p>[1] &ldquo;A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma&rdquo;</p>
+<p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Link:</strong></span></p>
 <div class=tab-panel>
 <div class=tab-nav>
 <button data-tab-item=python data-tab-group=link class="tab-nav-button btn active" onclick="switchTab('link','python')">python</button>
@@ -498,14 +524,17 @@ tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//di
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=link class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># paper link</span>
+filelink <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//*[@target=&#39;_blank&#39;]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
+filelink.f <span style=color:#f92672>&lt;-</span> filelink<span style=color:#a6e22e>[which</span>(filelink <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;&#34;</span>)<span style=color:#a6e22e>]
+</span><span style=color:#a6e22e></span>(pa.link <span style=color:#f92672>&lt;-</span> filelink.f[3])
 </code></pre></div>
 </div>
 </div>
 </div>
-</p>
-<p><code>Author</code>: Under <code>&lt;a></code> tag<br>
-<code>&lt;a href="/cgi-bin/xsl_transform.php?x=ag&amp;amp;c=SUGI#bogdidov">Bogdan Gadidov&lt;/a></code><br>
+<p>[1] &ldquo;<a href=https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf%22>https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"</a></p>
+<p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Author:</strong></span> Under <code>&lt;a></code> tag</p>
+<p><code>&lt;a href="/cgi-bin/xsl_transform.php?x=ag&amp;amp;c=SUGI#bogdidov">Bogdan Gadidov&lt;/a></code><br>
 <code>&lt;a href="/cgi-bin/xsl_transform.php?x=al&amp;amp;c=SUGI#linhnhle">Linh Le&lt;/a></code>
 <div class=tab-panel>
 <div class=tab-nav>
@@ -521,14 +550,17 @@ tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//di
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=author class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># author</span>
+author <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//div[contains(@class, &#39;paper&#39;)][3]/a[not(@id) and not(@target)]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+(author.f <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(author<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(author),<span style=color:#ae81ff>2</span>)],<span style=color:#e6db74>&#34;, &#34;</span>,author<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(author),<span style=color:#ae81ff>2</span>)]))
 </code></pre></div>
 </div>
 </div>
 </div>
 </p>
-<p><code>Keyword</code>: Under <code>&lt;span></code> tag<br>
-<code>&lt;span class="key">&lt;b>Keywords:&lt;/b> Text Mining Topic Modeling Time Series &lt;/span></code>
+<p>[1] &ldquo;Bogdan Gadidov, Linh Le&rdquo;</p>
+<p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Keyword:</strong></span> Under <code>&lt;span></code> tag</p>
+<p><code>&lt;span class="key">&lt;b>Keywords:&lt;/b> Text Mining Topic Modeling Time Series &lt;/span></code>
 <div class=tab-panel>
 <div class=tab-nav>
 <button data-tab-item=python data-tab-group=keyword class="tab-nav-button btn active" onclick="switchTab('keyword','python')">python</button>
@@ -543,14 +575,18 @@ tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//di
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=keyword class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># keyword</span>
+keyw <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper span.key&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+keyword <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>sub</span>(<span style=color:#e6db74>&#34;.*: &#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>,keyw)
+(keyword.f <span style=color:#f92672>&lt;-</span> keyword[1])
 </code></pre></div>
 </div>
 </div>
 </div>
 </p>
-<p><code>Pages & Size</code>: Under <code>&lt;span></code> tag <br>
-<code>&lt;span class="size">&lt;b>Pages&lt;/b>:&amp;nbsp;11&amp;nbsp;&lt;/span></code><br>
+<p>[1] &ldquo;Text Mining Topic Modeling Time Series&rdquo;</p>
+<p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Page & Size:</strong></span> Under <code>&lt;span></code> tag</p>
+<p><code>&lt;span class="size">&lt;b>Pages&lt;/b>:&amp;nbsp;11&amp;nbsp;&lt;/span></code><br>
 <code>&lt;span xmlns:gcse="uri:dummy-google-ns" class="size">&lt;b>Size&lt;/b>:&amp;nbsp;660&amp;nbsp;Kb&amp;nbsp;&lt;/span></code></p>
 <div class=tab-panel>
 <div class=tab-nav>
@@ -566,20 +602,50 @@ tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//di
 </code></pre></div>
 </div>
 <div data-tab-item=R data-tab-group=ps class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># page + size</span>
+ps <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper span.size&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+page <span style=color:#f92672>&lt;-</span> ps<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(ps),<span style=color:#ae81ff>2</span>)]
+size <span style=color:#f92672>&lt;-</span> ps<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(ps),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
+</span><span style=color:#a6e22e></span>(page.f <span style=color:#f92672>&lt;-</span> page[3])
+(size.f <span style=color:#f92672>&lt;-</span> size[3])
 </code></pre></div>
 </div>
+</div>
+</div>
+<p>[1] &ldquo;Pages: 11 "<br>
+[1] &ldquo;Size: 660 Kb "</p>
+<div class=expand>
+<div class=expand-label style=cursor:pointer onclick="$h=$(this),$h.next('div').slideToggle(100,function(){$h.children('i').attr('class',function(){return $h.next('div').is(':visible')?'fas fa-chevron-down':'fas fa-chevron-right'})})">
+<i style=font-size:x-small class="fas fa-chevron-right"></i>
+<span>
+1. Grab information (Title, Link, Author, Keyword, Pages, Sizes) from one paper
+</span>
+</div>
+<div class=expand-content style=display:none>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># R</span>
+df <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>data.frame</span>(confname<span style=color:#f92672>=</span>conf.name.f, 
+                 conftime<span style=color:#f92672>=</span>conf.time.f,
+                 confplace<span style=color:#f92672>=</span>conf.place.f,
+                 title<span style=color:#f92672>=</span>pa.name.f, link<span style=color:#f92672>=</span>pa.link,
+                 author<span style=color:#f92672>=</span>author.f, keyword<span style=color:#f92672>=</span>keyword.f,
+                 page<span style=color:#f92672>=</span>page.f, size<span style=color:#f92672>=</span>size.f,
+                 section<span style=color:#f92672>=</span>section.f
+                 )
+<span style=color:#a6e22e>library</span>(xlsx)
+<span style=color:#a6e22e>write.xlsx</span>(df, <span style=color:#e6db74>&#34;SUGI_paper.xlsx&#34;</span>)
+</code></pre></div>
 </div>
 </div>
 <div class=expand>
 <div class=expand-label style=cursor:pointer onclick="$h=$(this),$h.next('div').slideToggle(100,function(){$h.children('i').attr('class',function(){return $h.next('div').is(':visible')?'fas fa-chevron-down':'fas fa-chevron-right'})})">
 <i style=font-size:x-small class="fas fa-chevron-right"></i>
 <span>
-Grab paper information (Title, Link, Author, Keyword, Pages, Sizes) from one conference
+2. Grab paper information (Title, Link, Author, Keyword, Pages, Sizes) from one conference
 </span>
 </div>
 <div class=expand-content style=display:none>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>one_conf</span>(url):
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># python</span>
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>one_conf</span>(url):
     r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
     soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
     num_paper <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper&#39;</span>))
@@ -678,6 +744,7 @@ Grab paper information (Title, Link, Author, Keyword, Pages, Sizes) from one con
                             <span style=color:#e6db74>&#39;Size&#39;</span>   : size})
     dataset[<span style=color:#e6db74>&#39;Author&#39;</span>] <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;, &#34;</span><span style=color:#f92672>.</span>join(n) <span style=color:#66d9ef>for</span> n <span style=color:#f92672>in</span> dataset[<span style=color:#e6db74>&#39;Author&#39;</span>]]
     <span style=color:#66d9ef>return</span> dataset
+df <span style=color:#f92672>=</span> one_conf(url<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://www.lexjansen.com/cgi-bin/xsl_transform.php?x=sgf2018&#34;</span>)
 </code></pre></div>
 </div>
 </div>
@@ -685,11 +752,12 @@ Grab paper information (Title, Link, Author, Keyword, Pages, Sizes) from one con
 <div class=expand-label style=cursor:pointer onclick="$h=$(this),$h.next('div').slideToggle(100,function(){$h.children('i').attr('class',function(){return $h.next('div').is(':visible')?'fas fa-chevron-down':'fas fa-chevron-right'})})">
 <i style=font-size:x-small class="fas fa-chevron-right"></i>
 <span>
-Grab conference information (Conference place & time & name) from all conferences
+3. Grab conference information (Conference place & time & name) from all conferences
 </span>
 </div>
 <div class=expand-content style=display:none>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>all_paper</span>(url):
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># python</span>
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>all_paper</span>(url):
     <span style=color:#66d9ef>global</span> conf_name, conf_time, conf_place
     r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
     soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
@@ -739,7 +807,14 @@ C
 end
 </div>
 <h4 id=4-get-paper-attributes-section-name>4. Get paper attributes: Section name</h4>
-<p>Only grab section name & title from the url</p>
+<p>Only grab section name & title from the url
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item=python data-tab-group=section class="tab-nav-button btn active" onclick="switchTab('section','python')">python</button>
+<button data-tab-item=R data-tab-group=section class="tab-nav-button btn" onclick="switchTab('section','R')">R</button>
+</div>
+<div class=tab-content>
+<div data-tab-item=python data-tab-group=section class="tab-item active">
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>title_grab</span>(url):
     r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
     soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
@@ -777,7 +852,27 @@ end
 section <span style=color:#f92672>=</span> section_grab(<span style=color:#e6db74>&#34;https://www.lexjansen.com/sugi/&#34;</span>)
 Sections <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([pd<span style=color:#f92672>.</span>DataFrame(section[x]) <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(num_section)], axis <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
 Sections<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;Sections.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
-</code></pre></div><h4 id=5-merge-section-names-back-to-the-origin-file>5. Merge section names back to the origin file</h4>
+</code></pre></div>
+</div>
+<div data-tab-item=R data-tab-group=section class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R>sct <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.streams span.stream&#34;</span>) <span style=color:#f92672>%&gt;%</span> html_text
+section_name <span style=color:#f92672>&lt;-</span> sct[7]
+
+<span style=color:#75715e>#get the section links</span>
+uri3 <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.streams span.stream a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
+sublink3 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website, <span style=color:#a6e22e>substring</span>(uri3,<span style=color:#ae81ff>3</span>))
+sugi.section <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink3[7])
+
+<span style=color:#75715e>#get paper titles within the section</span>
+sct_papers <span style=color:#f92672>&lt;-</span> sugi.section <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper a&#34;</span>) <span style=color:#f92672>%&gt;%</span> html_text
+
+section.f <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>ifelse</span>(pa.name.f <span style=color:#f92672>%in%</span> sct_papers, section_name, <span style=color:#e6db74>&#34;&#34;</span>)
+</code></pre></div>
+</div>
+</div>
+</div>
+</p>
+<h4 id=5-merge-section-names-back-to-the-origin-file>5. Merge section names back to the origin file</h4>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>sugi <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;SUGI.xlsx&#39;</span>)  
 section <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;Sections.xlsx&#39;</span>)  
 pd<span style=color:#f92672>.</span>merge(sugi, section, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Title&#34;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)
@@ -810,7 +905,7 @@ pd<span style=color:#f92672>.</span>merge(sugi, section, on<span style=color:#f9
 best <span style=color:#f92672>=</span> best_paper_fl(<span style=color:#e6db74>&#34;https://www.lexjansen.com/sugi/&#34;</span>)
 best <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([pd<span style=color:#f92672>.</span>DataFrame(best[x]) <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>46</span>)], axis <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
 best<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;Best_paper.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
-</code></pre></div><h4 id=7-derive-final-dataset>7. Derive final dataset</h4>
+</code></pre></div><h4 id=7-derive-final-dataset-all-papers-from-one-forum>7. Derive final dataset: All papers from one forum</h4>
 <div class=tab-panel>
 <div class=tab-nav>
 <button data-tab-item=python data-tab-group=final class="tab-nav-button btn active" onclick="switchTab('final','python')">python</button>
@@ -843,17 +938,17 @@ final<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;SUG
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=../js/clipboard.min.js?1642495172></script>
-<script src=../js/perfect-scrollbar.min.js?1642495172></script>
-<script src=../js/perfect-scrollbar.jquery.min.js?1642495172></script>
-<script src=../js/jquery.sticky.js?1642495172></script>
-<script src=../js/featherlight.min.js?1642495172></script>
-<script src=../js/highlight.pack.js?1642495172></script>
+<script src=../js/clipboard.min.js?1642572245></script>
+<script src=../js/perfect-scrollbar.min.js?1642572245></script>
+<script src=../js/perfect-scrollbar.jquery.min.js?1642572245></script>
+<script src=../js/jquery.sticky.js?1642572245></script>
+<script src=../js/featherlight.min.js?1642572245></script>
+<script src=../js/highlight.pack.js?1642572245></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=../js/modernizr.custom-3.6.0.js?1642495172></script>
-<script src=../js/learn.js?1642495172></script>
-<script src=../js/hugo-learn.js?1642495172></script>
-<script src=../mermaid/mermaid.js?1642495172></script>
+<script src=../js/modernizr.custom-3.6.0.js?1642572245></script>
+<script src=../js/learn.js?1642572245></script>
+<script src=../js/hugo-learn.js?1642572245></script>
+<script src=../mermaid/mermaid.js?1642572245></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
