@@ -160,6 +160,7 @@ Note: If the path starts with a slash ( / ) it always represents an absolute pat
 [XPATH Cheat Sheet](https://devhints.io/xpath)
 
 ## 3.3 Examples
+[sample](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/3_ccs/sample.html)
 
 ### Example 1:Abusolte path
 -----------------------

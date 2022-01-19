@@ -19,7 +19,8 @@ import re
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+library(rvest)
+library(dplyr)
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -49,7 +50,9 @@ tree = html.fromstring(r.content)
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+# read url
+website <- "https://www.lexjansen.com"
+lex <- read_html(website)
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -177,10 +180,16 @@ sugi_url = url + href
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+#sublink1
+uri1 <- lex %>% html_nodes("span a") %>% html_attr("href")
+sublink1 <- paste0(website,uri1)
+sublink1[6]
+conf.ch <- read_html(sublink1[6])
 ```
 {{% /tab %}}
 {{< /tabs >}}
+
+[1] "https://www.lexjansen.com/sugi"
 
 #### 2. SUGI / SAS Global Forum -> Get conference information
 {{<mermaid align="center">}}
@@ -229,10 +238,30 @@ tree2.xpath('//li/span[2]/text()')[3]
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+# SUGI Forun 2018 link
+uri2 <- conf.ch %>% html_nodes("li a") %>% html_attr("href")
+sublink2 <- paste0(website,substring(uri2,3))
+conf.ch.2018 <- read_html(sublink2[4])
+
+# conference name
+conf.name <- conf.ch %>% html_nodes("li a") %>% html_text()
+(conf.name.f <- conf.name[4])
+
+# conference info (time, place)
+conf.info <- conf.ch %>% html_nodes("li span") %>% html_text()
+#time
+conf.time <- conf.info[seq(1,length(conf.info),2)]
+(conf.time.f <- conf.time[4])
+#place
+conf.place <- conf.info[seq(2,length(conf.info),2)]
+(conf.place.f <- conf.place[4])
 ```
 {{% /tab %}}
 {{< /tabs >}}
+
+[1] "SAS Global Forum 2018"   
+[1] "April 8-11, 2018"   
+[1] "Denver, Colorado"   
 
 
 #### 3. SUGI Forum 2018 webpage -> Get paper information
@@ -243,11 +272,6 @@ library()
 r_sugi_2018 = requests.get(sugi_2018_url, proxies=proxyDict, verify=False)
 soup3 = BeautifulSoup(r_sugi_2018.text, 'lxml')
 tree3 = html.fromstring(r_sugi_2018.content)  
-```
-{{% /tab %}}
-{{% tab name="R" %}}
-```R
-library()
 ```
 {{% /tab %}}
 {{< /tabs >}}
@@ -269,7 +293,8 @@ graph LR;
     style J fill:#f3d7d3; 
     style K fill:#f3d7d3; 
 {{< /mermaid >}}
-`Title`: Under `<a taget="_blank">` tag    
+<span style="background-color:rgb(255, 246, 143);padding:3px 0px;font-family:Georgia"> **Title:**</span>   Under `<a taget="_blank">` tag
+
 `<a target="_blank" href="https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"`    
 `>A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma</a>`   
 {{< tabs groupId="title">}}
@@ -283,13 +308,18 @@ tree3.xpath('//div[contains(@class, "paper")]/child::a[2]/text()')[2]
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+# title
+pname <- conf.ch.2018 %>% html_nodes(xpath="//*[@target='_blank']") %>% html_text()
+pname.f <- pname[which(pname != "")]
+(pa.name.f <- pname.f[3])
 ```
 {{% /tab %}}
 {{< /tabs >}}
 
+[1] "A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma"
 
-`Link`
+<span style="background-color:rgb(255, 246, 143);padding:3px 0px;font-family:Georgia"> **Link:**</span>   
+
 {{< tabs groupId="link">}}
 {{% tab name="python" %}}
 ```python
@@ -301,13 +331,18 @@ tree3.xpath('//div[contains(@class, "paper")]/child::a[2]/@href')[2]
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+# paper link
+filelink <- conf.ch.2018 %>% html_nodes(xpath="//*[@target='_blank']") %>% html_attr("href")
+filelink.f <- filelink[which(filelink != "")]
+(pa.link <- filelink.f[3])
 ```
 {{% /tab %}}
 {{< /tabs >}}
 
+[1] "https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"
 
-`Author`: Under `<a>` tag   
+<span style="background-color:rgb(255, 246, 143);padding:3px 0px;font-family:Georgia"> **Author:**</span>   Under `<a>` tag 
+  
 `<a href="/cgi-bin/xsl_transform.php?x=ag&amp;c=SUGI#bogdidov">Bogdan Gadidov</a>`  
 `<a href="/cgi-bin/xsl_transform.php?x=al&amp;c=SUGI#linhnhle">Linh Le</a>`
 {{< tabs groupId="author">}}
@@ -321,13 +356,17 @@ tree3.xpath('//div[contains(@class, "paper")][3]/a[not(@id) and not(@target)]/te
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+# author
+author <- conf.ch.2018 %>% html_nodes(xpath="//div[contains(@class, 'paper')][3]/a[not(@id) and not(@target)]") %>% html_text()
+(author.f <- paste0(author[seq(1,length(author),2)],", ",author[seq(2,length(author),2)]))
 ```
 {{% /tab %}}
 {{< /tabs >}}
 
+[1] "Bogdan Gadidov, Linh Le"
 
-`Keyword`: Under `<span>` tag   
+<span style="background-color:rgb(255, 246, 143);padding:3px 0px;font-family:Georgia"> **Keyword:**</span>   Under `<span>` tag
+  
 `<span class="key"><b>Keywords:</b> Text Mining Topic Modeling Time Series </span>`
 {{< tabs groupId="keyword">}}
 {{% tab name="python" %}}
@@ -340,12 +379,18 @@ tree3.xpath('//div[contains(@class, "paper")][3]/span[@class = "key"]/text()')
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+# keyword
+keyw <- conf.ch.2018 %>% html_nodes("div.paper span.key") %>% html_text()
+keyword <- sub(".*: ", "",keyw)
+(keyword.f <- keyword[1])
 ```
 {{% /tab %}}
 {{< /tabs >}}
 
-`Pages & Size`: Under `<span>` tag     
+[1] "Text Mining Topic Modeling Time Series"
+
+<span style="background-color:rgb(255, 246, 143);padding:3px 0px;font-family:Georgia"> **Page & Size:**</span> Under `<span>` tag    
+   
 `<span class="size"><b>Pages</b>:&nbsp;11&nbsp;</span>`  
 `<span xmlns:gcse="uri:dummy-google-ns" class="size"><b>Size</b>:&nbsp;660&nbsp;Kb&nbsp;</span>`   
 
@@ -360,14 +405,38 @@ tree3.xpath('//div[contains(@class, "paper")][3]/span[@class = "size"]/text()')
 {{% /tab %}}
 {{% tab name="R" %}}
 ```R
-library()
+# page + size
+ps <- conf.ch.2018 %>% html_nodes("div.paper span.size") %>% html_text()
+page <- ps[seq(1,length(ps),2)]
+size <- ps[seq(2,length(ps),2)]
+(page.f <- page[3])
+(size.f <- size[3])
 ```
 {{% /tab %}}
 {{< /tabs >}}
 
+[1] "Pages: 11 "   
+[1] "Size: 660 Kb "     
 
-{{%expand "Grab paper information (Title, Link, Author, Keyword, Pages, Sizes) from one conference" %}}
+{{%expand "1. Grab information (Title, Link, Author, Keyword, Pages, Sizes) from one paper" %}}
+```R
+# R
+df <- data.frame(confname=conf.name.f, 
+                 conftime=conf.time.f,
+                 confplace=conf.place.f,
+                 title=pa.name.f, link=pa.link,
+                 author=author.f, keyword=keyword.f,
+                 page=page.f, size=size.f,
+                 section=section.f
+                 )
+library(xlsx)
+write.xlsx(df, "SUGI_paper.xlsx")
+```
+{{% /expand%}}   
+
+{{%expand "2. Grab paper information (Title, Link, Author, Keyword, Pages, Sizes) from one conference" %}}
 ```python
+# python
 def one_conf(url):
     r_sugi = requests.get(url, proxies=proxyDict, verify=False)
     soup = BeautifulSoup(r_sugi.text, 'lxml')
@@ -467,11 +536,13 @@ def one_conf(url):
                             'Size'   : size})
     dataset['Author'] = [", ".join(n) for n in dataset['Author']]
     return dataset
+df = one_conf(url="https://www.lexjansen.com/cgi-bin/xsl_transform.php?x=sgf2018")
 ```
 {{% /expand%}}
 
-{{%expand "Grab conference information (Conference place & time & name) from all conferences" %}}
+{{%expand "3. Grab conference information (Conference place & time & name) from all conferences" %}}
 ```python
+# python
 def all_paper(url):
     global conf_name, conf_time, conf_place
     r_sugi = requests.get(url, proxies=proxyDict, verify=False)
@@ -524,6 +595,8 @@ graph TB;
 
 #### 4. Get paper attributes: Section name
 Only grab section name & title from the url
+{{< tabs groupId="section">}}
+{{% tab name="python" %}}
 ```python
 def title_grab(url):
     r_sugi = requests.get(url, proxies=proxyDict, verify=False)
@@ -563,6 +636,24 @@ section = section_grab("https://www.lexjansen.com/sugi/")
 Sections = pd.concat([pd.DataFrame(section[x]) for x in range(num_section)], axis = 0, ignore_index=True)
 Sections.to_csv('Sections.csv', index = False)
 ```
+{{% /tab %}}
+{{% tab name="R" %}}
+```R
+sct <- conf.ch %>% html_nodes("div.streams span.stream") %>% html_text
+section_name <- sct[7]
+
+#get the section links
+uri3 <- conf.ch %>% html_nodes("div.streams span.stream a") %>% html_attr("href")
+sublink3 <- paste0(website, substring(uri3,3))
+sugi.section <- read_html(sublink3[7])
+
+#get paper titles within the section
+sct_papers <- sugi.section %>% html_nodes("div.paper a") %>% html_text
+
+section.f <- ifelse(pa.name.f %in% sct_papers, section_name, "")
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 #### 5. Merge section names back to the origin file
 ```python
@@ -603,7 +694,7 @@ best = pd.concat([pd.DataFrame(best[x]) for x in range(46)], axis = 0, ignore_in
 best.to_csv('Best_paper.csv', index = False)
 ```
 
-#### 7. Derive final dataset
+#### 7. Derive final dataset: All papers from one forum
 {{< tabs groupId="final">}}
 {{% tab name="python" %}}
 ```python
