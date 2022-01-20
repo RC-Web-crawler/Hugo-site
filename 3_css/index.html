@@ -6,18 +6,18 @@
 <meta name=description content>
 <link rel=icon href=../images/favicon.png type=image/png>
 <title>CSS selectorts & Xpath : Web Crawler</title>
-<link href=../css/nucleus.css?1642572245 rel=stylesheet>
-<link href=../css/fontawesome-all.min.css?1642572245 rel=stylesheet>
-<link href=../css/hybrid.css?1642572245 rel=stylesheet>
-<link href=../css/featherlight.min.css?1642572245 rel=stylesheet>
-<link href=../css/perfect-scrollbar.min.css?1642572245 rel=stylesheet>
-<link href=../css/auto-complete.css?1642572245 rel=stylesheet>
-<link href=../css/atom-one-dark-reasonable.css?1642572245 rel=stylesheet>
-<link href=../css/theme.css?1642572245 rel=stylesheet>
-<link href=../css/tabs.css?1642572245 rel=stylesheet>
-<link href=../css/hugo-theme.css?1642572245 rel=stylesheet>
-<link href=../css/theme-green.css?1642572245 rel=stylesheet>
-<script src=../js/jquery-3.3.1.min.js?1642572245></script>
+<link href=../css/nucleus.css?1642671567 rel=stylesheet>
+<link href=../css/fontawesome-all.min.css?1642671567 rel=stylesheet>
+<link href=../css/hybrid.css?1642671567 rel=stylesheet>
+<link href=../css/featherlight.min.css?1642671567 rel=stylesheet>
+<link href=../css/perfect-scrollbar.min.css?1642671567 rel=stylesheet>
+<link href=../css/auto-complete.css?1642671567 rel=stylesheet>
+<link href=../css/atom-one-dark-reasonable.css?1642671567 rel=stylesheet>
+<link href=../css/theme.css?1642671567 rel=stylesheet>
+<link href=../css/tabs.css?1642671567 rel=stylesheet>
+<link href=../css/hugo-theme.css?1642671567 rel=stylesheet>
+<link href=../css/theme-green.css?1642671567 rel=stylesheet>
+<script src=../js/jquery-3.3.1.min.js?1642671567></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
 <body data-url=../3_css/>
@@ -33,10 +33,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=../js/lunr.min.js?1642572245></script>
-<script type=text/javascript src=../js/auto-complete.js?1642572245></script>
+<script type=text/javascript src=../js/lunr.min.js?1642671567></script>
+<script type=text/javascript src=../js/auto-complete.js?1642671567></script>
 <script type=text/javascript>var baseurl="https://rc-web-crawler.github.io/"</script>
-<script type=text/javascript src=../js/search.js?1642572245></script>
+<script type=text/javascript src=../js/search.js?1642671567></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -111,12 +111,6 @@ CSS selectorts & Xpath
 <nav id=TableOfContents>
 <ul>
 <li><a href=#31-introduction>3.1 Introduction</a></li>
-<li><a href=#32-summary>3.2 Summary</a>
-<ul>
-<li><a href=#321-css-selector-summary>3.2.1 CSS Selector Summary</a></li>
-</ul>
-</li>
-<li><a href=#322-xpath-summary>3.2.2 XPATH Summary</a></li>
 <li><a href=#33-examples>3.3 Examples</a>
 <ul>
 <li><a href=#example-1abusolte-path>Example 1:Abusolte path</a></li>
@@ -131,6 +125,12 @@ CSS selectorts & Xpath
 <li><a href=#example-10calculation>Example 10:Calculation</a></li>
 </ul>
 </li>
+<li><a href=#33-summary>3.3 Summary</a>
+<ul>
+<li><a href=#331-css-selector-summary>3.3.1 CSS Selector Summary</a></li>
+</ul>
+</li>
+<li><a href=#332-xpath-summary>3.3.2 XPATH Summary</a></li>
 </ul>
 </nav>
 </div>
@@ -147,11 +147,266 @@ CSS selectorts & Xpath
 <p>CSS, Cascading Style Sheets, is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. And CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.</p>
 <p>XPath, XML Path Language, is a query language for selecting nodes from an XML document. In addition, XPath may be used to compute values from the content of an XML document. XPath was defined by the World Wide Web Consortium.
 <a href=https://www.w3schools.com/default.asp>CSS Selector vs XPATH</a></p>
-<p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as <code>&lt;img /></code> and <code>&lt;input /></code> directly introduce content into the page. Other tags such as <code>&lt;p></code> surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page. HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages. Inclusion of CSS defines the look and layout of content. The World Wide Web Consortium (W3C), former maintainer of the HTML and current maintainer of the CSS standards, has encouraged the use of CSS over explicit presentational HTML since 1997. A form of HTML, known as HTML5, is used to display video and audio, primarily using the <code>&lt;canvas></code> element, in collaboration with javascript.</p>
-<p>Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The design goals of XML emphasize simplicity, generality, and usability across the Internet. It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures such as those used in web services.
-<a href="https://www.upgrad.com/blog/html-vs-xml/#:~:text=HTML%20and%20XML%20are%20related,language%20that%20defines%20other%20languages.">HTML vs XML</a></p>
-<h2 id=32-summary>3.2 Summary</h2>
-<h3 id=321-css-selector-summary>3.2.1 CSS Selector Summary</h3>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>HTML</th>
+<th>XML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1)</td>
+<td>HTML is used to display data and focuses on how data looks.</td>
+<td>XML is a software and hardware independent tool used to transport and store data. It focuses on what data is.</td>
+</tr>
+<tr>
+<td>2)</td>
+<td>HTML is a <strong>markup language</strong> itself.</td>
+<td>XML provides a <strong>framework to define markup languages</strong>.</td>
+</tr>
+<tr>
+<td>3)</td>
+<td>HTML is not case sensitive.</td>
+<td>XML is case sensitive.</td>
+</tr>
+<tr>
+<td>4)</td>
+<td>HTML is a presentation language.</td>
+<td>XML is neither a presentation language nor a programming language.</td>
+</tr>
+<tr>
+<td>5)</td>
+<td>HTML has its own predefined tags.</td>
+<td>You can define tags according to your need.</td>
+</tr>
+<tr>
+<td>6)</td>
+<td>In HTML, it is not necessary to use a closing tag.</td>
+<td>XML makes it mandatory to use a closing tag.</td>
+</tr>
+<tr>
+<td>7)</td>
+<td>HTML is static because it is used to display data.</td>
+<td>XML is dynamic because it is used to transport data.</td>
+</tr>
+<tr>
+<td>8)</td>
+<td>HTML does not preserve whitespaces.</td>
+<td>XML preserve whitespaces.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.upgrad.com/blog/html-vs-xml/#:~:text=HTML%20and%20XML%20are%20related,language%20that%20defines%20other%20languages.">HTML vs XML</a></p>
+<h2 id=33-examples>3.3 Examples</h2>
+<p>Sample HTML: <a href=https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/3_CSS/sample.html>link</a></p>
+<h3 id=example-1abusolte-path>Example 1:Abusolte path</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;body &gt; div &gt; p &gt; t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;/html/body/div/p/t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-2relative-path>Example 2:Relative path</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;body t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//body//t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-3single-element>Example 3:Single element</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-4multiple-element>Example 4:Multiple element</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t, price&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;1000000000.00&rdquo; <br>
+[3] &ldquo;Dumpling YYDS!&rdquo; &ldquo;100.00&rdquo;<br>
+[5] &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;1000.0&rdquo; <br>
+[7] &ldquo;Sweet Dumpling YYDS!&rdquo; &ldquo;100.0&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t | //price&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;1000000000.00&rdquo; <br>
+[3] &ldquo;Dumpling YYDS!&rdquo; &ldquo;100.00&rdquo;<br>
+[5] &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;1000.0&rdquo; <br>
+[7] &ldquo;Sweet Dumpling YYDS!&rdquo; &ldquo;100.0&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-5position>Example 5:Position</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:first-of-type&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:nth-of-type(2)&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:last-of-type&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[position()=1]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[2]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[last()]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-6id-attribute>Example 6:ID attribute</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div#div2&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@id=&#39;div2&#39;]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-7class-attribute>Example 7:Class attribute</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div.class1&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
+[2] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div.class1.class2&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@class=&#39;class1&#39;]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@class=&#39;class1 class2&#39;]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-8asterisk>Example 8:Asterisk</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;*.class3&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
+[2] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;<br>
+[3] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//*[@class=&#39;class3&#39;]&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
+[2] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;<br>
+[3] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-9relationship>Example 9:Relationship</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div#div2 t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Dumpling YYDS!&rdquo;</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@id=&#39;div2&#39;]/descendant::t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Dumpling YYDS!&rdquo;</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t[@class=&#39;text1&#39;]/ancestor::div&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
+</div>
+</div>
+</div>
+<h3 id=example-10calculation>Example 10:Calculation</h3>
+<hr>
+<div class=tab-panel>
+<div class=tab-nav>
+<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
+<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
+</div>
+<div class=tab-content>
+<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
+<p>Not avaiable</p>
+</div>
+<div data-tab-item=xpath data-tab-group=default class=tab-item>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//p[price&gt;50.0]/t&#34;</span>)
+</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
+</div>
+</div>
+</div>
+<h2 id=33-summary>3.3 Summary</h2>
+<h3 id=331-css-selector-summary>3.3.1 CSS Selector Summary</h3>
 <hr>
 <p>
 <div class=tab-panel>
@@ -489,7 +744,7 @@ CSS selectorts & Xpath
 </div>
 </div>
 <a href=https://frontend30.com/css-selectors-cheatsheet/>CSS Selector Cheat Sheet</a></p>
-<h2 id=322-xpath-summary>3.2.2 XPATH Summary</h2>
+<h2 id=332-xpath-summary>3.3.2 XPATH Summary</h2>
 <hr>
 <p>
 <div class=tab-panel>
@@ -566,7 +821,8 @@ CSS selectorts & Xpath
 </tr>
 </tbody>
 </table>
-<p>Note: If the path starts with a slash ( / ) it always represents an absolute path to an element!</p>
+<div class="notices note"><p>Note: If the path starts with a slash ( / ) it always represents an absolute path to an element!</p>
+</div>
 </div>
 <div data-tab-item=Axes data-tab-group=default class=tab-item>
 <table>
@@ -746,212 +1002,6 @@ CSS selectorts & Xpath
 </div>
 </div>
 <a href=https://devhints.io/xpath>XPATH Cheat Sheet</a></p>
-<h2 id=33-examples>3.3 Examples</h2>
-<p><a href=https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/3_ccs/sample.html>sample</a></p>
-<h3 id=example-1abusolte-path>Example 1:Abusolte path</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;body &gt; div &gt; p &gt; t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;/html/body/div/p/t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-2relative-path>Example 2:Relative path</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;body t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//body//t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-3single-element>Example 3:Single element</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-4multiple-element>Example 4:Multiple element</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;t, price&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;1000000000.00&rdquo; <br>
-[3] &ldquo;Dumpling YYDS!&rdquo; &ldquo;100.00&rdquo;
-[5] &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;1000.0&rdquo; <br>
-[7] &ldquo;Sweet Dumpling YYDS!&rdquo; &ldquo;100.0&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t | //price&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;1000000000.00&rdquo; <br>
-[3] &ldquo;Dumpling YYDS!&rdquo; &ldquo;100.00&rdquo;
-[5] &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;1000.0&rdquo; <br>
-[7] &ldquo;Sweet Dumpling YYDS!&rdquo; &ldquo;100.0&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-5position>Example 5:Position</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:first-of-type&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:nth-of-type(2)&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div:last-of-type&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[position()=1]&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[2]&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[last()]&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-6id-attribute>Example 6:ID attribute</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div#div2&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@id=&#39;div2&#39;]&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-7class-attribute>Example 7:Class attribute</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div.class1&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
-[2] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div.class1.class2&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@class=&#39;class1&#39;]&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@class=&#39;class1 class2&#39;]&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0 Happy Lantern Festival! Sweet Dumpling YYDS! 100.0&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-8asterisk>Example 8:Asterisk</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;*.class3&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
-[2] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;
-[3] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//*[@class=&#39;class3&#39;]&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo; <br>
-[2] &ldquo;Happy Spring Festival! Dumpling YYDS! 100.00&rdquo;
-[3] &ldquo;Happy Valentine&rsquo;s Day! Let&rsquo;s romantic! 1000.0&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-9relationship>Example 9:Relationship</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, css <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;div#div2 t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Dumpling YYDS!&rdquo;</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//div[@id=&#39;div2&#39;]/descendant::t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Dumpling YYDS!&rdquo;</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//t[@class=&#39;text1&#39;]/ancestor::div&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Welcome 2022! Beat COVID-19! 1000000000.00&rdquo;</p>
-</div>
-</div>
-</div>
-<h3 id=example-10calculation>Example 10:Calculation</h3>
-<hr>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item="css selector" data-tab-group=default class="tab-nav-button btn active" onclick="switchTab('default','css selector')">css selector</button>
-<button data-tab-item=xpath data-tab-group=default class="tab-nav-button btn" onclick="switchTab('default','xpath')">xpath</button>
-</div>
-<div class=tab-content>
-<div data-tab-item="css selector" data-tab-group=default class="tab-item active">
-<p>Not avaiable</p>
-</div>
-<div data-tab-item=xpath data-tab-group=default class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>check_element_text</span>(html <span style=color:#f92672>=</span> html, xpath <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;//p[price&gt;50.0]/t&#34;</span>)
-</code></pre></div><p>[1] &ldquo;Beat COVID-19!&rdquo; &ldquo;Dumpling YYDS!&rdquo; &ldquo;Let&rsquo;s romantic!&rdquo; &ldquo;Sweet Dumpling YYDS!&rdquo;</p>
-</div>
-</div>
-</div>
 <footer class=footline>
 </footer>
 </div>
@@ -964,17 +1014,17 @@ CSS selectorts & Xpath
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=../js/clipboard.min.js?1642572245></script>
-<script src=../js/perfect-scrollbar.min.js?1642572245></script>
-<script src=../js/perfect-scrollbar.jquery.min.js?1642572245></script>
-<script src=../js/jquery.sticky.js?1642572245></script>
-<script src=../js/featherlight.min.js?1642572245></script>
-<script src=../js/highlight.pack.js?1642572245></script>
+<script src=../js/clipboard.min.js?1642671567></script>
+<script src=../js/perfect-scrollbar.min.js?1642671567></script>
+<script src=../js/perfect-scrollbar.jquery.min.js?1642671567></script>
+<script src=../js/jquery.sticky.js?1642671567></script>
+<script src=../js/featherlight.min.js?1642671567></script>
+<script src=../js/highlight.pack.js?1642671567></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=../js/modernizr.custom-3.6.0.js?1642572245></script>
-<script src=../js/learn.js?1642572245></script>
-<script src=../js/hugo-learn.js?1642572245></script>
-<script src=../mermaid/mermaid.js?1642572245></script>
+<script src=../js/modernizr.custom-3.6.0.js?1642671567></script>
+<script src=../js/learn.js?1642671567></script>
+<script src=../js/hugo-learn.js?1642671567></script>
+<script src=../mermaid/mermaid.js?1642671567></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
