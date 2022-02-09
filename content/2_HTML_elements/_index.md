@@ -113,12 +113,12 @@ In the example 1; the `title`, `author`, `year`, and `price` elements are all si
 ```
 <books>
 
-<book>
-  <title>Harry Potter</title>
-  <author>J K. Rowling</author>
-  <year>2005</year>
-  <price>29.99</price>
-</book>
+  <book>
+    <title>Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
 
 </books>
 ```
