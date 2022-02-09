@@ -1,6 +1,6 @@
 +++
-title = "CSS selectorts & Xpath"
-menuTitle = "3. CSS selectorts & Xpath"
+title = "CSS selector & Xpath"
+menuTitle = "3. CSS selector & Xpath"
 weight = 3
 +++
 
