@@ -174,7 +174,7 @@ tree.xpath('//div[@id ="sasproceedings"]/ul/li/div/div/span/a/text()')
 tree.xpath('//div[@id ="sasproceedings"]/descendant::a/text()')
 
 # Get SUGI URL
-href = soup.select("div[id = 'sasproceedings'] a")[5].get('href')
+href = soup.select("div[id = 'sasproceedings'] a")[10].get('href')
 sugi_url = url + href
 ```
 {{% /tab %}}
@@ -277,7 +277,7 @@ tree3 = html.fromstring(r_sugi_2018.content)
 {{< /tabs >}}
 {{<mermaid align="center">}}
 graph LR;
-    A["div class='paper bl'"] --> B["a id='sgf2018.2659-2018'"];
+    A["div class='paper wh'"] --> B["a id='sgf2018.2659-2018'"];
     A --> C["span class='code'"];
     A --> D["a target='_blank'"  Title & Link];
     style D fill:#f3d7d3;
@@ -703,11 +703,6 @@ section = pd.read_excel('Sections.xlsx')
 best =  pd.read_excel('Best_paper.xlsx')  
 final = sugi.merge(section, on='Title', how='left').merge(best, on='Title', how='left')
 final.to_csv('SUGI_paper.csv', index = False)
-```
-{{% /tab %}}
-{{% tab name="R" %}}
-```R
-library()
 ```
 {{% /tab %}}
 {{< /tabs >}}
