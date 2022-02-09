@@ -6,18 +6,18 @@
 <meta name=description content>
 <link rel=icon href=../images/favicon.png type=image/png>
 <title>Demo: Web Scraping with R/Python : Web Crawler</title>
-<link href=../css/nucleus.css?1644384741 rel=stylesheet>
-<link href=../css/fontawesome-all.min.css?1644384741 rel=stylesheet>
-<link href=../css/hybrid.css?1644384741 rel=stylesheet>
-<link href=../css/featherlight.min.css?1644384741 rel=stylesheet>
-<link href=../css/perfect-scrollbar.min.css?1644384741 rel=stylesheet>
-<link href=../css/auto-complete.css?1644384741 rel=stylesheet>
-<link href=../css/atom-one-dark-reasonable.css?1644384741 rel=stylesheet>
-<link href=../css/theme.css?1644384741 rel=stylesheet>
-<link href=../css/tabs.css?1644384741 rel=stylesheet>
-<link href=../css/hugo-theme.css?1644384741 rel=stylesheet>
-<link href=../css/theme-green.css?1644384741 rel=stylesheet>
-<script src=../js/jquery-3.3.1.min.js?1644384741></script>
+<link href=../css/nucleus.css?1644387644 rel=stylesheet>
+<link href=../css/fontawesome-all.min.css?1644387644 rel=stylesheet>
+<link href=../css/hybrid.css?1644387644 rel=stylesheet>
+<link href=../css/featherlight.min.css?1644387644 rel=stylesheet>
+<link href=../css/perfect-scrollbar.min.css?1644387644 rel=stylesheet>
+<link href=../css/auto-complete.css?1644387644 rel=stylesheet>
+<link href=../css/atom-one-dark-reasonable.css?1644387644 rel=stylesheet>
+<link href=../css/theme.css?1644387644 rel=stylesheet>
+<link href=../css/tabs.css?1644387644 rel=stylesheet>
+<link href=../css/hugo-theme.css?1644387644 rel=stylesheet>
+<link href=../css/theme-green.css?1644387644 rel=stylesheet>
+<script src=../js/jquery-3.3.1.min.js?1644387644></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
 <body data-url=../4_demo/>
@@ -33,10 +33,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=../js/lunr.min.js?1644384741></script>
-<script type=text/javascript src=../js/auto-complete.js?1644384741></script>
+<script type=text/javascript src=../js/lunr.min.js?1644387644></script>
+<script type=text/javascript src=../js/auto-complete.js?1644387644></script>
 <script type=text/javascript>var baseurl="https://rc-web-crawler.github.io/"</script>
-<script type=text/javascript src=../js/search.js?1644384741></script>
+<script type=text/javascript src=../js/search.js?1644387644></script>
 </div>
 <section id=homelinks>
 <ul>
@@ -364,7 +364,7 @@ tree<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div
 tree<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[@id =&#34;sasproceedings&#34;]/descendant::a/text()&#39;</span>)
 
 <span style=color:#75715e># Get SUGI URL</span>
-href <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[id = &#39;sasproceedings&#39;] a&#34;</span>)[<span style=color:#ae81ff>5</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)
+href <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[id = &#39;sasproceedings&#39;] a&#34;</span>)[<span style=color:#ae81ff>10</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)
 sugi_url <span style=color:#f92672>=</span> url <span style=color:#f92672>+</span> href
 </code></pre></div>
 </div>
@@ -471,7 +471,7 @@ tree3 <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>f
 </div>
 <div class=mermaid align=center>
 graph LR;
-A["div class='paper bl'"] --> B["a id='sgf2018.2659-2018'"];
+A["div class='paper wh'"] --> B["a id='sgf2018.2659-2018'"];
 A --> C["span class='code'"];
 A --> D["a target='_blank'" Title & Link];
 style D fill:#f3d7d3;
@@ -914,7 +914,6 @@ best<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;Best
 <div class=tab-panel>
 <div class=tab-nav>
 <button data-tab-item=python data-tab-group=final class="tab-nav-button btn active" onclick="switchTab('final','python')">python</button>
-<button data-tab-item=R data-tab-group=final class="tab-nav-button btn" onclick="switchTab('final','R')">R</button>
 </div>
 <div class=tab-content>
 <div data-tab-item=python data-tab-group=final class="tab-item active">
@@ -923,10 +922,6 @@ section <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>r
 best <span style=color:#f92672>=</span>  pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;Best_paper.xlsx&#39;</span>)  
 final <span style=color:#f92672>=</span> sugi<span style=color:#f92672>.</span>merge(section, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;Title&#39;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)<span style=color:#f92672>.</span>merge(best, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;Title&#39;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)
 final<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;SUGI_paper.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=final class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>()
 </code></pre></div>
 </div>
 </div>
@@ -943,17 +938,17 @@ final<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;SUG
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=../js/clipboard.min.js?1644384741></script>
-<script src=../js/perfect-scrollbar.min.js?1644384741></script>
-<script src=../js/perfect-scrollbar.jquery.min.js?1644384741></script>
-<script src=../js/jquery.sticky.js?1644384741></script>
-<script src=../js/featherlight.min.js?1644384741></script>
-<script src=../js/highlight.pack.js?1644384741></script>
+<script src=../js/clipboard.min.js?1644387644></script>
+<script src=../js/perfect-scrollbar.min.js?1644387644></script>
+<script src=../js/perfect-scrollbar.jquery.min.js?1644387644></script>
+<script src=../js/jquery.sticky.js?1644387644></script>
+<script src=../js/featherlight.min.js?1644387644></script>
+<script src=../js/highlight.pack.js?1644387644></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=../js/modernizr.custom-3.6.0.js?1644384741></script>
-<script src=../js/learn.js?1644384741></script>
-<script src=../js/hugo-learn.js?1644384741></script>
-<script src=../mermaid/mermaid.js?1644384741></script>
+<script src=../js/modernizr.custom-3.6.0.js?1644387644></script>
+<script src=../js/learn.js?1644387644></script>
+<script src=../js/hugo-learn.js?1644387644></script>
+<script src=../mermaid/mermaid.js?1644387644></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
