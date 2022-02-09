@@ -5,7 +5,7 @@
 <meta name=generator content="Hugo 0.92.1">
 <meta name=description content>
 <link rel=icon href=../images/favicon.png type=image/png>
-<title>Categories : Web Crawler</title>
+<title>Setup Your Python Environment : Web Crawler</title>
 <link href=../css/nucleus.css?1644384741 rel=stylesheet>
 <link href=../css/fontawesome-all.min.css?1644384741 rel=stylesheet>
 <link href=../css/hybrid.css?1644384741 rel=stylesheet>
@@ -20,7 +20,7 @@
 <script src=../js/jquery-3.3.1.min.js?1644384741></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
-<body data-url=../categories/>
+<body data-url=../5_python_env/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -67,7 +67,9 @@
 4. Demo: with R & Python
 </a>
 </li>
-<li data-nav-id=/5_python_env/ title="Setup Your Python Environment" class=dd-item>
+<li data-nav-id=/5_python_env/ title="Setup Your Python Environment" class="dd-item
+parent
+active">
 <a href=../5_python_env/>
 5. Appendix: Python Environment Setup
 </a>
@@ -106,11 +108,18 @@
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-Categories
+Setup Your Python Environment
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#prepare-software>Prepare software</a></li>
+<li><a href=#setup-proxy-servers>Setup proxy servers</a></li>
+<li><a href=#setup-your-own-environment>Setup your own environment</a></li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
@@ -119,16 +128,80 @@ Categories
 </div>
 <div id=body-inner>
 <h1>
-category ::
-Categories
+Setup Your Python Environment
 </h1>
-<ul>
-</ul>
+<h2 id=prepare-software>Prepare software</h2>
+<ol>
+<li>Install the software <strong>Anaconda</strong> through <a href=https://sccm.novartis.intra/esd/>Novartis Software Self-Service</a>
+<img src=./1.JPG alt=image1></li>
+</ol>
+<h2 id=setup-proxy-servers>Setup proxy servers</h2>
+<ol>
+<li>
+<p>Create a file named <strong>.condarc</strong> located in the path: C:\Users\521id<br>
+<img src=./2.JPG alt=image2></p>
+</li>
+<li>
+<p>Open the file .condarc using Notepad++ or UltraEdit as you like</p>
+</li>
+<li>
+<p>Add below texts into this file (do not remove spaces or indents before &ldquo;-&rdquo; and &ldquo;http&rdquo;)</p>
+<blockquote>
+<p>ssl_verify: true</p>
+<p>channels:</p>
+<p>  - defaults</p>
+<p>  - https<a href></a>://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</p>
+<p>  - https<a href></a>://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</p>
+<p>proxy_servers:</p>
+<p>  http: http<a href></a>://ap-cnzj-proxy.ap.novartis.net:2011</p>
+<p>  https: http<a href></a>://ap-cnzj-proxy.ap.novartis.net:2011</p>
+<p>show_channel_urls: true</p>
+</blockquote>
+</li>
+<li>
+<p>Save and quit</p>
+</li>
+</ol>
+<h2 id=setup-your-own-environment>Setup your own environment</h2>
+<ol>
+<li>
+<p>Open <strong>Anaconda Navigator</strong> to create your own environment. (Be patient after clicking <em>Create</em> and remember the environment name)
+<img src=./3.JPG alt=image3></p>
+</li>
+<li>
+<p>Now you can install any application that you needed e.g. Jupyter Notebook, VS Code in your own environment.</p>
+</li>
+<li>
+<p>Search &ldquo;<strong>env</strong>&rdquo; in windows search. Choose <em><strong>Edit environment variables for your account</strong></em>.
+<img src=./4.jpg alt=image4></p>
+</li>
+<li>
+<p>Choose <em><strong>Path</strong></em>, and then click <em><strong>Edit</strong></em>. Then click <em><strong>New</strong></em> to add below environment variables. (&ldquo;py37&rdquo; is the environment name which is created in Anaconda Navigator and you can type in your own)
+<img src=./5.JPG alt=image5>
+<img src=./6.JPG alt=image6></p>
+</li>
+<li>
+<p>Open <strong>Anaconda Prompt (your envr name)</strong>. Install packages using below command lines.</p>
+<blockquote>
+<p>pip install --proxy=http<a href></a>://ap-cnzj-proxy.ap.novartis.net:2010 -U flask (package name) --user -i https<a href></a>://pypi.tuna.tsinghua.edu.cn/simple</p>
+</blockquote>
+</li>
+<li>
+<p>Open <strong>Command Prompt</strong> by press Windows + R and type &ldquo;cmd&rdquo;. Install packages using below command lines.</p>
+<blockquote>
+<p>C:\Users\521id\.conda\envs\your envr name\python.exe -m pip install --proxy=http<a href></a>://ap-cnzj-proxy.ap.novartis.net:2010 -U flask (package name) --user -i https<a href></a>://pypi.tuna.tsinghua.edu.cn/simple</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Keep learning and enjoy coding!</strong></p>
+</li>
+</ol>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
+<a class="nav nav-prev" href=../4_demo/ title="Demo: Web Scraping with R/Python"> <i class="fa fa-chevron-left"></i></a>
 <a class="nav nav-next" href=../1_web_at_glance/ title="Web at a glance" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
