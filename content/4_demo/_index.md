@@ -36,7 +36,7 @@ Within Novartis, we need proxy to get into some websites.
 {{% tab name="python" %}}
 ```python
 url = "https://www.lexjansen.com"
-proxyDict = {'https': 'http://na-useh-proxy.na.novartis.net:2011'}
+proxyDict = {'https': xxx}
 # Interact with data via a REST API
 # Returns a <response> object
 r = requests.get(url, proxies=proxyDict, verify=False)
