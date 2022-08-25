@@ -3,7 +3,7 @@ title = "Content Analysis"
 menuTitle = "6. Content Analysis"
 weight = 6
 +++
-### Title Analysis: Keyword Prediction
+## Title Analysis: Keyword Prediction
 
 Although most of the articles have keywords with them, there are still
 quite a lot of articles without keywords. Meanwhile, some articles may
@@ -165,7 +165,7 @@ the calculation.
       geom_bar (stat="identity", width=1) + 
       coord_polar ("y", start=0) +
       geom_text(aes(label = paste0(percentage, "%")), position = position_stack(vjust=0.5))+
-      labs(x = NULL, y = NULL, fill = NULL) + 
+      labs(x = NULL, y = NULL, fill = NULL,title="Coverage of cleaned keywords") + 
       theme_classic() +
       theme(axis.line = element_blank(),
               axis.text = element_blank(),
@@ -173,8 +173,8 @@ the calculation.
             ) +
       scale_fill_brewer(palette="Blues")
 
-![](./cov1-1.png) {{%
-/expand%}}
+{{%/expand%}}  
+![](./cov1-1.png)   
 
 Approximately 73.18% of the papers have cleaned keyword coverage.
 
@@ -235,7 +235,7 @@ keywords for all the papers imputed.
       geom_bar (stat="identity", width=1) + 
       coord_polar ("y", start=0) +
       geom_text(aes(label = paste0(percentage, "%")), position = position_stack(vjust=0.5))+
-      labs(x = NULL, y = NULL, fill = NULL) + 
+      labs(x = NULL, y = NULL, fill = NULL, title="Coverage of imputed keywords") + 
       theme_classic() +
       theme(axis.line = element_blank(),
               axis.text = element_blank(),
@@ -243,7 +243,7 @@ keywords for all the papers imputed.
             ) +
       scale_fill_brewer(palette="Blues")
 
-![](./cov2-1.png)
+
 
     #imputed keyword accuracy 
     test <- paper5 %>%
@@ -262,7 +262,7 @@ keywords for all the papers imputed.
       geom_bar (stat="identity", width=1) + 
       coord_polar ("y", start=0) +
       geom_text(aes(label = paste0(percentage, "%")), position = position_stack(vjust=0.5))+
-      labs(x = NULL, y = NULL, fill = NULL) + 
+      labs(x = NULL, y = NULL, fill = NULL,title="Percent of imputed keywords that exist in cleaned keywords") + 
       theme_classic() +
       theme(axis.line = element_blank(),
               axis.text = element_blank(),
@@ -270,9 +270,9 @@ keywords for all the papers imputed.
             ) +
       scale_fill_manual(values='#71A92C')
 
-![](./cov2-2.png) {{%
-/expand%}}
-
+{{%/expand%}}  
+![](./cov2-1.png)
+![](./cov2-2.png)   
 Approximately 82.1% of the papers have keyword coverage after
 imputation. Also, we can find that all the imputed keywords are within
 cleaned keywords.
@@ -330,7 +330,7 @@ papers we collected.
       geom_bar (stat="identity", width=1) + 
       coord_polar ("y", start=0) +
       geom_text(aes(label = paste0(percentage, "%")), position = position_stack(vjust=0.5))+
-      labs(x = NULL, y = NULL, fill = NULL) + 
+      labs(x = NULL, y = NULL, fill = NULL,title="Coverage of predicted keywords for all papers") + 
       theme_classic() +
       theme(axis.line = element_blank(),
               axis.text = element_blank(),
@@ -338,8 +338,9 @@ papers we collected.
             ) +
       scale_fill_brewer(palette="Blues")
 
-![](./pred-1.png) {{%
-/expand%}}
+ {{%
+/expand%}}  
+![](./pred-1.png)  
 
 After predicting keywords using our dictionary model, the predicted
 keyword coverage of all the papers is approximately 53.16%.
