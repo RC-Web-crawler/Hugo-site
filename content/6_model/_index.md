@@ -173,7 +173,7 @@ the calculation.
             ) +
       scale_fill_brewer(palette="Blues")
 
-![](title-analysis_files/figure-markdown_strict/cov1-1.png) {{%
+![](./cov1-1.png) {{%
 /expand%}}
 
 Approximately 73.18% of the papers have cleaned keyword coverage.
@@ -243,7 +243,7 @@ keywords for all the papers imputed.
             ) +
       scale_fill_brewer(palette="Blues")
 
-![](title-analysis_files/figure-markdown_strict/cov2-1.png)
+![](./cov2-1.png)
 
     #imputed keyword accuracy 
     test <- paper5 %>%
@@ -270,7 +270,7 @@ keywords for all the papers imputed.
             ) +
       scale_fill_manual(values='#71A92C')
 
-![](title-analysis_files/figure-markdown_strict/cov2-2.png) {{%
+![](./cov2-2.png) {{%
 /expand%}}
 
 Approximately 82.1% of the papers have keyword coverage after
@@ -338,7 +338,7 @@ papers we collected.
             ) +
       scale_fill_brewer(palette="Blues")
 
-![](title-analysis_files/figure-markdown_strict/pred-1.png) {{%
+![](./pred-1.png) {{%
 /expand%}}
 
 After predicting keywords using our dictionary model, the predicted
