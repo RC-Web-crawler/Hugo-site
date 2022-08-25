@@ -1,250 +1,77 @@
-<!doctype html><html lang=en class="js csstransforms3d">
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.92.1">
-<meta name=description content>
-<link rel=icon href=../images/favicon.png type=image/png>
-<title>Demo: Web Scraping with R/Python : Web Crawler</title>
-<link href=../css/nucleus.css?1644458095 rel=stylesheet>
-<link href=../css/fontawesome-all.min.css?1644458095 rel=stylesheet>
-<link href=../css/hybrid.css?1644458095 rel=stylesheet>
-<link href=../css/featherlight.min.css?1644458095 rel=stylesheet>
-<link href=../css/perfect-scrollbar.min.css?1644458095 rel=stylesheet>
-<link href=../css/auto-complete.css?1644458095 rel=stylesheet>
-<link href=../css/atom-one-dark-reasonable.css?1644458095 rel=stylesheet>
-<link href=../css/theme.css?1644458095 rel=stylesheet>
-<link href=../css/tabs.css?1644458095 rel=stylesheet>
-<link href=../css/hugo-theme.css?1644458095 rel=stylesheet>
-<link href=../css/theme-green.css?1644458095 rel=stylesheet>
-<script src=../js/jquery-3.3.1.min.js?1644458095></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
-</head>
-<body data-url=../4_demo/>
-<nav id=sidebar>
-<div id=header-wrapper>
-<div id=header>
-<a id=logo href=https://github.com/RC-Web-crawler/Hugo-site>
-<img src=../images/web_crawler.png>
-</a>
-</div>
-<div class=searchbox>
-<label for=search-by><i class="fas fa-search"></i></label>
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.101.0"><meta name=description content><link rel=icon href=../images/favicon.png type=image/png><title>Demo: Web Scraping with R/Python : Web Crawler</title><link href=../css/nucleus.css?1661403123 rel=stylesheet><link href=../css/fontawesome-all.min.css?1661403123 rel=stylesheet><link href=../css/hybrid.css?1661403123 rel=stylesheet><link href=../css/featherlight.min.css?1661403123 rel=stylesheet><link href=../css/perfect-scrollbar.min.css?1661403123 rel=stylesheet><link href=../css/auto-complete.css?1661403123 rel=stylesheet><link href=../css/atom-one-dark-reasonable.css?1661403123 rel=stylesheet><link href=../css/theme.css?1661403123 rel=stylesheet><link href=../css/tabs.css?1661403123 rel=stylesheet><link href=../css/hugo-theme.css?1661403123 rel=stylesheet><link href=../css/theme-green.css?1661403123 rel=stylesheet><script src=../js/jquery-3.3.1.min.js?1661403123></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style></head><body data-url=../4_demo/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=https://github.com/RC-Web-crawler/Hugo-site><img src=../images/web_crawler.png></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
-<span data-search-clear><i class="fas fa-times"></i></span>
-</div>
-<script type=text/javascript src=../js/lunr.min.js?1644458095></script>
-<script type=text/javascript src=../js/auto-complete.js?1644458095></script>
-<script type=text/javascript>var baseurl="https://rc-web-crawler.github.io/"</script>
-<script type=text/javascript src=../js/search.js?1644458095></script>
-</div>
-<section id=homelinks>
-<ul>
-<li>
-<a class=padding href=../><i class="fas fa-home"></i> Home</a>
-</li>
-</ul>
-</section>
-<div class=highlightable>
-<ul class=topics>
-<li data-nav-id=/1_web_at_glance/ title="Web at a glance" class=dd-item>
-<a href=../1_web_at_glance/>
-1. Web at a glance
-</a>
-</li>
-<li data-nav-id=/2_html_elements/ title="HTML elements & Tree Structure" class=dd-item>
-<a href=../2_html_elements/>
-2. HTML elements
-</a>
-</li>
-<li data-nav-id=/3_css/ title="CSS selector & Xpath" class=dd-item>
-<a href=../3_css/>
-3. CSS selector & Xpath
-</a>
-</li>
-<li data-nav-id=/4_demo/ title="Demo: Web Scraping with R/Python" class="dd-item
-parent
-active">
-<a href=../4_demo/>
-4. Demo: with R & Python
-</a>
-</li>
-<li data-nav-id=/5_python_env/ title="Setup Your Python Environment" class=dd-item>
-<a href=../5_python_env/>
-5. Appendix: Python Environment Setup
-</a>
-</li>
-</ul>
-<section id=shortcuts>
-<h3>More</h3>
-<ul>
-<li>
-<a class=padding href=https://github.com/RC-Web-crawler/Hugo-site><i class="fab fa-fw fa-github"></i> GitHub</a>
-</li>
-<li>
-<a class=padding href=https://rc-web-crawler.github.io/credits><i class="fas fa-fw fa-bullhorn"></i> Credits</a>
-</li>
-</ul>
-</section>
-<section id=footer>
-<p><a id=logo href=https://github.com/RC-Web-crawler/Hugo-site>
-<img src=../images/novartis-logo.png>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=../js/lunr.min.js?1661403123></script>
+<script type=text/javascript src=../js/auto-complete.js?1661403123></script>
+<script type=text/javascript>var baseurl="https://rc-web-crawler.github.io/"</script><script type=text/javascript src=../js/search.js?1661403123></script></div><section id=homelinks><ul><li><a class=padding href=../><i class='fas fa-home'></i> Home</a></li></ul></section><div class=highlightable><ul class=topics><li data-nav-id=/1_web_at_glance/ title="Web at a glance" class=dd-item><a href=../1_web_at_glance/>1. Web at a glance</a></li><li data-nav-id=/2_html_elements/ title="HTML elements & Tree Structure" class=dd-item><a href=../2_html_elements/>2. HTML elements</a></li><li data-nav-id=/3_css/ title="CSS selector & Xpath" class=dd-item><a href=../3_css/>3. CSS selector & Xpath</a></li><li data-nav-id=/4_demo/ title="Demo: Web Scraping with R/Python" class="dd-item
+active"><a href=../4_demo/>4. Demo: with R & Python</a></li><li data-nav-id=/2nd_home/ title=2nd_Home class=dd-item><a href=../2nd_home/>2nd_Home</a></li><li data-nav-id=/5_keyword/ title="Keyword Analysis" class=dd-item><a href=../5_keyword/>5. Keyword Analysis</a></li><li data-nav-id=/6_model/ title="Content Analysis" class=dd-item><a href=../6_model/>6. Content Analysis</a></li><li data-nav-id=/7_shiny/ title="eCRF Index Shiny App" class=dd-item><a href=../7_shiny/>7. eCRF Index Shiny App</a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://github.com/RC-Web-crawler/Hugo-site><i class='fab fa-fw fa-github'></i> GitHub</a></li><li><a class=padding href=https://rc-web-crawler.github.io/credits><i class='fas fa-fw fa-bullhorn'></i> Credits</a></li></ul></section><section id=footer><p><a id=logo href=https://github.com/RC-Web-crawler/Hugo-site><img src=../images/novartis-logo.png>
 </a>Built with <i class="fas fa-heart"></i>
-<a> from Web Crawler study group</a> and
-<a href=https://gohugo.io/>Hugo</a></p>
-</section>
-</div>
-</nav>
-<section id=body>
-<div id=overlay></div>
-<div class="padding highlightable">
-<div>
-<div id=top-bar>
-<div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
-<span id=sidebar-toggle-span>
-<a href=# id=sidebar-toggle data-sidebar-toggle>
-<i class="fas fa-bars"></i>
-</a>
-</span>
+<a>from Web Crawler study group</a> and
+<a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
-<span class=links>
-Demo: Web Scraping with R/Python
-</span>
-</div>
-<div class=progress>
-<div class=wrapper>
-<nav id=TableOfContents>
-<ul>
-<li>
-<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-</div>
-<div id=head-tags>
-</div>
-<div id=body-inner>
-<h1>
-Demo: Web Scraping with R/Python
-</h1>
-<hr>
-<h4 id=pre-prepare-include-packages-that-we-need>Pre-prepare: Include packages that we need</h4>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=include_packages class="tab-nav-button btn active" onclick="switchTab('include_packages','python')">python</button>
-<button data-tab-item=R data-tab-group=include_packages class="tab-nav-button btn" onclick="switchTab('include_packages','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=include_packages class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> bs4 <span style=color:#f92672>import</span> BeautifulSoup <span style=color:#75715e># beautifulsoup4</span>
-<span style=color:#f92672>import</span> requests
-<span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
-<span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
-<span style=color:#f92672>import</span> re
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=include_packages class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>library</span>(rvest)
-<span style=color:#a6e22e>library</span>(dplyr)
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="notices note"><p>Within Novartis, we need proxy to get into some websites.</p>
-</div>
-<h4 id=pre-prepare-interact-with-the-website>Pre-prepare: Interact with the website</h4>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=read_in_the_url class="tab-nav-button btn active" onclick="switchTab('read_in_the_url','python')">python</button>
-<button data-tab-item=R data-tab-group=read_in_the_url class="tab-nav-button btn" onclick="switchTab('read_in_the_url','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=read_in_the_url class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;https://www.lexjansen.com&#34;</span>
-proxyDict <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;https&#39;</span>: xxx}
-<span style=color:#75715e># Interact with data via a REST API</span>
-<span style=color:#75715e># Returns a &lt;response&gt; object</span>
-r <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-
-<span style=color:#75715e># for css selector</span>
-soup <span style=color:#f92672>=</span> BeautifulSoup(r<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-
-<span style=color:#75715e># for XPath</span>
-tree <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>fromstring(r<span style=color:#f92672>.</span>content)  
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=read_in_the_url class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># read url</span>
-website <span style=color:#f92672>&lt;-</span> <span style=color:#e6db74>&#34;https://www.lexjansen.com&#34;</span>
-lex <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(website)
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>Different parsers:</p>
-<ul>
-<li>&lsquo;lxml&rsquo;, &lsquo;html.parser&rsquo;, &lsquo;xml&rsquo;&mldr;</li>
-<li>If it is a perfectly-formed HTML document, small differences between parsers.</li>
-<li>If the document is not perfectly-formed, different parsers give different results.</li>
-</ul>
-<div class=expand>
-<div class=expand-label style=cursor:pointer onclick="$h=$(this),$h.next('div').slideToggle(100,function(){$h.children('i').attr('class',function(){return $h.next('div').is(':visible')?'fas fa-chevron-down':'fas fa-chevron-right'})})">
-<i style=font-size:x-small class="fas fa-chevron-right"></i>
-<span>
-HTML file
-</span>
-</div>
-<div class=expand-content style=display:none>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
-<span style=color:#75715e>&lt;!--[if lt IE 7]&gt;      &lt;html class=&#34;no-js lt-ie9 lt-ie8 lt-ie7&#34; lang=&#34;en&#34;&gt; &lt;![endif]--&gt;&lt;!--[if IE 7]&gt;         &lt;html class=&#34;no-js lt-ie9 lt-ie8&#34; lang=&#34;en&#34;&gt; &lt;![endif]--&gt;&lt;!--[if IE 8]&gt;         &lt;html class=&#34;no-js lt-ie9&#34; lang=&#34;en&#34;&gt; &lt;![endif]--&gt;&lt;!--[if gt IE 8]&gt;      &lt;html class=&#34;no-js&#34; lang=&#34;en&#34;&gt; &lt;![endif]--&gt;</span>&lt;<span style=color:#f92672>html</span>&gt;&lt;<span style=color:#f92672>head</span>&gt;
-&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;utf-8&#34;</span>/&gt;
-&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;IE=edge&#34;</span> <span style=color:#a6e22e>http-equiv</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;X-UA-Compatible&#34;</span>/&gt;
-&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://fonts.googleapis.com/css?family=Special+Elite&amp;amp;v1&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;stylesheet&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/css&#34;</span>/&gt;
-&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;-gdlTJkYvyNRwnnZSHmM94zhCJNRmCwBfdNWk5u2yII&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;google-site-verification&#34;</span>/&gt;
-&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;c2f6e02546ad6b1a&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;yandex-verification&#34;</span>/&gt;
-&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;telephone=no&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;format-detection&#34;</span>/&gt;
-&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;none&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;msapplication-config&#34;</span>/&gt;
-&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;SAS Proceedings and more: Fortune Records, Dave Marsh 1001, ...&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;description&#34;</span>/&gt;
-&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;SAS Proceedings, Lex Jansen, Fortune Records, The Heart of Rock and Soul, Dave Marsh 1001&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;KeyWords&#34;</span>/&gt;
-&lt;<span style=color:#f92672>title</span>&gt;SAS Proceedings and more&lt;/<span style=color:#f92672>title</span>&gt;
-&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;application/ld+json&#34;</span>&gt;{<span style=color:#e6db74>&#34;@context&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;https:\/\/schema.org&#34;</span>,<span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;WebSite&#34;</span>,<span style=color:#e6db74>&#34;url&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;https:\/\/www.lexjansen.com\/&#34;</span>,<span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;Lex Jansen&#39;s Homepage&#34;</span>}&lt;/<span style=color:#f92672>script</span>&gt;
-&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;application/ld+json&#34;</span>&gt;{<span style=color:#e6db74>&#34;@context&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;https:\/\/schema.org&#34;</span>,<span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;Person&#34;</span>,<span style=color:#e6db74>&#34;url&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;https:\/\/www.lexjansen.com\/&#34;</span>,
-    <span style=color:#e6db74>&#34;sameAs&#34;</span><span style=color:#f92672>:</span>[<span style=color:#e6db74>&#34;https:\/\/instagram.com\/lex.jansen\/&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/www.evernote.com\/pub\/lexjansen\/public&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/www.linkedin.com\/in\/lexjansen&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/plus.google.com\/u\/0\/+LexJansen&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/www.youtube.com\/user\/lexjansen&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/twitter.com\/lexjansen&#34;</span>],<span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;Lex jansen&#34;</span>}&lt;/<span style=color:#f92672>script</span>&gt;
-&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;favicon.ico&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;icon&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;image/x-icon&#34;</span>/&gt;
-&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;favicon.ico&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;shortcut icon&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;image/x-icon&#34;</span>/&gt;
-&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/apple-touch-icon.png&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;apple-touch-icon&#34;</span>/&gt;
-&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/apple-touch-icon-57x57.png&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;apple-touch-icon&#34;</span> <span style=color:#a6e22e>sizes</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;57x57&#34;</span>/&gt;
-...
-&lt;<span style=color:#f92672>br</span>/&gt;
-Copyright © 1999-2022 Lex Jansen. All rights reserved.&lt;<span style=color:#f92672>br</span>/&gt;
-SAS is a registered trademark of SAS Institute Inc.
-SAS, Statistical Analysis System, and all other SAS Institute Inc. product or service names are registered trademarks or trademarks of SAS Institute Inc. in the USA and other countries. ® indicates USA registration.
-&lt;/<span style=color:#f92672>div</span>&gt;
-&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://www.google-analytics.com/urchin.js&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span>&gt;&lt;/<span style=color:#f92672>script</span>&gt;
-&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span>&gt; <span style=color:#a6e22e>_uacct</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;UA-132232-1&#34;</span>; <span style=color:#a6e22e>urchinTracker</span>();&lt;/<span style=color:#f92672>script</span>&gt;
-&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>async</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;&#34;</span> <span style=color:#a6e22e>data-goatcounter</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://lexjansen.goatcounter.com/count&#34;</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//gc.zgo.at/count.js&#34;</span>&gt;&lt;/<span style=color:#f92672>script</span>&gt;
-&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span>&gt;
-    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>gaJsHost</span> <span style=color:#f92672>=</span> ((<span style=color:#e6db74>&#34;https:&#34;</span> <span style=color:#f92672>==</span> document.<span style=color:#a6e22e>location</span>.<span style=color:#a6e22e>protocol</span>) <span style=color:#f92672>?</span> <span style=color:#e6db74>&#34;https://ssl.&#34;</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;https://www.&#34;</span>);
-    document.<span style=color:#a6e22e>write</span>(<span style=color:#a6e22e>unescape</span>(<span style=color:#e6db74>&#34;%3Cscript src=&#39;&#34;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>gaJsHost</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;google-analytics.com/ga.js&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&#34;</span>));
-  &lt;/<span style=color:#f92672>script</span>&gt;
-&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span>&gt;
-    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>pageTracker</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>_gat</span>.<span style=color:#a6e22e>_getTracker</span>(<span style=color:#e6db74>&#34;UA-132232-1&#34;</span>);
-    <span style=color:#a6e22e>pageTracker</span>.<span style=color:#a6e22e>_trackPageview</span>();
-  &lt;/<span style=color:#f92672>script</span>&gt;
-&lt;/<span style=color:#f92672>div</span>&gt;
-&lt;/<span style=color:#f92672>body</span>&gt;
-&lt;/<span style=color:#f92672>html</span>&gt;
-</code></pre></div>
-</div>
-</div>
-<h4 id=structure>Structure</h4>
-<div class=mermaid align=center>
-graph TB;
+<span class=links>Demo: Web Scraping with R/Python</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Demo: Web Scraping with R/Python</h1><hr><h4 id=pre-prepare-include-packages-that-we-need>Pre-prepare: Include packages that we need</h4><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=include_packages class="tab-nav-button btn active" onclick='switchTab("include_packages","python")'>python</button>
+<button data-tab-item=R data-tab-group=include_packages class="tab-nav-button btn" onclick='switchTab("include_packages","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=include_packages class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> bs4 <span style=color:#f92672>import</span> BeautifulSoup <span style=color:#75715e># beautifulsoup4</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> requests
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> re
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=include_packages class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#a6e22e>library</span>(rvest)
+</span></span><span style=display:flex><span><span style=color:#a6e22e>library</span>(dplyr)
+</span></span></code></pre></div></div></div></div><div class="notices note"><p>Within Novartis, we need proxy to get into some websites.</p></div><h4 id=pre-prepare-interact-with-the-website>Pre-prepare: Interact with the website</h4><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=read_in_the_url class="tab-nav-button btn active" onclick='switchTab("read_in_the_url","python")'>python</button>
+<button data-tab-item=R data-tab-group=read_in_the_url class="tab-nav-button btn" onclick='switchTab("read_in_the_url","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=read_in_the_url class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;https://www.lexjansen.com&#34;</span>
+</span></span><span style=display:flex><span>proxyDict <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;https&#39;</span>: xxx}
+</span></span><span style=display:flex><span><span style=color:#75715e># Interact with data via a REST API</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Returns a &lt;response&gt; object</span>
+</span></span><span style=display:flex><span>r <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># for css selector</span>
+</span></span><span style=display:flex><span>soup <span style=color:#f92672>=</span> BeautifulSoup(r<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># for XPath</span>
+</span></span><span style=display:flex><span>tree <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>fromstring(r<span style=color:#f92672>.</span>content)  
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=read_in_the_url class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e># read url</span>
+</span></span><span style=display:flex><span>website <span style=color:#f92672>&lt;-</span> <span style=color:#e6db74>&#34;https://www.lexjansen.com&#34;</span>
+</span></span><span style=display:flex><span>lex <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(website)
+</span></span></code></pre></div></div></div></div><p>Different parsers:</p><ul><li>&rsquo;lxml&rsquo;, &lsquo;html.parser&rsquo;, &lsquo;xml&rsquo;&mldr;</li><li>If it is a perfectly-formed HTML document, small differences between parsers.</li><li>If the document is not perfectly-formed, different parsers give different results.</li></ul><div class=expand><div class=expand-label style=cursor:pointer onclick='$h=$(this),$h.next("div").slideToggle(100,function(){$h.children("i").attr("class",function(){return $h.next("div").is(":visible")?"fas fa-chevron-down":"fas fa-chevron-right"})})'><i style=font-size:x-small class="fas fa-chevron-right"></i>
+<span>HTML file</span></div><div class=expand-content style=display:none><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span><span style=color:#75715e>&lt;!DOCTYPE html&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>&lt;!--[if lt IE 7]&gt;      &lt;html class=&#34;no-js lt-ie9 lt-ie8 lt-ie7&#34; lang=&#34;en&#34;&gt; &lt;![endif]--&gt;&lt;!--[if IE 7]&gt;         &lt;html class=&#34;no-js lt-ie9 lt-ie8&#34; lang=&#34;en&#34;&gt; &lt;![endif]--&gt;&lt;!--[if IE 8]&gt;         &lt;html class=&#34;no-js lt-ie9&#34; lang=&#34;en&#34;&gt; &lt;![endif]--&gt;&lt;!--[if gt IE 8]&gt;      &lt;html class=&#34;no-js&#34; lang=&#34;en&#34;&gt; &lt;![endif]--&gt;</span>&lt;<span style=color:#f92672>html</span>&gt;&lt;<span style=color:#f92672>head</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>charset</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;utf-8&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;IE=edge&#34;</span> <span style=color:#a6e22e>http-equiv</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;X-UA-Compatible&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://fonts.googleapis.com/css?family=Special+Elite&amp;amp;v1&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;stylesheet&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/css&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;-gdlTJkYvyNRwnnZSHmM94zhCJNRmCwBfdNWk5u2yII&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;google-site-verification&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;c2f6e02546ad6b1a&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;yandex-verification&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;telephone=no&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;format-detection&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;none&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;msapplication-config&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;SAS Proceedings and more: Fortune Records, Dave Marsh 1001, ...&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;description&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>meta</span> <span style=color:#a6e22e>content</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;SAS Proceedings, Lex Jansen, Fortune Records, The Heart of Rock and Soul, Dave Marsh 1001&#34;</span> <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;KeyWords&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>title</span>&gt;SAS Proceedings and more&lt;/<span style=color:#f92672>title</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;application/ld+json&#34;</span>&gt;{<span style=color:#e6db74>&#34;@context&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;https:\/\/schema.org&#34;</span>,<span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;WebSite&#34;</span>,<span style=color:#e6db74>&#34;url&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;https:\/\/www.lexjansen.com\/&#34;</span>,<span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;Lex Jansen&#39;s Homepage&#34;</span>}&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;application/ld+json&#34;</span>&gt;{<span style=color:#e6db74>&#34;@context&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;https:\/\/schema.org&#34;</span>,<span style=color:#e6db74>&#34;@type&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;Person&#34;</span>,<span style=color:#e6db74>&#34;url&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;https:\/\/www.lexjansen.com\/&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;sameAs&#34;</span><span style=color:#f92672>:</span>[<span style=color:#e6db74>&#34;https:\/\/instagram.com\/lex.jansen\/&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/www.evernote.com\/pub\/lexjansen\/public&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/www.linkedin.com\/in\/lexjansen&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/plus.google.com\/u\/0\/+LexJansen&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/www.youtube.com\/user\/lexjansen&#34;</span>,<span style=color:#e6db74>&#34;https:\/\/twitter.com\/lexjansen&#34;</span>],<span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>:</span><span style=color:#e6db74>&#34;Lex jansen&#34;</span>}&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;favicon.ico&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;icon&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;image/x-icon&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;favicon.ico&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;shortcut icon&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;image/x-icon&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/apple-touch-icon.png&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;apple-touch-icon&#34;</span>/&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/apple-touch-icon-57x57.png&#34;</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;apple-touch-icon&#34;</span> <span style=color:#a6e22e>sizes</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;57x57&#34;</span>/&gt;
+</span></span><span style=display:flex><span>...
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>br</span>/&gt;
+</span></span><span style=display:flex><span>Copyright © 1999-2022 Lex Jansen. All rights reserved.&lt;<span style=color:#f92672>br</span>/&gt;
+</span></span><span style=display:flex><span>SAS is a registered trademark of SAS Institute Inc.
+</span></span><span style=display:flex><span>SAS, Statistical Analysis System, and all other SAS Institute Inc. product or service names are registered trademarks or trademarks of SAS Institute Inc. in the USA and other countries. ® indicates USA registration.
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://www.google-analytics.com/urchin.js&#34;</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span>&gt;&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span>&gt; <span style=color:#a6e22e>_uacct</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;UA-132232-1&#34;</span>; <span style=color:#a6e22e>urchinTracker</span>();&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>async</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;&#34;</span> <span style=color:#a6e22e>data-goatcounter</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://lexjansen.goatcounter.com/count&#34;</span> <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//gc.zgo.at/count.js&#34;</span>&gt;&lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span>&gt;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>gaJsHost</span> <span style=color:#f92672>=</span> ((<span style=color:#e6db74>&#34;https:&#34;</span> <span style=color:#f92672>==</span> document.<span style=color:#a6e22e>location</span>.<span style=color:#a6e22e>protocol</span>) <span style=color:#f92672>?</span> <span style=color:#e6db74>&#34;https://ssl.&#34;</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;https://www.&#34;</span>);
+</span></span><span style=display:flex><span>    document.<span style=color:#a6e22e>write</span>(<span style=color:#a6e22e>unescape</span>(<span style=color:#e6db74>&#34;%3Cscript src=&#39;&#34;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>gaJsHost</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;google-analytics.com/ga.js&#39; type=&#39;text/javascript&#39;%3E%3C/script%3E&#34;</span>));
+</span></span><span style=display:flex><span>  &lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>&lt;<span style=color:#f92672>script</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text/javascript&#34;</span>&gt;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> <span style=color:#a6e22e>pageTracker</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>_gat</span>.<span style=color:#a6e22e>_getTracker</span>(<span style=color:#e6db74>&#34;UA-132232-1&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>pageTracker</span>.<span style=color:#a6e22e>_trackPageview</span>();
+</span></span><span style=display:flex><span>  &lt;/<span style=color:#f92672>script</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>body</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#f92672>html</span>&gt;
+</span></span></code></pre></div></div></div><h4 id=structure>Structure</h4><div class=mermaid align=center>graph TB;
 A[Title, Link, Author, Keyword, Pages, Size]
 B[Conference name, Conference place, Conference time]
 C[Section name, Best paper flag]
@@ -260,217 +87,84 @@ B
 end
 subgraph g3[Paper attributes]
 C
-end
-</div>
-<h4 id=one-example-that-we-use>One example that we use</h4>
-<table>
-<thead>
-<tr>
-<th>Paper information</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Title</td>
-<td>A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma</td>
-</tr>
-<tr>
-<td>Link</td>
-<td><a href=https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf>https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf</a></td>
-</tr>
-<tr>
-<td>Author</td>
-<td>Bogdan Gadidov, Linh Le</td>
-</tr>
-<tr>
-<td>Keyword</td>
-<td>Text Mining Topic Modeling Time Series</td>
-</tr>
-<tr>
-<td>Pages</td>
-<td>11</td>
-</tr>
-<tr>
-<td>Sizes</td>
-<td>660 kb</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Conference information</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Conference name</td>
-<td>SAS Global Forum 2018</td>
-</tr>
-<tr>
-<td>Conference place</td>
-<td>Denver, Colorado</td>
-</tr>
-<tr>
-<td>Conference time</td>
-<td>April 8-11, 2018</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Paper attributes</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Section name</td>
-<td>Breakout</td>
-</tr>
-<tr>
-<td>Best paper flag</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id=1-homepage---get-the-sugi-url>1. Homepage -> Get the SUGI url</h4>
-<div class=mermaid align=center>
-graph LR;
+end</div><h4 id=one-example-that-we-use>One example that we use</h4><table><thead><tr><th>Paper information</th><th></th></tr></thead><tbody><tr><td>Title</td><td>A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma</td></tr><tr><td>Link</td><td><a href=https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf>https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf</a></td></tr><tr><td>Author</td><td>Bogdan Gadidov, Linh Le</td></tr><tr><td>Keyword</td><td>Text Mining Topic Modeling Time Series</td></tr><tr><td>Pages</td><td>11</td></tr><tr><td>Sizes</td><td>660 kb</td></tr></tbody></table><table><thead><tr><th>Conference information</th><th></th></tr></thead><tbody><tr><td>Conference name</td><td>SAS Global Forum 2018</td></tr><tr><td>Conference place</td><td>Denver, Colorado</td></tr><tr><td>Conference time</td><td>April 8-11, 2018</td></tr></tbody></table><table><thead><tr><th>Paper attributes</th><th></th></tr></thead><tbody><tr><td>Section name</td><td>Breakout</td></tr><tr><td>Best paper flag</td><td></td></tr></tbody></table><h4 id=1-homepage---get-the-sugi-url>1. Homepage -> Get the SUGI url</h4><div class=mermaid align=center>graph LR;
 A["div id='sasproceedings'"] --> B[ul]
 B --> C[li];
 C --> D["div class='pf'"];
 D --> E[div];
 E --> F[span] --> G[a];
-style G fill:#f3d7d3;
-</div>
-<p><code>&lt;a href="/sugi">SUGI / SAS Global Forum&lt;/a> papers (1976-2021)</code></p>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=sugi_url class="tab-nav-button btn active" onclick="switchTab('sugi_url','python')">python</button>
-<button data-tab-item=R data-tab-group=sugi_url class="tab-nav-button btn" onclick="switchTab('sugi_url','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=sugi_url class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># CSS selector</span>
-soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[id = &#39;sasproceedings&#39;] &gt; ul &gt; li &gt; div &gt; div &gt; span &gt; a&#34;</span>)
-soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[id = &#39;sasproceedings&#39;] a&#34;</span>)
-
-<span style=color:#75715e># XPath</span>
-tree<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[@id =&#34;sasproceedings&#34;]/ul/li/div/div/span/a/text()&#39;</span>)
-tree<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[@id =&#34;sasproceedings&#34;]/descendant::a/text()&#39;</span>)
-
-<span style=color:#75715e># Get SUGI URL</span>
-href <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[id = &#39;sasproceedings&#39;] a&#34;</span>)[<span style=color:#ae81ff>10</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)
-sugi_url <span style=color:#f92672>=</span> url <span style=color:#f92672>+</span> href
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=sugi_url class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e>#sublink1</span>
-uri1 <span style=color:#f92672>&lt;-</span> lex <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;span a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
-sublink1 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website,uri1)
-sublink1[6]
-conf.ch <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink1[6])
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>[1] &ldquo;<a href=https://www.lexjansen.com/sugi%22>https://www.lexjansen.com/sugi"</a></p>
-<h4 id=2-sugi--sas-global-forum---get-conference-information>2. SUGI / SAS Global Forum -> Get conference information</h4>
-<p>
-<div class=mermaid align=center>
-graph LR;
+style G fill:#f3d7d3;</div><p><code>&lt;a href="/sugi">SUGI / SAS Global Forum&lt;/a> papers (1976-2021)</code></p><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=sugi_url class="tab-nav-button btn active" onclick='switchTab("sugi_url","python")'>python</button>
+<button data-tab-item=R data-tab-group=sugi_url class="tab-nav-button btn" onclick='switchTab("sugi_url","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=sugi_url class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># CSS selector</span>
+</span></span><span style=display:flex><span>soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[id = &#39;sasproceedings&#39;] &gt; ul &gt; li &gt; div &gt; div &gt; span &gt; a&#34;</span>)
+</span></span><span style=display:flex><span>soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[id = &#39;sasproceedings&#39;] a&#34;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath</span>
+</span></span><span style=display:flex><span>tree<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[@id =&#34;sasproceedings&#34;]/ul/li/div/div/span/a/text()&#39;</span>)
+</span></span><span style=display:flex><span>tree<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[@id =&#34;sasproceedings&#34;]/descendant::a/text()&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Get SUGI URL</span>
+</span></span><span style=display:flex><span>href <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[id = &#39;sasproceedings&#39;] a&#34;</span>)[<span style=color:#ae81ff>10</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)
+</span></span><span style=display:flex><span>sugi_url <span style=color:#f92672>=</span> url <span style=color:#f92672>+</span> href
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=sugi_url class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e>#sublink1</span>
+</span></span><span style=display:flex><span>uri1 <span style=color:#f92672>&lt;-</span> lex <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;span a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
+</span></span><span style=display:flex><span>sublink1 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website,uri1)
+</span></span><span style=display:flex><span>sublink1[6]
+</span></span><span style=display:flex><span>conf.ch <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink1[6])
+</span></span></code></pre></div></div></div></div><p>[1] &ldquo;<a href=https://www.lexjansen.com/sugi%22>https://www.lexjansen.com/sugi"</a></p><h4 id=2-sugi--sas-global-forum---get-conference-information>2. SUGI / SAS Global Forum -> Get conference information</h4><p><div class=mermaid align=center>graph LR;
 A["ul class='conferences'"] --> B["li class='conference'"]
 B --> C[a];
 B --> D[span];
 B --> E[span];
 style C fill:#f3d7d3;
 style D fill:#f3d7d3;
-style E fill:#f3d7d3;
-</div>
-<code>&lt;a href="../cgi-bin/xsl_transform.php?x=sgf2018">SAS Global Forum 2018&lt;/a></code> <br>
-<code>&lt;span>April 8-11, 2018&lt;/span></code> <br>
-<code>&lt;span>Denver, Colorado&lt;/span></code></p>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=sugi_sas class="tab-nav-button btn active" onclick="switchTab('sugi_sas','python')">python</button>
-<button data-tab-item=R data-tab-group=sugi_sas class="tab-nav-button btn" onclick="switchTab('sugi_sas','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=sugi_sas class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(sugi_url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-soup2 <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-tree2 <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>fromstring(r_sugi<span style=color:#f92672>.</span>content)  
-
-<span style=color:#75715e># SUGI Forun 2018 url</span>
-soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;li a&#39;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)
-sugi_2018_url <span style=color:#f92672>=</span> url <span style=color:#f92672>+</span> soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;li a&#39;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)[<span style=color:#ae81ff>2</span>:]
-
-<span style=color:#75715e># 1. conference name</span>
-<span style=color:#75715e># CSS selector</span>
-soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li a&#34;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>text
-<span style=color:#75715e># XPath</span>
-tree2<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//li/a/text()&#39;</span>)[<span style=color:#ae81ff>3</span>]
-
-<span style=color:#75715e># 2. conference time</span>
-<span style=color:#75715e># CSS selector</span>
-soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li[class = &#39;conference&#39;]&#34;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;span&#34;</span>)[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>text
-<span style=color:#75715e># XPath: first &lt;span&gt; element under &lt;li&gt;</span>
-tree2<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//li/span[1]/text()&#39;</span>)[<span style=color:#ae81ff>3</span>]
-
-<span style=color:#75715e># 3. conference place</span>
-<span style=color:#75715e># CSS selector</span>
-soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li[class = &#39;conference&#39;]&#34;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;span&#34;</span>)[<span style=color:#ae81ff>1</span>]<span style=color:#f92672>.</span>text
-<span style=color:#75715e># XPath: second &lt;span&gt; element under &lt;li&gt;</span>
-tree2<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//li/span[2]/text()&#39;</span>)[<span style=color:#ae81ff>3</span>]
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=sugi_sas class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># SUGI Forun 2018 link</span>
-uri2 <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
-sublink2 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website,<span style=color:#a6e22e>substring</span>(uri2,<span style=color:#ae81ff>3</span>))
-conf.ch.2018 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink2[4])
-
-<span style=color:#75715e># conference name</span>
-conf.name <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
-(conf.name.f <span style=color:#f92672>&lt;-</span> conf.name[4])
-
-<span style=color:#75715e># conference info (time, place)</span>
-conf.info <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li span&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
-<span style=color:#75715e>#time</span>
-conf.time <span style=color:#f92672>&lt;-</span> conf.info<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(conf.info),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
-</span><span style=color:#a6e22e></span>(conf.time.f <span style=color:#f92672>&lt;-</span> conf.time[4])
-<span style=color:#75715e>#place</span>
-conf.place <span style=color:#f92672>&lt;-</span> conf.info<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(conf.info),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
-</span><span style=color:#a6e22e></span>(conf.place.f <span style=color:#f92672>&lt;-</span> conf.place[4])
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>[1] &ldquo;SAS Global Forum 2018&rdquo;<br>
-[1] &ldquo;April 8-11, 2018&rdquo;<br>
-[1] &ldquo;Denver, Colorado&rdquo;</p>
-<h4 id=3-sugi-forum-2018-webpage---get-paper-information>3. SUGI Forum 2018 webpage -> Get paper information</h4>
-<p>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=info class="tab-nav-button btn active" onclick="switchTab('info','python')">python</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=info class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># create soup3 &amp; tree3</span>
-r_sugi_2018 <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(sugi_2018_url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-soup3 <span style=color:#f92672>=</span> BeautifulSoup(r_sugi_2018<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-tree3 <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>fromstring(r_sugi_2018<span style=color:#f92672>.</span>content)  
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class=mermaid align=center>
-graph LR;
+style E fill:#f3d7d3;</div><code>&lt;a href="../cgi-bin/xsl_transform.php?x=sgf2018">SAS Global Forum 2018&lt;/a></code><br><code>&lt;span>April 8-11, 2018&lt;/span></code><br><code>&lt;span>Denver, Colorado&lt;/span></code></p><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=sugi_sas class="tab-nav-button btn active" onclick='switchTab("sugi_sas","python")'>python</button>
+<button data-tab-item=R data-tab-group=sugi_sas class="tab-nav-button btn" onclick='switchTab("sugi_sas","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=sugi_sas class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(sugi_url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>soup2 <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>tree2 <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>fromstring(r_sugi<span style=color:#f92672>.</span>content)  
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># SUGI Forun 2018 url</span>
+</span></span><span style=display:flex><span>soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;li a&#39;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)
+</span></span><span style=display:flex><span>sugi_2018_url <span style=color:#f92672>=</span> url <span style=color:#f92672>+</span> soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;li a&#39;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)[<span style=color:#ae81ff>2</span>:]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 1. conference name</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># CSS selector</span>
+</span></span><span style=display:flex><span>soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li a&#34;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath</span>
+</span></span><span style=display:flex><span>tree2<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//li/a/text()&#39;</span>)[<span style=color:#ae81ff>3</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 2. conference time</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># CSS selector</span>
+</span></span><span style=display:flex><span>soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li[class = &#39;conference&#39;]&#34;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;span&#34;</span>)[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath: first &lt;span&gt; element under &lt;li&gt;</span>
+</span></span><span style=display:flex><span>tree2<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//li/span[1]/text()&#39;</span>)[<span style=color:#ae81ff>3</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 3. conference place</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># CSS selector</span>
+</span></span><span style=display:flex><span>soup2<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li[class = &#39;conference&#39;]&#34;</span>)[<span style=color:#ae81ff>3</span>]<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;span&#34;</span>)[<span style=color:#ae81ff>1</span>]<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath: second &lt;span&gt; element under &lt;li&gt;</span>
+</span></span><span style=display:flex><span>tree2<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//li/span[2]/text()&#39;</span>)[<span style=color:#ae81ff>3</span>]
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=sugi_sas class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e># SUGI Forun 2018 link</span>
+</span></span><span style=display:flex><span>uri2 <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
+</span></span><span style=display:flex><span>sublink2 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website,<span style=color:#a6e22e>substring</span>(uri2,<span style=color:#ae81ff>3</span>))
+</span></span><span style=display:flex><span>conf.ch.2018 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink2[4])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># conference name</span>
+</span></span><span style=display:flex><span>conf.name <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+</span></span><span style=display:flex><span>(conf.name.f <span style=color:#f92672>&lt;-</span> conf.name[4])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># conference info (time, place)</span>
+</span></span><span style=display:flex><span>conf.info <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;li span&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+</span></span><span style=display:flex><span><span style=color:#75715e>#time</span>
+</span></span><span style=display:flex><span>conf.time <span style=color:#f92672>&lt;-</span> conf.info<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(conf.info),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e></span>(conf.time.f <span style=color:#f92672>&lt;-</span> conf.time[4])
+</span></span><span style=display:flex><span><span style=color:#75715e>#place</span>
+</span></span><span style=display:flex><span>conf.place <span style=color:#f92672>&lt;-</span> conf.info<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(conf.info),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e></span>(conf.place.f <span style=color:#f92672>&lt;-</span> conf.place[4])
+</span></span></code></pre></div></div></div></div><p>[1] &ldquo;SAS Global Forum 2018&rdquo;<br>[1] &ldquo;April 8-11, 2018&rdquo;<br>[1] &ldquo;Denver, Colorado&rdquo;</p><h4 id=3-sugi-forum-2018-webpage---get-paper-information>3. SUGI Forum 2018 webpage -> Get paper information</h4><p><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=info class="tab-nav-button btn active" onclick='switchTab("info","python")'>python</button></div><div class=tab-content><div data-tab-item=python data-tab-group=info class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># create soup3 &amp; tree3</span>
+</span></span><span style=display:flex><span>r_sugi_2018 <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(sugi_2018_url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>soup3 <span style=color:#f92672>=</span> BeautifulSoup(r_sugi_2018<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>tree3 <span style=color:#f92672>=</span> html<span style=color:#f92672>.</span>fromstring(r_sugi_2018<span style=color:#f92672>.</span>content)  
+</span></span></code></pre></div></div></div></div><div class=mermaid align=center>graph LR;
 A["div class='paper wh'"] --> B["a id='sgf2018.2659-2018'"];
 A --> C["span class='code'"];
 A --> D["a target='_blank'" Title & Link];
@@ -485,313 +179,194 @@ style H fill:#f3d7d3;
 A --> J["span class='size'", Pages] -->j[b];
 A --> K["span xmlns:gcse='uri:dummy-google-ns' class='size'", Size] -->k[b];
 style J fill:#f3d7d3;
-style K fill:#f3d7d3;
-</div>
-<span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Title:</strong></span> Under <code>&lt;a taget="_blank"></code> tag</p>
-<p><code>&lt;a target="_blank" href="https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"</code> <br>
-<code>>A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma&lt;/a></code><br>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=title class="tab-nav-button btn active" onclick="switchTab('title','python')">python</button>
-<button data-tab-item=R data-tab-group=title class="tab-nav-button btn" onclick="switchTab('title','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=title class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># CSS selector</span>
-soup3<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper &gt; a[target = &#34;_blank&#34;]&#39;</span>)[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>text
-<span style=color:#75715e># XPath: find the second &lt;a&gt; element, which is the child of div.paper.wh</span>
-tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)]/child::a[2]/text()&#39;</span>)[<span style=color:#ae81ff>2</span>]
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=title class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># title</span>
-pname <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//*[@target=&#39;_blank&#39;]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
-pname.f <span style=color:#f92672>&lt;-</span> pname<span style=color:#a6e22e>[which</span>(pname <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;&#34;</span>)<span style=color:#a6e22e>]
-</span><span style=color:#a6e22e></span>(pa.name.f <span style=color:#f92672>&lt;-</span> pname.f[3])
-</code></pre></div>
-</div>
-</div>
-</div>
-</p>
-<p>[1] &ldquo;A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma&rdquo;</p>
-<p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Link:</strong></span></p>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=link class="tab-nav-button btn active" onclick="switchTab('link','python')">python</button>
-<button data-tab-item=R data-tab-group=link class="tab-nav-button btn" onclick="switchTab('link','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=link class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># CSS selector</span>
-soup3<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper &gt; a[target = &#34;_blank&#34;]&#39;</span>)[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)
-<span style=color:#75715e># XPath:</span>
-tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)]/child::a[2]/@href&#39;</span>)[<span style=color:#ae81ff>2</span>]
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=link class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># paper link</span>
-filelink <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//*[@target=&#39;_blank&#39;]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
-filelink.f <span style=color:#f92672>&lt;-</span> filelink<span style=color:#a6e22e>[which</span>(filelink <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;&#34;</span>)<span style=color:#a6e22e>]
-</span><span style=color:#a6e22e></span>(pa.link <span style=color:#f92672>&lt;-</span> filelink.f[3])
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>[1] &ldquo;<a href=https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf%22>https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"</a></p>
-<p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Author:</strong></span> Under <code>&lt;a></code> tag</p>
-<p><code>&lt;a href="/cgi-bin/xsl_transform.php?x=ag&amp;amp;c=SUGI#bogdidov">Bogdan Gadidov&lt;/a></code><br>
-<code>&lt;a href="/cgi-bin/xsl_transform.php?x=al&amp;amp;c=SUGI#linhnhle">Linh Le&lt;/a></code>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=author class="tab-nav-button btn active" onclick="switchTab('author','python')">python</button>
-<button data-tab-item=R data-tab-group=author class="tab-nav-button btn" onclick="switchTab('author','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=author class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># beautifulsoup syntax</span>
-soup3<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;div&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;paper&#34;</span>})[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#39;a&#39;</span>, id<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>, target<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>)
-<span style=color:#75715e># XPath: within the &lt;div&gt;, with attribute contains &#34;paper&#34;, find &lt;a&gt; tag without attributes &#34;id&#34; and &#34;target&#34;</span>
-tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)][3]/a[not(@id) and not(@target)]/text()&#39;</span>)
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=author class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># author</span>
-author <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//div[contains(@class, &#39;paper&#39;)][3]/a[not(@id) and not(@target)]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
-(author.f <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(author<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(author),<span style=color:#ae81ff>2</span>)],<span style=color:#e6db74>&#34;, &#34;</span>,author<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(author),<span style=color:#ae81ff>2</span>)]))
-</code></pre></div>
-</div>
-</div>
-</div>
-</p>
-<p>[1] &ldquo;Bogdan Gadidov, Linh Le&rdquo;</p>
-<p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Keyword:</strong></span> Under <code>&lt;span></code> tag</p>
-<p><code>&lt;span class="key">&lt;b>Keywords:&lt;/b> Text Mining Topic Modeling Time Series &lt;/span></code>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=keyword class="tab-nav-button btn active" onclick="switchTab('keyword','python')">python</button>
-<button data-tab-item=R data-tab-group=keyword class="tab-nav-button btn" onclick="switchTab('keyword','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=keyword class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># CSS selector</span>
-soup3<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper &gt; span[class = &#34;key&#34;]&#39;</span>)[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>text
-<span style=color:#75715e># XPath: within the &lt;div&gt;, with attribute contains &#34;paper&#34;, find the &lt;span&gt; tag with attribute class=&#34;key&#34;</span>
-tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)][3]/span[@class = &#34;key&#34;]/text()&#39;</span>)
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=keyword class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># keyword</span>
-keyw <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper span.key&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
-keyword <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>sub</span>(<span style=color:#e6db74>&#34;.*: &#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>,keyw)
-(keyword.f <span style=color:#f92672>&lt;-</span> keyword[1])
-</code></pre></div>
-</div>
-</div>
-</div>
-</p>
-<p>[1] &ldquo;Text Mining Topic Modeling Time Series&rdquo;</p>
-<p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"> <strong>Page & Size:</strong></span> Under <code>&lt;span></code> tag</p>
-<p><code>&lt;span class="size">&lt;b>Pages&lt;/b>:&amp;nbsp;11&amp;nbsp;&lt;/span></code><br>
-<code>&lt;span xmlns:gcse="uri:dummy-google-ns" class="size">&lt;b>Size&lt;/b>:&amp;nbsp;660&amp;nbsp;Kb&amp;nbsp;&lt;/span></code></p>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=ps class="tab-nav-button btn active" onclick="switchTab('ps','python')">python</button>
-<button data-tab-item=R data-tab-group=ps class="tab-nav-button btn" onclick="switchTab('ps','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=ps class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># CSS selector</span>
-soup3<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper&#39;</span>)[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;span[class = &#34;size&#34;]&#39;</span>)
-<span style=color:#75715e># XPath: within the &lt;div&gt;, with attribute contains &#34;paper&#34;, find the &lt;span&gt; tag with attribute class=&#34;size&#34;</span>
-tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)][3]/span[@class = &#34;size&#34;]/text()&#39;</span>)
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=ps class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># page + size</span>
-ps <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper span.size&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
-page <span style=color:#f92672>&lt;-</span> ps<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(ps),<span style=color:#ae81ff>2</span>)]
-size <span style=color:#f92672>&lt;-</span> ps<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(ps),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
-</span><span style=color:#a6e22e></span>(page.f <span style=color:#f92672>&lt;-</span> page[3])
-(size.f <span style=color:#f92672>&lt;-</span> size[3])
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>[1] &ldquo;Pages: 11 "<br>
-[1] &ldquo;Size: 660 Kb "</p>
-<div class=expand>
-<div class=expand-label style=cursor:pointer onclick="$h=$(this),$h.next('div').slideToggle(100,function(){$h.children('i').attr('class',function(){return $h.next('div').is(':visible')?'fas fa-chevron-down':'fas fa-chevron-right'})})">
-<i style=font-size:x-small class="fas fa-chevron-right"></i>
-<span>
-1. Grab information (Title, Link, Author, Keyword, Pages, Sizes) from one paper
-</span>
-</div>
-<div class=expand-content style=display:none>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># R</span>
-df <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>data.frame</span>(confname<span style=color:#f92672>=</span>conf.name.f, 
-                 conftime<span style=color:#f92672>=</span>conf.time.f,
-                 confplace<span style=color:#f92672>=</span>conf.place.f,
-                 title<span style=color:#f92672>=</span>pa.name.f, link<span style=color:#f92672>=</span>pa.link,
-                 author<span style=color:#f92672>=</span>author.f, keyword<span style=color:#f92672>=</span>keyword.f,
-                 page<span style=color:#f92672>=</span>page.f, size<span style=color:#f92672>=</span>size.f,
-                 section<span style=color:#f92672>=</span>section.f
-                 )
-<span style=color:#a6e22e>library</span>(xlsx)
-<span style=color:#a6e22e>write.xlsx</span>(df, <span style=color:#e6db74>&#34;SUGI_paper.xlsx&#34;</span>)
-</code></pre></div>
-</div>
-</div>
-<div class=expand>
-<div class=expand-label style=cursor:pointer onclick="$h=$(this),$h.next('div').slideToggle(100,function(){$h.children('i').attr('class',function(){return $h.next('div').is(':visible')?'fas fa-chevron-down':'fas fa-chevron-right'})})">
-<i style=font-size:x-small class="fas fa-chevron-right"></i>
-<span>
-2. Grab paper information (Title, Link, Author, Keyword, Pages, Sizes) from one conference
-</span>
-</div>
-<div class=expand-content style=display:none>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># python</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>one_conf</span>(url):
-    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-    num_paper <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper&#39;</span>))
-    
-    title <span style=color:#f92672>=</span> []
-    link <span style=color:#f92672>=</span> []
-    author <span style=color:#f92672>=</span> []
-    keyword <span style=color:#f92672>=</span> []
-    page <span style=color:#f92672>=</span> []
-    size <span style=color:#f92672>=</span> []
-    
-    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(num_paper):
-        div <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;div&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;paper&#34;</span>})[i]
-        <span style=color:#75715e># title &amp; link</span>
-        tl <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper &gt; a[target = &#34;_blank&#34;]&#39;</span>)
-        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> tl: <span style=color:#75715e># tl is empty</span>
-            <span style=color:#66d9ef>if</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;code&#34;</span>}) <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#66d9ef>None</span>:
-                t_new <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;code&#34;</span>})<span style=color:#f92672>.</span>findNextSibling(text<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
-            <span style=color:#66d9ef>else</span>:
-                t_new <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;a&#34;</span>)<span style=color:#f92672>.</span>findNextSibling(text<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
-            title<span style=color:#f92672>.</span>append(t_new)
-            link<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-            tag <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div &gt; a&#39;</span>)[<span style=color:#ae81ff>1</span>:]
-            ps <span style=color:#f92672>=</span> []
-        <span style=color:#66d9ef>else</span>:
-            title<span style=color:#f92672>.</span>append(tl[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>text)
-            link<span style=color:#f92672>.</span>append(tl[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>))
-            tag <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div &gt; a&#39;</span>)[<span style=color:#ae81ff>2</span>:]
-            ps <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;size&#34;</span>})
-        
-        <span style=color:#75715e># author</span>
-        author2 <span style=color:#f92672>=</span> []
-        <span style=color:#66d9ef>for</span> j <span style=color:#f92672>in</span> range(len(tag)):
-            author2<span style=color:#f92672>.</span>append(tag[j]<span style=color:#f92672>.</span>text)
-        author<span style=color:#f92672>.</span>append(author2)
-        
-        <span style=color:#75715e># keyword</span>
-        key <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;key&#34;</span>})
-        <span style=color:#66d9ef>if</span> key <span style=color:#f92672>is</span> <span style=color:#66d9ef>None</span>:
-            keyword<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-        <span style=color:#66d9ef>else</span>:
-            keyword<span style=color:#f92672>.</span>append(key<span style=color:#f92672>.</span>text[<span style=color:#ae81ff>10</span>:])
-        
-        <span style=color:#75715e># page &amp; size</span>
-        <span style=color:#66d9ef>if</span> len(ps) <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>2</span>:
-            p <span style=color:#f92672>=</span> ps[<span style=color:#ae81ff>0</span>]
-            s <span style=color:#f92672>=</span> ps[<span style=color:#ae81ff>1</span>]
-            <span style=color:#66d9ef>if</span> p <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#66d9ef>None</span> <span style=color:#f92672>and</span> s <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#66d9ef>None</span>:
-                <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;Page&#39;</span> <span style=color:#f92672>in</span> p<span style=color:#f92672>.</span>text:
-                    p2 <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, p<span style=color:#f92672>.</span>text)
-                    page<span style=color:#f92672>.</span>append(p2<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>))
-                    <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;Size&#39;</span> <span style=color:#f92672>in</span> s<span style=color:#f92672>.</span>text:
-                        s2_r <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, s<span style=color:#f92672>.</span>text)
-                        s2 <span style=color:#f92672>=</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; &#34;</span> <span style=color:#f92672>+</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>2</span>)
-                        size<span style=color:#f92672>.</span>append(s2)
-                    <span style=color:#66d9ef>else</span>:
-                        size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-                <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;Size&#39;</span> <span style=color:#f92672>in</span> p<span style=color:#f92672>.</span>text:
-                    s2_r <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, p<span style=color:#f92672>.</span>text)
-                    s2 <span style=color:#f92672>=</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; &#34;</span> <span style=color:#f92672>+</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>2</span>)
-                    size<span style=color:#f92672>.</span>append(s2)
-                    page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-            <span style=color:#66d9ef>else</span>:
-                size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-                page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-                
-        <span style=color:#66d9ef>elif</span> len(ps) <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>:
-            p <span style=color:#f92672>=</span> ps[<span style=color:#ae81ff>0</span>]
-            <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;Page&#39;</span> <span style=color:#f92672>in</span> p<span style=color:#f92672>.</span>text:
-                p2 <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, p<span style=color:#f92672>.</span>text)
-                page<span style=color:#f92672>.</span>append(p2<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>))
-                size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-            <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;Size&#39;</span> <span style=color:#f92672>in</span> p<span style=color:#f92672>.</span>text:
-                s2_r <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, p<span style=color:#f92672>.</span>text)
-                <span style=color:#66d9ef>if</span> s2_r <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#66d9ef>None</span>:
-                    s2 <span style=color:#f92672>=</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; &#34;</span> <span style=color:#f92672>+</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>2</span>)
-                    size<span style=color:#f92672>.</span>append(s2)
-                    page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-                <span style=color:#66d9ef>else</span>:
-                    page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-                    size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-            <span style=color:#66d9ef>else</span>:
-                page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-                size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-        <span style=color:#66d9ef>else</span>:
-            page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-            size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
-            
-        
-    <span style=color:#75715e># derive dataframe</span>
-    dataset <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame({<span style=color:#e6db74>&#39;Title&#39;</span>  : title,
-                            <span style=color:#e6db74>&#39;Keyword&#39;</span>: keyword,
-                            <span style=color:#e6db74>&#39;Link&#39;</span>   : link,
-                            <span style=color:#e6db74>&#39;Author&#39;</span> : author,
-                            <span style=color:#e6db74>&#39;Pages&#39;</span>  : page,
-                            <span style=color:#e6db74>&#39;Size&#39;</span>   : size})
-    dataset[<span style=color:#e6db74>&#39;Author&#39;</span>] <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;, &#34;</span><span style=color:#f92672>.</span>join(n) <span style=color:#66d9ef>for</span> n <span style=color:#f92672>in</span> dataset[<span style=color:#e6db74>&#39;Author&#39;</span>]]
-    <span style=color:#66d9ef>return</span> dataset
-df <span style=color:#f92672>=</span> one_conf(url<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://www.lexjansen.com/cgi-bin/xsl_transform.php?x=sgf2018&#34;</span>)
-</code></pre></div>
-</div>
-</div>
-<div class=expand>
-<div class=expand-label style=cursor:pointer onclick="$h=$(this),$h.next('div').slideToggle(100,function(){$h.children('i').attr('class',function(){return $h.next('div').is(':visible')?'fas fa-chevron-down':'fas fa-chevron-right'})})">
-<i style=font-size:x-small class="fas fa-chevron-right"></i>
-<span>
-3. Grab conference information (Conference place & time & name) from all conferences
-</span>
-</div>
-<div class=expand-content style=display:none>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># python</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>all_paper</span>(url):
-    <span style=color:#66d9ef>global</span> conf_name, conf_time, conf_place
-    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-    
-    num_paper <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li a&#34;</span>))
-    df_list <span style=color:#f92672>=</span> []
-    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(num_paper):
-        <span style=color:#75715e># print(i)</span>
-        conf_name <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li a&#34;</span>)[i]<span style=color:#f92672>.</span>text
-        conf_time <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li &gt; span&#34;</span>)[<span style=color:#ae81ff>2</span><span style=color:#f92672>*</span>i]<span style=color:#f92672>.</span>text
-        conf_place <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li &gt; span&#34;</span>)[<span style=color:#ae81ff>2</span><span style=color:#f92672>*</span>i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>]<span style=color:#f92672>.</span>text
-        
-        conf_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;https://www.lexjansen.com&#39;</span> <span style=color:#f92672>+</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;li a&#39;</span>)[i]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)[<span style=color:#ae81ff>2</span>:]
-        df <span style=color:#f92672>=</span> one_conf(conf_url)
-        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Conference_place&#34;</span>, value <span style=color:#f92672>=</span> conf_place, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
-        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Conference_time&#34;</span>, value <span style=color:#f92672>=</span> conf_time, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
-        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Conference_name&#34;</span>, value <span style=color:#f92672>=</span> conf_name, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
-        
-        df_list<span style=color:#f92672>.</span>append(df)
-    <span style=color:#66d9ef>return</span> df_list
-
-conf <span style=color:#f92672>=</span> all_paper(<span style=color:#e6db74>&#39;https://www.lexjansen.com/sugi&#39;</span>)
-SUGI <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([pd<span style=color:#f92672>.</span>DataFrame(conf[x]) <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(num_paper)], axis <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
-SUGI<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;SUGI.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
-</code></pre></div>
-</div>
-</div>
-<div class=mermaid align=center>
-graph TB;
+style K fill:#f3d7d3;</div><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"><strong>Title:</strong></span> Under <code>&lt;a taget="_blank"></code> tag</p><p><code>&lt;a target="_blank" href="https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"</code><br><code>>A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma&lt;/a></code><br><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=title class="tab-nav-button btn active" onclick='switchTab("title","python")'>python</button>
+<button data-tab-item=R data-tab-group=title class="tab-nav-button btn" onclick='switchTab("title","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=title class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># CSS selector</span>
+</span></span><span style=display:flex><span>soup3<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper &gt; a[target = &#34;_blank&#34;]&#39;</span>)[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath: find the second &lt;a&gt; element, which is the child of div.paper.wh</span>
+</span></span><span style=display:flex><span>tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)]/child::a[2]/text()&#39;</span>)[<span style=color:#ae81ff>2</span>]
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=title class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e># title</span>
+</span></span><span style=display:flex><span>pname <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//*[@target=&#39;_blank&#39;]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+</span></span><span style=display:flex><span>pname.f <span style=color:#f92672>&lt;-</span> pname<span style=color:#a6e22e>[which</span>(pname <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;&#34;</span>)<span style=color:#a6e22e>]
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e></span>(pa.name.f <span style=color:#f92672>&lt;-</span> pname.f[3])
+</span></span></code></pre></div></div></div></div></p><p>[1] &ldquo;A Case Study of Mining Social Media Data for Disaster Relief: Hurricane Irma&rdquo;</p><p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"><strong>Link:</strong></span></p><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=link class="tab-nav-button btn active" onclick='switchTab("link","python")'>python</button>
+<button data-tab-item=R data-tab-group=link class="tab-nav-button btn" onclick='switchTab("link","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=link class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># CSS selector</span>
+</span></span><span style=display:flex><span>soup3<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper &gt; a[target = &#34;_blank&#34;]&#39;</span>)[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath:</span>
+</span></span><span style=display:flex><span>tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)]/child::a[2]/@href&#39;</span>)[<span style=color:#ae81ff>2</span>]
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=link class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e># paper link</span>
+</span></span><span style=display:flex><span>filelink <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//*[@target=&#39;_blank&#39;]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
+</span></span><span style=display:flex><span>filelink.f <span style=color:#f92672>&lt;-</span> filelink<span style=color:#a6e22e>[which</span>(filelink <span style=color:#f92672>!=</span> <span style=color:#e6db74>&#34;&#34;</span>)<span style=color:#a6e22e>]
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e></span>(pa.link <span style=color:#f92672>&lt;-</span> filelink.f[3])
+</span></span></code></pre></div></div></div></div><p>[1] &ldquo;<a href=https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf%22>https://www.sas.com/content/dam/SAS/support/en/sas-global-forum-proceedings/2018/2695-2018.pdf"</a></p><p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"><strong>Author:</strong></span> Under <code>&lt;a></code> tag</p><p><code>&lt;a href="/cgi-bin/xsl_transform.php?x=ag&amp;amp;c=SUGI#bogdidov">Bogdan Gadidov&lt;/a></code><br><code>&lt;a href="/cgi-bin/xsl_transform.php?x=al&amp;amp;c=SUGI#linhnhle">Linh Le&lt;/a></code><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=author class="tab-nav-button btn active" onclick='switchTab("author","python")'>python</button>
+<button data-tab-item=R data-tab-group=author class="tab-nav-button btn" onclick='switchTab("author","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=author class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># beautifulsoup syntax</span>
+</span></span><span style=display:flex><span>soup3<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;div&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;paper&#34;</span>})[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#39;a&#39;</span>, id<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>, target<span style=color:#f92672>=</span><span style=color:#66d9ef>None</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath: within the &lt;div&gt;, with attribute contains &#34;paper&#34;, find &lt;a&gt; tag without attributes &#34;id&#34; and &#34;target&#34;</span>
+</span></span><span style=display:flex><span>tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)][3]/a[not(@id) and not(@target)]/text()&#39;</span>)
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=author class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e># author</span>
+</span></span><span style=display:flex><span>author <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(xpath<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;//div[contains(@class, &#39;paper&#39;)][3]/a[not(@id) and not(@target)]&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+</span></span><span style=display:flex><span>(author.f <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(author<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(author),<span style=color:#ae81ff>2</span>)],<span style=color:#e6db74>&#34;, &#34;</span>,author<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(author),<span style=color:#ae81ff>2</span>)]))
+</span></span></code></pre></div></div></div></div></p><p>[1] &ldquo;Bogdan Gadidov, Linh Le&rdquo;</p><p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"><strong>Keyword:</strong></span> Under <code>&lt;span></code> tag</p><p><code>&lt;span class="key">&lt;b>Keywords:&lt;/b> Text Mining Topic Modeling Time Series &lt;/span></code><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=keyword class="tab-nav-button btn active" onclick='switchTab("keyword","python")'>python</button>
+<button data-tab-item=R data-tab-group=keyword class="tab-nav-button btn" onclick='switchTab("keyword","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=keyword class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># CSS selector</span>
+</span></span><span style=display:flex><span>soup3<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper &gt; span[class = &#34;key&#34;]&#39;</span>)[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath: within the &lt;div&gt;, with attribute contains &#34;paper&#34;, find the &lt;span&gt; tag with attribute class=&#34;key&#34;</span>
+</span></span><span style=display:flex><span>tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)][3]/span[@class = &#34;key&#34;]/text()&#39;</span>)
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=keyword class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e># keyword</span>
+</span></span><span style=display:flex><span>keyw <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper span.key&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+</span></span><span style=display:flex><span>keyword <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>sub</span>(<span style=color:#e6db74>&#34;.*: &#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>,keyw)
+</span></span><span style=display:flex><span>(keyword.f <span style=color:#f92672>&lt;-</span> keyword[1])
+</span></span></code></pre></div></div></div></div></p><p>[1] &ldquo;Text Mining Topic Modeling Time Series&rdquo;</p><p><span style="background-color:#fff68f;padding:3px 0;font-family:Georgia"><strong>Page & Size:</strong></span> Under <code>&lt;span></code> tag</p><p><code>&lt;span class="size">&lt;b>Pages&lt;/b>:&amp;nbsp;11&amp;nbsp;&lt;/span></code><br><code>&lt;span xmlns:gcse="uri:dummy-google-ns" class="size">&lt;b>Size&lt;/b>:&amp;nbsp;660&amp;nbsp;Kb&amp;nbsp;&lt;/span></code></p><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=ps class="tab-nav-button btn active" onclick='switchTab("ps","python")'>python</button>
+<button data-tab-item=R data-tab-group=ps class="tab-nav-button btn" onclick='switchTab("ps","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=ps class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># CSS selector</span>
+</span></span><span style=display:flex><span>soup3<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper&#39;</span>)[<span style=color:#ae81ff>2</span>]<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;span[class = &#34;size&#34;]&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#75715e># XPath: within the &lt;div&gt;, with attribute contains &#34;paper&#34;, find the &lt;span&gt; tag with attribute class=&#34;size&#34;</span>
+</span></span><span style=display:flex><span>tree3<span style=color:#f92672>.</span>xpath(<span style=color:#e6db74>&#39;//div[contains(@class, &#34;paper&#34;)][3]/span[@class = &#34;size&#34;]/text()&#39;</span>)
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=ps class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e># page + size</span>
+</span></span><span style=display:flex><span>ps <span style=color:#f92672>&lt;-</span> conf.ch.2018 <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper span.size&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_text</span>()
+</span></span><span style=display:flex><span>page <span style=color:#f92672>&lt;-</span> ps<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>1</span>,<span style=color:#a6e22e>length</span>(ps),<span style=color:#ae81ff>2</span>)]
+</span></span><span style=display:flex><span>size <span style=color:#f92672>&lt;-</span> ps<span style=color:#a6e22e>[seq</span>(<span style=color:#ae81ff>2</span>,<span style=color:#a6e22e>length</span>(ps),<span style=color:#ae81ff>2</span>)<span style=color:#a6e22e>]
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e></span>(page.f <span style=color:#f92672>&lt;-</span> page[3])
+</span></span><span style=display:flex><span>(size.f <span style=color:#f92672>&lt;-</span> size[3])
+</span></span></code></pre></div></div></div></div><p>[1] &ldquo;Pages: 11 "<br>[1] &ldquo;Size: 660 Kb "</p><div class=expand><div class=expand-label style=cursor:pointer onclick='$h=$(this),$h.next("div").slideToggle(100,function(){$h.children("i").attr("class",function(){return $h.next("div").is(":visible")?"fas fa-chevron-down":"fas fa-chevron-right"})})'><i style=font-size:x-small class="fas fa-chevron-right"></i>
+<span>1. Grab information (Title, Link, Author, Keyword, Pages, Sizes) from one paper</span></div><div class=expand-content style=display:none><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span><span style=color:#75715e># R</span>
+</span></span><span style=display:flex><span>df <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>data.frame</span>(confname<span style=color:#f92672>=</span>conf.name.f, 
+</span></span><span style=display:flex><span>                 conftime<span style=color:#f92672>=</span>conf.time.f,
+</span></span><span style=display:flex><span>                 confplace<span style=color:#f92672>=</span>conf.place.f,
+</span></span><span style=display:flex><span>                 title<span style=color:#f92672>=</span>pa.name.f, link<span style=color:#f92672>=</span>pa.link,
+</span></span><span style=display:flex><span>                 author<span style=color:#f92672>=</span>author.f, keyword<span style=color:#f92672>=</span>keyword.f,
+</span></span><span style=display:flex><span>                 page<span style=color:#f92672>=</span>page.f, size<span style=color:#f92672>=</span>size.f,
+</span></span><span style=display:flex><span>                 section<span style=color:#f92672>=</span>section.f
+</span></span><span style=display:flex><span>                 )
+</span></span><span style=display:flex><span><span style=color:#a6e22e>library</span>(xlsx)
+</span></span><span style=display:flex><span><span style=color:#a6e22e>write.xlsx</span>(df, <span style=color:#e6db74>&#34;SUGI_paper.xlsx&#34;</span>)
+</span></span></code></pre></div></div></div><div class=expand><div class=expand-label style=cursor:pointer onclick='$h=$(this),$h.next("div").slideToggle(100,function(){$h.children("i").attr("class",function(){return $h.next("div").is(":visible")?"fas fa-chevron-down":"fas fa-chevron-right"})})'><i style=font-size:x-small class="fas fa-chevron-right"></i>
+<span>2. Grab paper information (Title, Link, Author, Keyword, Pages, Sizes) from one conference</span></div><div class=expand-content style=display:none><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># python</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>one_conf</span>(url):
+</span></span><span style=display:flex><span>    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>    num_paper <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper&#39;</span>))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    title <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    link <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    author <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    keyword <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    page <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    size <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(num_paper):
+</span></span><span style=display:flex><span>        div <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;div&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;paper&#34;</span>})[i]
+</span></span><span style=display:flex><span>        <span style=color:#75715e># title &amp; link</span>
+</span></span><span style=display:flex><span>        tl <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper &gt; a[target = &#34;_blank&#34;]&#39;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> tl: <span style=color:#75715e># tl is empty</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;code&#34;</span>}) <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#66d9ef>None</span>:
+</span></span><span style=display:flex><span>                t_new <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;code&#34;</span>})<span style=color:#f92672>.</span>findNextSibling(text<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                t_new <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;a&#34;</span>)<span style=color:#f92672>.</span>findNextSibling(text<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>            title<span style=color:#f92672>.</span>append(t_new)
+</span></span><span style=display:flex><span>            link<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>            tag <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div &gt; a&#39;</span>)[<span style=color:#ae81ff>1</span>:]
+</span></span><span style=display:flex><span>            ps <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            title<span style=color:#f92672>.</span>append(tl[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>            link<span style=color:#f92672>.</span>append(tl[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>))
+</span></span><span style=display:flex><span>            tag <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div &gt; a&#39;</span>)[<span style=color:#ae81ff>2</span>:]
+</span></span><span style=display:flex><span>            ps <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;size&#34;</span>})
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># author</span>
+</span></span><span style=display:flex><span>        author2 <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> j <span style=color:#f92672>in</span> range(len(tag)):
+</span></span><span style=display:flex><span>            author2<span style=color:#f92672>.</span>append(tag[j]<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>        author<span style=color:#f92672>.</span>append(author2)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># keyword</span>
+</span></span><span style=display:flex><span>        key <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;key&#34;</span>})
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> key <span style=color:#f92672>is</span> <span style=color:#66d9ef>None</span>:
+</span></span><span style=display:flex><span>            keyword<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            keyword<span style=color:#f92672>.</span>append(key<span style=color:#f92672>.</span>text[<span style=color:#ae81ff>10</span>:])
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># page &amp; size</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> len(ps) <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>2</span>:
+</span></span><span style=display:flex><span>            p <span style=color:#f92672>=</span> ps[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>            s <span style=color:#f92672>=</span> ps[<span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> p <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#66d9ef>None</span> <span style=color:#f92672>and</span> s <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#66d9ef>None</span>:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;Page&#39;</span> <span style=color:#f92672>in</span> p<span style=color:#f92672>.</span>text:
+</span></span><span style=display:flex><span>                    p2 <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, p<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>                    page<span style=color:#f92672>.</span>append(p2<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;Size&#39;</span> <span style=color:#f92672>in</span> s<span style=color:#f92672>.</span>text:
+</span></span><span style=display:flex><span>                        s2_r <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, s<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>                        s2 <span style=color:#f92672>=</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; &#34;</span> <span style=color:#f92672>+</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>                        size<span style=color:#f92672>.</span>append(s2)
+</span></span><span style=display:flex><span>                    <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                        size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;Size&#39;</span> <span style=color:#f92672>in</span> p<span style=color:#f92672>.</span>text:
+</span></span><span style=display:flex><span>                    s2_r <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, p<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>                    s2 <span style=color:#f92672>=</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; &#34;</span> <span style=color:#f92672>+</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>                    size<span style=color:#f92672>.</span>append(s2)
+</span></span><span style=display:flex><span>                    page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>                page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>                
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>elif</span> len(ps) <span style=color:#f92672>==</span> <span style=color:#ae81ff>1</span>:
+</span></span><span style=display:flex><span>            p <span style=color:#f92672>=</span> ps[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> <span style=color:#e6db74>&#39;Page&#39;</span> <span style=color:#f92672>in</span> p<span style=color:#f92672>.</span>text:
+</span></span><span style=display:flex><span>                p2 <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, p<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>                page<span style=color:#f92672>.</span>append(p2<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>                size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>elif</span> <span style=color:#e6db74>&#39;Size&#39;</span> <span style=color:#f92672>in</span> p<span style=color:#f92672>.</span>text:
+</span></span><span style=display:flex><span>                s2_r <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>search(<span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>(.*)</span><span style=color:#ae81ff>\xa0</span><span style=color:#e6db74>&#39;</span>, p<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>if</span> s2_r <span style=color:#f92672>is</span> <span style=color:#f92672>not</span> <span style=color:#66d9ef>None</span>:
+</span></span><span style=display:flex><span>                    s2 <span style=color:#f92672>=</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; &#34;</span> <span style=color:#f92672>+</span> s2_r<span style=color:#f92672>.</span>group(<span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>                    size<span style=color:#f92672>.</span>append(s2)
+</span></span><span style=display:flex><span>                    page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                    page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>                    size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>                page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>                size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            page<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>            size<span style=color:#f92672>.</span>append(<span style=color:#e6db74>&#34;&#34;</span>)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    <span style=color:#75715e># derive dataframe</span>
+</span></span><span style=display:flex><span>    dataset <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame({<span style=color:#e6db74>&#39;Title&#39;</span>  : title,
+</span></span><span style=display:flex><span>                            <span style=color:#e6db74>&#39;Keyword&#39;</span>: keyword,
+</span></span><span style=display:flex><span>                            <span style=color:#e6db74>&#39;Link&#39;</span>   : link,
+</span></span><span style=display:flex><span>                            <span style=color:#e6db74>&#39;Author&#39;</span> : author,
+</span></span><span style=display:flex><span>                            <span style=color:#e6db74>&#39;Pages&#39;</span>  : page,
+</span></span><span style=display:flex><span>                            <span style=color:#e6db74>&#39;Size&#39;</span>   : size})
+</span></span><span style=display:flex><span>    dataset[<span style=color:#e6db74>&#39;Author&#39;</span>] <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;, &#34;</span><span style=color:#f92672>.</span>join(n) <span style=color:#66d9ef>for</span> n <span style=color:#f92672>in</span> dataset[<span style=color:#e6db74>&#39;Author&#39;</span>]]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> dataset
+</span></span><span style=display:flex><span>df <span style=color:#f92672>=</span> one_conf(url<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;https://www.lexjansen.com/cgi-bin/xsl_transform.php?x=sgf2018&#34;</span>)
+</span></span></code></pre></div></div></div><div class=expand><div class=expand-label style=cursor:pointer onclick='$h=$(this),$h.next("div").slideToggle(100,function(){$h.children("i").attr("class",function(){return $h.next("div").is(":visible")?"fas fa-chevron-down":"fas fa-chevron-right"})})'><i style=font-size:x-small class="fas fa-chevron-right"></i>
+<span>3. Grab conference information (Conference place & time & name) from all conferences</span></div><div class=expand-content style=display:none><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#75715e># python</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>all_paper</span>(url):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>global</span> conf_name, conf_time, conf_place
+</span></span><span style=display:flex><span>    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    num_paper <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li a&#34;</span>))
+</span></span><span style=display:flex><span>    df_list <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(num_paper):
+</span></span><span style=display:flex><span>        <span style=color:#75715e># print(i)</span>
+</span></span><span style=display:flex><span>        conf_name <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li a&#34;</span>)[i]<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span>        conf_time <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li &gt; span&#34;</span>)[<span style=color:#ae81ff>2</span><span style=color:#f92672>*</span>i]<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span>        conf_place <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li &gt; span&#34;</span>)[<span style=color:#ae81ff>2</span><span style=color:#f92672>*</span>i<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span>]<span style=color:#f92672>.</span>text
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        conf_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;https://www.lexjansen.com&#39;</span> <span style=color:#f92672>+</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;li a&#39;</span>)[i]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)[<span style=color:#ae81ff>2</span>:]
+</span></span><span style=display:flex><span>        df <span style=color:#f92672>=</span> one_conf(conf_url)
+</span></span><span style=display:flex><span>        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Conference_place&#34;</span>, value <span style=color:#f92672>=</span> conf_place, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Conference_time&#34;</span>, value <span style=color:#f92672>=</span> conf_time, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Conference_name&#34;</span>, value <span style=color:#f92672>=</span> conf_name, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        df_list<span style=color:#f92672>.</span>append(df)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> df_list
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>conf <span style=color:#f92672>=</span> all_paper(<span style=color:#e6db74>&#39;https://www.lexjansen.com/sugi&#39;</span>)
+</span></span><span style=display:flex><span>SUGI <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([pd<span style=color:#f92672>.</span>DataFrame(conf[x]) <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(num_paper)], axis <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>SUGI<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;SUGI.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
+</span></span></code></pre></div></div></div><div class=mermaid align=center>graph TB;
 A[Title, Link, Author, Keyword, Pages, Size]
 B[Conference name, Conference place, Conference time]
 C[Section name, Best paper flag]
@@ -809,146 +384,100 @@ B
 end
 subgraph g3[Paper attributes]
 C
-end
-</div>
-<h4 id=4-get-paper-attributes-section-name>4. Get paper attributes: Section name</h4>
-<p>Only grab section name & title from the url
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=section class="tab-nav-button btn active" onclick="switchTab('section','python')">python</button>
-<button data-tab-item=R data-tab-group=section class="tab-nav-button btn" onclick="switchTab('section','R')">R</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=section class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>title_grab</span>(url):
-    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-    num_paper <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper&#39;</span>))
-    
-    title <span style=color:#f92672>=</span> []
-    
-    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(num_paper):
-        div <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;div&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;paper&#34;</span>})[i]
-        <span style=color:#75715e># print(i)</span>
-        t <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;a&#34;</span>)<span style=color:#f92672>.</span>findNextSibling()
-        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> t:
-            print(<span style=color:#e6db74>&#34;No title&#34;</span>)
-        <span style=color:#66d9ef>else</span>:
-            title<span style=color:#f92672>.</span>append(t<span style=color:#f92672>.</span>text)
-    title_df <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame({<span style=color:#e6db74>&#39;Title&#39;</span>  : title})
-    <span style=color:#66d9ef>return</span> title_df
-
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>section_grab</span>(url):
-    s <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-    soup <span style=color:#f92672>=</span> BeautifulSoup(s<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-    num_stream <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[class=&#39;streams&#39;] span&#34;</span>))
-    
-    df_list <span style=color:#f92672>=</span> []
-    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(num_stream):
-        <span style=color:#75715e># print(i)</span>
-        x <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;stream&#34;</span>})[i]
-        sec_name <span style=color:#f92672>=</span> x<span style=color:#f92672>.</span>text        
-        sec_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;https://www.lexjansen.com&#39;</span> <span style=color:#f92672>+</span> x<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;a&#34;</span>)<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)[<span style=color:#ae81ff>2</span>:]
-        df <span style=color:#f92672>=</span> title_grab(sec_url)
-        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Section_name&#34;</span>, value <span style=color:#f92672>=</span> sec_name, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)        
-        df_list<span style=color:#f92672>.</span>append(df)
-    <span style=color:#66d9ef>return</span> df_list
-
-section <span style=color:#f92672>=</span> section_grab(<span style=color:#e6db74>&#34;https://www.lexjansen.com/sugi/&#34;</span>)
-Sections <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([pd<span style=color:#f92672>.</span>DataFrame(section[x]) <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(num_section)], axis <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
-Sections<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;Sections.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
-</code></pre></div>
-</div>
-<div data-tab-item=R data-tab-group=section class=tab-item>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R>sct <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.streams span.stream&#34;</span>) <span style=color:#f92672>%&gt;%</span> html_text
-section_name <span style=color:#f92672>&lt;-</span> sct[7]
-
-<span style=color:#75715e>#get the section links</span>
-uri3 <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.streams span.stream a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
-sublink3 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website, <span style=color:#a6e22e>substring</span>(uri3,<span style=color:#ae81ff>3</span>))
-sugi.section <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink3[7])
-
-<span style=color:#75715e>#get paper titles within the section</span>
-sct_papers <span style=color:#f92672>&lt;-</span> sugi.section <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper a&#34;</span>) <span style=color:#f92672>%&gt;%</span> html_text
-
-section.f <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>ifelse</span>(pa.name.f <span style=color:#f92672>%in%</span> sct_papers, section_name, <span style=color:#e6db74>&#34;&#34;</span>)
-</code></pre></div>
-</div>
-</div>
-</div>
-</p>
-<h4 id=5-merge-section-names-back-to-the-origin-file>5. Merge section names back to the origin file</h4>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>sugi <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;SUGI.xlsx&#39;</span>)  
-section <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;Sections.xlsx&#39;</span>)  
-pd<span style=color:#f92672>.</span>merge(sugi, section, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Title&#34;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)
-</code></pre></div><h4 id=6-get-paper-attributes-best-paper-flag>6. Get paper attributes: Best paper flag</h4>
-<p>Only grab the title from the url, and provide &ldquo;Y&rdquo; to column &ldquo;Best_paper_fl&rdquo;</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>best_paper_title</span>(url):
-    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-    title <span style=color:#f92672>=</span> []
-    best <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div.paperback &gt; a&#34;</span>)
-    <span style=color:#66d9ef>if</span> best:
-        <span style=color:#66d9ef>for</span> pp <span style=color:#f92672>in</span> best:
-            title<span style=color:#f92672>.</span>append(pp<span style=color:#f92672>.</span>text)
-    paper_df <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame({<span style=color:#e6db74>&#39;Title&#39;</span>  : title})
-    <span style=color:#66d9ef>return</span> paper_df
-
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>best_paper_fl</span>(url):
-    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
-    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
-    paper <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li a&#34;</span>)
-    df_list <span style=color:#f92672>=</span> []
-    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(len(paper)):
-        <span style=color:#75715e># print(i)</span>
-        conf_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;https://www.lexjansen.com&#39;</span> <span style=color:#f92672>+</span> paper[i]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)[<span style=color:#ae81ff>2</span>:]
-        df <span style=color:#f92672>=</span> best_paper_title(conf_url)
-        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Best_paper_fl&#34;</span>, value <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Y&#34;</span>, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)   
-        df_list<span style=color:#f92672>.</span>append(df)
-    <span style=color:#66d9ef>return</span> df_list
-
-best <span style=color:#f92672>=</span> best_paper_fl(<span style=color:#e6db74>&#34;https://www.lexjansen.com/sugi/&#34;</span>)
-best <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([pd<span style=color:#f92672>.</span>DataFrame(best[x]) <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>46</span>)], axis <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
-best<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;Best_paper.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
-</code></pre></div><h4 id=7-derive-final-dataset-all-papers-from-one-forum>7. Derive final dataset: All papers from one forum</h4>
-<div class=tab-panel>
-<div class=tab-nav>
-<button data-tab-item=python data-tab-group=final class="tab-nav-button btn active" onclick="switchTab('final','python')">python</button>
-</div>
-<div class=tab-content>
-<div data-tab-item=python data-tab-group=final class="tab-item active">
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>sugi <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;SUGI.xlsx&#39;</span>)  
-section <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;Sections.xlsx&#39;</span>)  
-best <span style=color:#f92672>=</span>  pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;Best_paper.xlsx&#39;</span>)  
-final <span style=color:#f92672>=</span> sugi<span style=color:#f92672>.</span>merge(section, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;Title&#39;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)<span style=color:#f92672>.</span>merge(best, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;Title&#39;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)
-final<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;SUGI_paper.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
-</code></pre></div>
-</div>
-</div>
-</div>
-<footer class=footline>
-</footer>
-</div>
-</div>
-<div id=navigation>
-<a class="nav nav-prev" href=../3_css/ title="CSS selector & Xpath"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=../5_python_env/ title="Setup Your Python Environment" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
-</div>
-</section>
-<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
-<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
-</div>
-<script src=../js/clipboard.min.js?1644458095></script>
-<script src=../js/perfect-scrollbar.min.js?1644458095></script>
-<script src=../js/perfect-scrollbar.jquery.min.js?1644458095></script>
-<script src=../js/jquery.sticky.js?1644458095></script>
-<script src=../js/featherlight.min.js?1644458095></script>
-<script src=../js/highlight.pack.js?1644458095></script>
-<script>hljs.initHighlightingOnLoad()</script>
-<script src=../js/modernizr.custom-3.6.0.js?1644458095></script>
-<script src=../js/learn.js?1644458095></script>
-<script src=../js/hugo-learn.js?1644458095></script>
-<script src=../mermaid/mermaid.js?1644458095></script>
-<script>mermaid.initialize({startOnLoad:!0})</script>
-</body>
-</html>
+end</div><h4 id=4-get-paper-attributes-section-name>4. Get paper attributes: Section name</h4><p>Only grab section name & title from the url<div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=section class="tab-nav-button btn active" onclick='switchTab("section","python")'>python</button>
+<button data-tab-item=R data-tab-group=section class="tab-nav-button btn" onclick='switchTab("section","R")'>R</button></div><div class=tab-content><div data-tab-item=python data-tab-group=section class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>title_grab</span>(url):
+</span></span><span style=display:flex><span>    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>    num_paper <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#39;div.paper&#39;</span>))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    title <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(num_paper):
+</span></span><span style=display:flex><span>        div <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;div&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;paper&#34;</span>})[i]
+</span></span><span style=display:flex><span>        <span style=color:#75715e># print(i)</span>
+</span></span><span style=display:flex><span>        t <span style=color:#f92672>=</span> div<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;a&#34;</span>)<span style=color:#f92672>.</span>findNextSibling()
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> t:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;No title&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>:
+</span></span><span style=display:flex><span>            title<span style=color:#f92672>.</span>append(t<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>    title_df <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame({<span style=color:#e6db74>&#39;Title&#39;</span>  : title})
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> title_df
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>section_grab</span>(url):
+</span></span><span style=display:flex><span>    s <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>    soup <span style=color:#f92672>=</span> BeautifulSoup(s<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>    num_stream <span style=color:#f92672>=</span> len(soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div[class=&#39;streams&#39;] span&#34;</span>))
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    df_list <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(num_stream):
+</span></span><span style=display:flex><span>        <span style=color:#75715e># print(i)</span>
+</span></span><span style=display:flex><span>        x <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>find_all(<span style=color:#e6db74>&#34;span&#34;</span>, {<span style=color:#e6db74>&#34;class&#34;</span>: <span style=color:#e6db74>&#34;stream&#34;</span>})[i]
+</span></span><span style=display:flex><span>        sec_name <span style=color:#f92672>=</span> x<span style=color:#f92672>.</span>text        
+</span></span><span style=display:flex><span>        sec_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;https://www.lexjansen.com&#39;</span> <span style=color:#f92672>+</span> x<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;a&#34;</span>)<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)[<span style=color:#ae81ff>2</span>:]
+</span></span><span style=display:flex><span>        df <span style=color:#f92672>=</span> title_grab(sec_url)
+</span></span><span style=display:flex><span>        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Section_name&#34;</span>, value <span style=color:#f92672>=</span> sec_name, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)        
+</span></span><span style=display:flex><span>        df_list<span style=color:#f92672>.</span>append(df)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> df_list
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>section <span style=color:#f92672>=</span> section_grab(<span style=color:#e6db74>&#34;https://www.lexjansen.com/sugi/&#34;</span>)
+</span></span><span style=display:flex><span>Sections <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([pd<span style=color:#f92672>.</span>DataFrame(section[x]) <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(num_section)], axis <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>Sections<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;Sections.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
+</span></span></code></pre></div></div><div data-tab-item=R data-tab-group=section class=tab-item><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=display:flex><span>sct <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.streams span.stream&#34;</span>) <span style=color:#f92672>%&gt;%</span> html_text
+</span></span><span style=display:flex><span>section_name <span style=color:#f92672>&lt;-</span> sct[7]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#get the section links</span>
+</span></span><span style=display:flex><span>uri3 <span style=color:#f92672>&lt;-</span> conf.ch <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.streams span.stream a&#34;</span>) <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_attr</span>(<span style=color:#e6db74>&#34;href&#34;</span>)
+</span></span><span style=display:flex><span>sublink3 <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>paste0</span>(website, <span style=color:#a6e22e>substring</span>(uri3,<span style=color:#ae81ff>3</span>))
+</span></span><span style=display:flex><span>sugi.section <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>read_html</span>(sublink3[7])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#get paper titles within the section</span>
+</span></span><span style=display:flex><span>sct_papers <span style=color:#f92672>&lt;-</span> sugi.section <span style=color:#f92672>%&gt;%</span> <span style=color:#a6e22e>html_nodes</span>(<span style=color:#e6db74>&#34;div.paper a&#34;</span>) <span style=color:#f92672>%&gt;%</span> html_text
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>section.f <span style=color:#f92672>&lt;-</span> <span style=color:#a6e22e>ifelse</span>(pa.name.f <span style=color:#f92672>%in%</span> sct_papers, section_name, <span style=color:#e6db74>&#34;&#34;</span>)
+</span></span></code></pre></div></div></div></div></p><h4 id=5-merge-section-names-back-to-the-origin-file>5. Merge section names back to the origin file</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>sugi <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;SUGI.xlsx&#39;</span>)  
+</span></span><span style=display:flex><span>section <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;Sections.xlsx&#39;</span>)  
+</span></span><span style=display:flex><span>pd<span style=color:#f92672>.</span>merge(sugi, section, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Title&#34;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)
+</span></span></code></pre></div><h4 id=6-get-paper-attributes-best-paper-flag>6. Get paper attributes: Best paper flag</h4><p>Only grab the title from the url, and provide &ldquo;Y&rdquo; to column &ldquo;Best_paper_fl&rdquo;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>best_paper_title</span>(url):
+</span></span><span style=display:flex><span>    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>    title <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    best <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;div.paperback &gt; a&#34;</span>)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> best:
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> pp <span style=color:#f92672>in</span> best:
+</span></span><span style=display:flex><span>            title<span style=color:#f92672>.</span>append(pp<span style=color:#f92672>.</span>text)
+</span></span><span style=display:flex><span>    paper_df <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>DataFrame({<span style=color:#e6db74>&#39;Title&#39;</span>  : title})
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> paper_df
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>best_paper_fl</span>(url):
+</span></span><span style=display:flex><span>    r_sugi <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>get(url, proxies<span style=color:#f92672>=</span>proxyDict, verify<span style=color:#f92672>=</span><span style=color:#66d9ef>False</span>)
+</span></span><span style=display:flex><span>    soup <span style=color:#f92672>=</span> BeautifulSoup(r_sugi<span style=color:#f92672>.</span>text, <span style=color:#e6db74>&#39;lxml&#39;</span>)
+</span></span><span style=display:flex><span>    paper <span style=color:#f92672>=</span> soup<span style=color:#f92672>.</span>select(<span style=color:#e6db74>&#34;li a&#34;</span>)
+</span></span><span style=display:flex><span>    df_list <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(len(paper)):
+</span></span><span style=display:flex><span>        <span style=color:#75715e># print(i)</span>
+</span></span><span style=display:flex><span>        conf_url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;https://www.lexjansen.com&#39;</span> <span style=color:#f92672>+</span> paper[i]<span style=color:#f92672>.</span>get(<span style=color:#e6db74>&#39;href&#39;</span>)[<span style=color:#ae81ff>2</span>:]
+</span></span><span style=display:flex><span>        df <span style=color:#f92672>=</span> best_paper_title(conf_url)
+</span></span><span style=display:flex><span>        df<span style=color:#f92672>.</span>insert(column <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Best_paper_fl&#34;</span>, value <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Y&#34;</span>, loc<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span>)   
+</span></span><span style=display:flex><span>        df_list<span style=color:#f92672>.</span>append(df)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> df_list
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>best <span style=color:#f92672>=</span> best_paper_fl(<span style=color:#e6db74>&#34;https://www.lexjansen.com/sugi/&#34;</span>)
+</span></span><span style=display:flex><span>best <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>concat([pd<span style=color:#f92672>.</span>DataFrame(best[x]) <span style=color:#66d9ef>for</span> x <span style=color:#f92672>in</span> range(<span style=color:#ae81ff>46</span>)], axis <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>, ignore_index<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>best<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;Best_paper.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
+</span></span></code></pre></div><h4 id=7-derive-final-dataset-all-papers-from-one-forum>7. Derive final dataset: All papers from one forum</h4><div class=tab-panel><div class=tab-nav><button data-tab-item=python data-tab-group=final class="tab-nav-button btn active" onclick='switchTab("final","python")'>python</button></div><div class=tab-content><div data-tab-item=python data-tab-group=final class="tab-item active"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span>sugi <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;SUGI.xlsx&#39;</span>)  
+</span></span><span style=display:flex><span>section <span style=color:#f92672>=</span> pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;Sections.xlsx&#39;</span>)  
+</span></span><span style=display:flex><span>best <span style=color:#f92672>=</span>  pd<span style=color:#f92672>.</span>read_excel(<span style=color:#e6db74>&#39;Best_paper.xlsx&#39;</span>)  
+</span></span><span style=display:flex><span>final <span style=color:#f92672>=</span> sugi<span style=color:#f92672>.</span>merge(section, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;Title&#39;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)<span style=color:#f92672>.</span>merge(best, on<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;Title&#39;</span>, how<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;left&#39;</span>)
+</span></span><span style=display:flex><span>final<span style=color:#f92672>.</span>to_csv(<span style=color:#e6db74>&#39;SUGI_paper.csv&#39;</span>, index <span style=color:#f92672>=</span> <span style=color:#66d9ef>False</span>)
+</span></span></code></pre></div></div></div></div><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=../3_css/ title="CSS selector & Xpath"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=../2nd_home/ title=2nd_Home style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=../js/clipboard.min.js?1661403123></script>
+<script src=../js/perfect-scrollbar.min.js?1661403123></script>
+<script src=../js/perfect-scrollbar.jquery.min.js?1661403123></script>
+<script src=../js/jquery.sticky.js?1661403123></script>
+<script src=../js/featherlight.min.js?1661403123></script>
+<script src=../js/highlight.pack.js?1661403123></script>
+<script>hljs.initHighlightingOnLoad()</script><script src=../js/modernizr.custom-3.6.0.js?1661403123></script>
+<script src=../js/learn.js?1661403123></script>
+<script src=../js/hugo-learn.js?1661403123></script>
+<script src=../mermaid/mermaid.js?1661403123></script>
+<script>mermaid.initialize({startOnLoad:!0})</script></body></html>
