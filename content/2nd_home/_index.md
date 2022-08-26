@@ -16,4 +16,6 @@ pre = "<b>2. </b>"
 #### 2.3 eCRF Index Shiny App
 <br>
 
- {{%attachments title="Source Data" style="green" pattern=".*\.(xlsx)$"/%}}
+
+[Source Data](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FRC-Web-crawler%2Frc-web-crawler.github.io%2Fmain%2F2nd_home%2F_index.files%2Fpaper.xlsx&wdOrigin=BROWSELINK)
+
