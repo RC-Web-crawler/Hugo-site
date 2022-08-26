@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web-Crawler on Web Crawler</title>
+    <link>https://rc-web-crawler.github.io/1st_home/</link>
+    <description>Recent content in Web-Crawler on Web Crawler</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://rc-web-crawler.github.io/1st_home/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1.1 Web at a glance</title>
+      <link>https://rc-web-crawler.github.io/1st_home/1_web_at_glance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rc-web-crawler.github.io/1st_home/1_web_at_glance/</guid>
+      <description>1. Web at a glance  1.1 Overview of a webpage  1.1.1 HTML 1.1.2 CSS 1.1.3 JavaScript      Is web crawling and scraping legal?
+ Octoparse : If you’re doing web crawling for your own purposes, then it is legal as it falls under fair use doctrine. The complications start if you want to use scraped data for others, especially commercial purposes. As long as you are not crawling at a disruptive rate and the source is public you should be fine.</description>
+    </item>
+    
+    <item>
+      <title>HTML elements &amp; Tree Structure</title>
+      <link>https://rc-web-crawler.github.io/1st_home/2_html_elements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rc-web-crawler.github.io/1st_home/2_html_elements/</guid>
+      <description>2. HTML elements &amp;amp; Tree Structure  2.1 HTML elements 2.2 HTML Attributes 2.3 Tree structure of HTML document  2.3.1 Relationship of Nodes      2. HTML elements &amp;amp; Tree Structure 2.1 HTML elements An HTML element is defined by a start tag, some content, and an end tag. The HTML element is everything from the start tag to the end tag:
+&amp;lt;tagname&amp;gt;Content goes here...&amp;lt;/tagname&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>CSS selector &amp; Xpath</title>
+      <link>https://rc-web-crawler.github.io/1st_home/3_css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rc-web-crawler.github.io/1st_home/3_css/</guid>
+      <description>3.1 Introduction CSS, Cascading Style Sheets, is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. And CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.
+XPath, XML Path Language, is a query language for selecting nodes from an XML document.</description>
+    </item>
+    
+    <item>
+      <title>Demo: Web Scraping with R/Python</title>
+      <link>https://rc-web-crawler.github.io/1st_home/4_demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rc-web-crawler.github.io/1st_home/4_demo/</guid>
+      <description>Pre-prepare: Include packages that we need pythonRfrom bs4 import BeautifulSoup # beautifulsoup4 import requests import pandas as pd import numpy as np import re library(rvest) library(dplyr) Within Novartis, we need proxy to get into some websites.
+Pre-prepare: Interact with the website pythonRurl = &amp;#34;https://www.lexjansen.com&amp;#34; proxyDict = {&amp;#39;https&amp;#39;: xxx} # Interact with data via a REST API # Returns a &amp;lt;response&amp;gt; object r = requests.</description>
+    </item>
+    
+  </channel>
+</rss>
