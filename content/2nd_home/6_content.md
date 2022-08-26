@@ -174,7 +174,7 @@ the calculation.
       scale_fill_brewer(palette="Blues")
 
 {{%/expand%}}  
-![](./cov1-1.png)   
+![](/2nd_Home/cov1-1.png)   
 
 Approximately 73.18% of the papers have cleaned keyword coverage.
 
@@ -271,8 +271,8 @@ keywords for all the papers imputed.
       scale_fill_manual(values='#71A92C')
 
 {{%/expand%}}  
-![](./cov2-1.png)
-![](./cov2-2.png)   
+![](/2nd_Home/cov2-1.png)
+![](/2nd_Home/cov2-2.png)   
 Approximately 82.1% of the papers have keyword coverage after
 imputation. Also, we can find that all the imputed keywords are within
 cleaned keywords.
@@ -340,7 +340,7 @@ papers we collected.
 
  {{%
 /expand%}}  
-![](./pred-1.png)  
+![](/2nd_Home/pred-1.png)  
 
 After predicting keywords using our dictionary model, the predicted
 keyword coverage of all the papers is approximately 53.16%.

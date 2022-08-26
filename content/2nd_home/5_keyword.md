@@ -163,7 +163,7 @@ Thirdly, generate the keyword coverage plot.
       theme_classic(base_size = 12)
 
     ggplotly(a)
-![](./key.png)
+![](/2nd_Home/key.png)
 
 
 We can see that as the keywords increase, the more articles are covered. However, when the keywords increase to a certain range, the coverage rate becomes limited.
