@@ -1,7 +1,7 @@
 +++
 title = "eCRF Index Shiny App"
-menuTitle = "7. eCRF Index Shiny App"
-weight = 7
+menuTitle = "2.3 eCRF Index Shiny App"
+weight = 9
 +++
 
 

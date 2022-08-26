@@ -1,7 +1,7 @@
 +++
 title = "HTML elements & Tree Structure"
-menuTitle = "2. HTML elements"
-weight = 2
+menuTitle = "1.2 HTML elements"
+weight = 3
 +++
 
 - [**2. HTML elements & Tree Structure**](#2-html-elements--tree-structure)

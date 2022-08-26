@@ -1,7 +1,7 @@
 +++
-title = "Web at a glance"
-menuTitle = "1. Web at a glance"
-weight = 1
+title = "1.1 Web at a glance"
+menuTitle = "1.1 Web at a glance"
+weight = 2
 +++
 
 - [**1. Web at a glance**](#1-web-at-a-glance)

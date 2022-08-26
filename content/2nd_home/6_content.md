@@ -1,7 +1,7 @@
 +++
 title = "Content Analysis"
-menuTitle = "6. Content Analysis"
-weight = 6
+menuTitle = "2.2 Content Analysis"
+weight = 8
 +++
 ## Title Analysis: Keyword Prediction
 

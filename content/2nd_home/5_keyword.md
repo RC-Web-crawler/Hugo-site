@@ -1,7 +1,7 @@
 +++
 title = "Keyword Analysis"
-menuTitle = "5. Keyword Analysis"
-weight = 5
+menuTitle = "2.1 Keyword Analysis"
+weight = 7
 +++
 
 
