@@ -42,7 +42,7 @@ A webpage generally consists of three parts, namely HTML(超文本标记语言),
 #### **1.1.1 HTML**
 HTML stands for HyperText Markup Language. "Markup language" means that, rather than using a programming language to perform functions, HTML uses **tags** to identify different types of content and the purposes they each serve to the webpage.
 
-Let's start with a simple webpage without CSS and JavaScript：[webpage_raw](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_raw.html)
+Let's start with a simple webpage without CSS and JavaScript：[webpage_raw](https://htmlpreview.github.io/?https://raw.githubusercontent.com/RC-Web-crawler/Hugo-site/main/content/1st_home/webpage_raw.html)
 
 HTML Document:
 ```
@@ -80,7 +80,7 @@ You can see a lot of tags in this document, such as `<html>`, `</html>`, `<head>
 #### **1.1.2 CSS**
 CSS stands for Cascading Style Sheets. This programming language dictates how the HTML elements of a website should actually appear on the frontend of the page.
 
-Let's see the new webpage after adding a CSS style: [webpage_css](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_css.html)
+Let's see the new webpage after adding a CSS style: [webpage_css](https://htmlpreview.github.io/?https://raw.githubusercontent.com/RC-Web-crawler/Hugo-site/main/content/1st_home/webpage_css.html)
 
 ```
     <style type="text/css">
@@ -96,5 +96,5 @@ Let's see the new webpage after adding a CSS style: [webpage_css](https://htmlpr
 #### **1.1.3 JavaScript**
 JavaScript is a logic-based programming language that can be used to modify website content and make it behave in different ways in response to a user's actions. Most of the dynamic behavior you'll see on a web page is thanks to JavaScript, which augments a browser's default controls and behaviors.
 
-Let's see the new webpage after applying a JavaScript：[webpage_js](https://htmlpreview.github.io/?https://github.com/RC-Web-crawler/Hugo-site/blob/main/content/1_web_at_glance/webpage_js.html)
+Let's see the new webpage after applying a JavaScript：[webpage_js](https://htmlpreview.github.io/?https://raw.githubusercontent.com/RC-Web-crawler/Hugo-site/main/content/1st_home/webpage_js.html)
 
