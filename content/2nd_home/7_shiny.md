@@ -13,8 +13,6 @@ According to alpha test results, the coverage rate is 70% ~ 85% and the accuracy
 As expected, mapping results for efficacy-related domains, like QS, ZW, are low in accuracy and coverage, since their
 eCRF forms are always study specific forms 
 
-#### Shiny App
-
 
 
 

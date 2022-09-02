@@ -12,11 +12,12 @@ analysis. To solve this problem, we can try to predict the keywords with
 title analysis techniques.
 
 In the following parts, the keyword prediction using the results from
-previous keyword analysis will be demonstrated.
-
+previous keyword analysis is demonstrated. The whole workflow is shown
+below:  
+<img src="https://raw.githubusercontent.com/RC-Web-crawler/Hugo-site/main/content/2nd_home/workflow.png">
 ## Pre-prepare: Include packages and source data
 
-We will mainly use the package [quanteda](https://quanteda.io/) for our
+We mainly use the package [quanteda](https://quanteda.io/) for our
 analysis. Quanteda is an R package for managing and analyzing textual
 data. It is designed for R users needing to apply natural language
 processing to texts, from documents to final analysis.  
@@ -44,8 +45,8 @@ processing to texts, from documents to final analysis.
 
 ## Pre-prepare: Including data and building dictonary
 
-In our analysis, we will use topic-specific dictionaries. Topic-specific
-dictionaries is a method somehow similar to [sentiment
+In our analysis, we use topic-specific dictionaries as our main method.
+Topic-specific dictionaries is a method somehow similar to [sentiment
 analysis](https://en.wikipedia.org/wiki/Sentiment_analysis). Its aim is
 to determine the polarity of a text, which could be done by counting
 terms that were previously assigned to the given categories. With this
@@ -53,7 +54,11 @@ method, we can categorize the given titles into specific keywords in our
 dictionary.
 
 To use topic-specific dictionaries, the keyword corpus and dictionary
-need to be built in advance.  
+need to be built in advance. In this study, we use the results of
+keywords analysis to help our dictionary construction. Our dictionary
+includes all keywords with frequency larger than 35 in the keywords
+analysis. In addition, some popular words, e.g. "send", are added to the
+dictionary manually to improve the performance.  
 {{%expand "build dictionary" %}}
 
     #Build keyword corpus
@@ -67,7 +72,7 @@ need to be built in advance.
     dict <- list(
       output_delivery_system = c('output','delivery','system'),
       hash_object = c('hash','object'),
-      machine_learing = c('machine','learing'),
+      machine_learning = c('machine','learning'),
       dictionary_table = c('dictionary','table'),
       cdisc = c('cdisc','adam','sdtm','xml','domain','send'),
       multisheet_workbook = c('multi','sheet','workbook','excel'),
@@ -112,10 +117,10 @@ need to be built in advance.
 
 ## Keyword Cleaning
 
-We will calculate the keyword coverage from source data first. In this
-study, the keyword coverage is defined as the percent of papers with any
-keyword existing after imputation. Keyword cleaning is performed before
-the calculation.  
+We calculate the cleaned keyword coverage from source data first. In
+this study, the keyword coverage is defined as the percent of papers
+with any keyword existing after imputation. Keyword cleaning is
+performed before the calculation.  
 {{%expand "keyword cleaning" %}}
 
     #Clean Keyword
@@ -173,19 +178,19 @@ the calculation.
             ) +
       scale_fill_brewer(palette="Blues")
 
-{{%/expand%}}   
+{{%/expand%}}  
 <img src="https://raw.githubusercontent.com/RC-Web-crawler/Hugo-site/main/content/2nd_home/cov1-1.png">
-
 Approximately 73.18% of the papers have cleaned keyword coverage.
 
 ## Keyword Imputation
 
-Next, we will use our dictionary to impute the keyword from the titles.
-Similarly, the coverage of the imputed keyword will be calculated. Also,
-we will calculate the accuracy of the imputation by comparing the
-imputed results with cleaning results. The accuracy here is defined as
-the percentage of papers where the cleaned keywords exist in the imputed
-keywords for all the papers imputed.  
+Next, we use our dictionary to impute the keyword from the titles. In
+this part, the papers with cleaned keywords are used to calculate the
+correct rate of imputation. Similarly, the coverage of the imputed
+keyword is calculated. Also, we calculate the accuracy of the imputation
+by comparing the imputed results with cleaning results. The accuracy
+here is defined as the percentage of papers where the cleaned keywords
+exist in the imputed keywords for all the papers imputed.  
 {{%expand "keyword imputation" %}}
 
     #Build title corpus
@@ -273,6 +278,7 @@ keywords for all the papers imputed.
 {{%/expand%}}  
 <img src="https://raw.githubusercontent.com/RC-Web-crawler/Hugo-site/main/content/2nd_home/cov2-1.png">
 <img src="https://raw.githubusercontent.com/RC-Web-crawler/Hugo-site/main/content/2nd_home/cov2-2.png">
+
 Approximately 82.1% of the papers have keyword coverage after
 imputation. Also, we can find that all the imputed keywords are within
 cleaned keywords.
@@ -280,7 +286,7 @@ cleaned keywords.
 ## Keyword Prediction
 
 Finally, we try to use the dictionary to predict the keyword of all the
-papers we collected.  
+papers we collected. The coverage rate after prediction is computed.  
 {{%expand "keyword prediction" %}}
 
     #Prediction
@@ -338,10 +344,8 @@ papers we collected.
             ) +
       scale_fill_brewer(palette="Blues")
 
- {{%
-/expand%}}  
+{{%/expand%}}  
 <img src="https://raw.githubusercontent.com/RC-Web-crawler/Hugo-site/main/content/2nd_home/pred-1.png">
-
 After predicting keywords using our dictionary model, the predicted
 keyword coverage of all the papers is approximately 53.16%.
 
@@ -354,9 +358,16 @@ dictionary used in our study is relatively crude. With a better
 dictionary, the coverage could be even higher.  
 Besides, we also tried to use [Latent Dirichlet
 Allocation(LDA)](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation)
-to perform a topic modeling analysis. However, because the number of
-words in a title is relatively small, we did not get a satisfying
-result.
+to perform a topic modeling analysis. However, because of several
+reasons, we did not get a satisfying result. To use the LDA method,
+several topics must be pre-specified, but in our study we do not have
+such topics. If we try using all the words in our dictionary as topics,
+the time and resource consumption could become a big problem. Meanwhile,
+even if we have our topics pre-specified, the limited length of a title
+could also result in a poor accuracy in keyword prediction.
 
-Other methods may also be applied in the topic analysis, such as
-supervised machine learning. If you are interested, have a try!
+In the future, we will keep trying other methods in the title analysis,
+such as supervised or unsupervised learning. Furthermore, based on the
+current progress we’ve made, we will try to analyze the abstracts using
+various methods. If you are interested in our study, welcome!
+
